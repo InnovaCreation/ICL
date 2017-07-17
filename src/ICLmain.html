@@ -72,6 +72,8 @@
 						console.log('exec error: ' + error);
 					}
 				});
+				
+				console.log(args);
 			}
 			</script>
 		</div>
@@ -95,26 +97,23 @@
 				var lib_dir = $path.join($GameRoot, './gamedir/libs/');
 				var lib_args = '-cp "';
 				json.libraries.forEach(function(lib) {
-					console.log(lib.name);
+					console.log("Get Library " + lib.name);
 					
-					if (lib.downloads.classifiers) {
-						// Lib classifiers stuff
-						var artifact = lib.downloads.classifiers[lib.natives[$OSType]];
-						console.log(artifact.path);
-						
-						lib_args += lib_dir + artifact.path + ":"
-					} else {
-						console.log(lib.downloads.artifact.path);
+					var artifact;
+					if (lib.downloads.classifiers)
+						artifact = lib.downloads.classifiers[lib.natives[$OSType]];
+					else
+						artifact = lib.downloads.artifact;
 					
-						lib_args += lib_dir + lib.downloads.artifact.path + ":"
-					}
+					console.log("Path:" + artifact.path);						
+					lib_args += lib_dir + artifact.path + ":"
 				});
 				// Add main jar to those libs
-				var versions_dir = $path.join($GameRoot, './versions/');
+				var versions_dir = $path.join($GameRoot, './gamedir/versions/');
 				var version_id = '1.11.2';
 				lib_args += versions_dir + version_id + '.jar"'
 				// Output args
-				console.log(lib_args);
+				document.getElementById('class_path').value = lib_args;
 			}
 			</script>
 		</div>
