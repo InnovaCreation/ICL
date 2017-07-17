@@ -1,0 +1,1592 @@
+[14:11:55] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
+[14:11:55] [main/INFO] [FML/]: Forge Mod Loader version 12.18.3.2202 for Minecraft 1.10.2 loading
+[14:11:55] [main/INFO] [FML/]: Java is OpenJDK 64-Bit Server VM, version 1.8.0_121-AOSC, running on Linux:amd64:4.11.8-aosc-main, installed at /usr/lib/java
+[14:11:55] [main/DEBUG] [FML/]: Java classpath at launch is /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/minecraftforge/forge/1.10.2-12.18.3.2202/forge-1.10.2-12.18.3.2202.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/ow2/asm/asm-all/5.0.3/asm-all-5.0.3.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/jline/jline/2.13/jline-2.13.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/typesafe/config/1.2.1/config-1.2.1.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-continuations-library_2.11-1.0.2.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/lzma/lzma/0.0.1/lzma-0.0.1.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/java3d/vecmath/1.5.2/vecmath-1.5.2.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/mojang/netty/1.6/netty-1.6.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/oshi-project/oshi-core/1.1/oshi-core-1.1.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/ibm/icu/icu4j-core-mojang/51.2/icu4j-core-mojang-51.2.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/io/netty/netty-all/4.0.23.Final/netty-all-4.0.23.Final.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/google/guava/guava/17.0/guava-17.0.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/mojang/authlib/1.5.22/authlib-1.5.22.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/mojang/realms/1.9.8/realms-1.9.8.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/it/unimi/dsi/fastutil/7.0.12_mojang/fastutil-7.0.12_mojang.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9/log4j-api-2.0-beta9.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9/log4j-core-2.0-beta9.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar:/home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/versions/1.10.2/1.10.2.jar
+[14:11:55] [main/DEBUG] [FML/]: Java library path at launch is /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/versions/1.10.2-forge1.10.2-12.18.3.2202/1.10.2-forge1.10.2-12.18.3.2202-natives
+[14:11:55] [main/DEBUG] [FML/]: Enabling runtime deobfuscation
+[14:11:55] [main/DEBUG] [FML/]: Instantiating coremod class FMLCorePlugin
+[14:11:55] [main/DEBUG] [FML/]: Added access transformer class net.minecraftforge.fml.common.asm.transformers.AccessTransformer to enqueued access transformers
+[14:11:55] [main/DEBUG] [FML/]: Enqueued coremod FMLCorePlugin
+[14:11:55] [main/DEBUG] [FML/]: Instantiating coremod class FMLForgePlugin
+[14:11:55] [main/DEBUG] [FML/]: Enqueued coremod FMLForgePlugin
+[14:11:55] [main/DEBUG] [FML/]: All fundamental core mods are successfully located
+[14:11:55] [main/DEBUG] [FML/]: Attempting to load commandline specified mods, relative to /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft
+[14:11:55] [main/DEBUG] [FML/]: Discovering coremods
+[14:11:55] [main/DEBUG] [FML/]: Examining for coremod candidacy BetterFoliage-MC1.10.2-2.1.3.jar
+[14:11:55] [main/TRACE] [FML/]: Found FMLCorePluginContainsFMLMod marker in BetterFoliage-MC1.10.2-2.1.3.jar, it will be examined later for regular @Mod instances
+[14:11:55] [main/DEBUG] [FML/]: Instantiating coremod class BetterFoliageLoader
+[14:11:55] [main/DEBUG] [FML/]: The coremod mods.betterfoliage.loader.BetterFoliageLoader requested minecraft version 1.10.2 and minecraft is 1.10.2. It will be loaded.
+[14:11:55] [main/DEBUG] [FML/]: Enqueued coremod BetterFoliageLoader
+[14:11:55] [main/DEBUG] [FML/]: Examining for coremod candidacy CoralReef-1.2.jar
+[14:11:55] [main/DEBUG] [FML/]: Not found coremod data in CoralReef-1.2.jar
+[14:11:55] [main/DEBUG] [FML/]: Examining for coremod candidacy OptiFine_1.10.2_HD_U_D8.jar
+[14:11:55] [main/INFO] [FML/]: Loading tweaker optifine.OptiFineForgeTweaker from OptiFine_1.10.2_HD_U_D8.jar
+[14:11:55] [main/DEBUG] [FML/]: Examining for coremod candidacy replaymod-1.10.2-2.0.0-b6.jar
+[14:11:55] [main/INFO] [FML/]: Loading tweaker org.spongepowered.asm.launch.MixinTweaker from replaymod-1.10.2-2.0.0-b6.jar
+[14:11:55] [main/DEBUG] [FML/]: Examining for coremod candidacy soundphysics-mc1.10.2-v1.0.0.jar
+[14:11:55] [main/TRACE] [FML/]: Found FMLCorePluginContainsFMLMod marker in soundphysics-mc1.10.2-v1.0.0.jar, it will be examined later for regular @Mod instances
+[14:11:55] [main/DEBUG] [FML/]: Instantiating coremod class SPFMLLoadingPlugin
+[14:11:55] [main/DEBUG] [FML/]: The coremod com.sonicether.soundphysics.SPFMLLoadingPlugin requested minecraft version 1.10.2 and minecraft is 1.10.2. It will be loaded.
+[14:11:55] [main/DEBUG] [FML/]: Enqueued coremod SPFMLLoadingPlugin
+[14:11:55] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:11:55] [main/INFO] [LaunchWrapper/]: Loading tweak class name optifine.OptiFineForgeTweaker
+[14:11:55] [main/INFO] [LaunchWrapper/]: Loading tweak class name org.spongepowered.asm.launch.MixinTweaker
+[14:11:55] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.6.4 Source=file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar Env=CLIENT
+[14:11:55] [main/DEBUG] [mixin/]: Adding new mixin transformer proxy #1
+[14:11:55] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[14:11:55] [main/DEBUG] [mixin/]: Mixin platform: primary container is file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar
+[14:11:55] [main/DEBUG] [mixin/]: Adding mixin platform agents for container file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar
+[14:11:55] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentFML for file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar
+[14:11:55] [main/DEBUG] [mixin/]: replaymod-1.10.2-2.0.0-b6.jar has core plugin com.replaymod.core.LoadingPlugin. Injecting it into FML for co-initialisation:
+[14:11:55] [main/DEBUG] [FML/]: Instantiating coremod class LoadingPlugin
+[14:11:55] [main/WARN] [FML/]: The coremod com.replaymod.core.LoadingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[14:11:55] [main/INFO] [mixin/]: Compatibility level set to JAVA_8
+[14:11:55] [main/DEBUG] [FML/]: Enqueued coremod LoadingPlugin
+[14:11:55] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar
+[14:11:55] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:11:55] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:11:55] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:11:55] [main/INFO] [LaunchWrapper/]: Calling tweak class optifine.OptiFineForgeTweaker
+[14:11:55] [main/INFO] [STDOUT/]: [optifine.OptiFineForgeTweaker:dbg:56]: OptiFineForgeTweaker: acceptOptions
+[14:11:55] [main/INFO] [STDOUT/]: [optifine.OptiFineForgeTweaker:dbg:56]: OptiFineForgeTweaker: injectIntoClassLoader
+[14:11:55] [main/INFO] [STDOUT/]: [optifine.OptiFineClassTransformer:dbg:266]: OptiFine ClassTransformer
+[14:11:55] [main/INFO] [STDOUT/]: [optifine.OptiFineClassTransformer:dbg:266]: OptiFine URL: file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/OptiFine_1.10.2_HD_U_D8.jar
+[14:11:55] [main/INFO] [STDOUT/]: [optifine.OptiFineClassTransformer:dbg:266]: OptiFine ZIP file: /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/mods/OptiFine_1.10.2_HD_U_D8.jar
+[14:11:55] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:11:56] [main/DEBUG] [FML/]: Injecting coremod FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin} class transformers
+[14:11:56] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
+[14:11:56] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[PREINIT]
+[14:11:56] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer
+[14:11:56] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
+[14:11:56] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
+[14:11:56] [main/DEBUG] [FML/]: Injection complete
+[14:11:56] [main/DEBUG] [FML/]: Running coremod plugin for FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin}
+[14:11:56] [main/DEBUG] [FML/]: Running coremod plugin FMLCorePlugin
+[14:11:56] [main/DEBUG] [FML/]: Read 914 binary patches
+[14:11:56] [main/DEBUG] [FML/]: Loading deobfuscation resource /deobfuscation_data-1.10.2.lzma with 32371 records
+[14:11:57] [main/INFO] [FML/]: Found valid fingerprint for Minecraft Forge. Certificate fingerprint e3c3d50c7c986df74c645c0ac54639741c90a557
+[14:11:57] [main/INFO] [FML/]: Found valid fingerprint for Minecraft. Certificate fingerprint cd99959656f753dc28d863b46769f7f8fbaefcfc
+[14:11:57] [main/DEBUG] [FML/]: Coremod plugin class FMLCorePlugin run successfully
+[14:11:57] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:11:57] [main/DEBUG] [FML/]: Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
+[14:11:57] [main/DEBUG] [FML/]: Injection complete
+[14:11:57] [main/DEBUG] [FML/]: Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
+[14:11:57] [main/DEBUG] [FML/]: Running coremod plugin FMLForgePlugin
+[14:11:57] [main/DEBUG] [FML/]: Coremod plugin class FMLForgePlugin run successfully
+[14:11:57] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:11:57] [main/DEBUG] [FML/]: Injecting coremod BetterFoliageLoader {mods.betterfoliage.loader.BetterFoliageLoader} class transformers
+[14:11:57] [main/TRACE] [FML/]: Registering transformer mods.betterfoliage.loader.BetterFoliageTransformer
+[14:11:57] [main/DEBUG] [FML/]: Injection complete
+[14:11:57] [main/DEBUG] [FML/]: Running coremod plugin for BetterFoliageLoader {mods.betterfoliage.loader.BetterFoliageLoader}
+[14:11:57] [main/DEBUG] [FML/]: Running coremod plugin BetterFoliageLoader
+[14:11:57] [main/DEBUG] [FML/]: Coremod plugin class BetterFoliageLoader run successfully
+[14:11:57] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:11:57] [main/DEBUG] [FML/]: Injecting coremod SPFMLLoadingPlugin {com.sonicether.soundphysics.SPFMLLoadingPlugin} class transformers
+[14:11:57] [main/TRACE] [FML/]: Registering transformer com.sonicether.soundphysics.SoundPhysicsCore
+[14:11:57] [main/DEBUG] [FML/]: Injection complete
+[14:11:57] [main/DEBUG] [FML/]: Running coremod plugin for SPFMLLoadingPlugin {com.sonicether.soundphysics.SPFMLLoadingPlugin}
+[14:11:57] [main/DEBUG] [FML/]: Running coremod plugin SPFMLLoadingPlugin
+[14:11:57] [main/DEBUG] [FML/]: Coremod plugin class SPFMLLoadingPlugin run successfully
+[14:11:57] [main/INFO] [LaunchWrapper/]: Calling tweak class org.spongepowered.asm.launch.MixinTweaker
+[14:11:57] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentFML:file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar]
+[14:11:57] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar]
+[14:11:57] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentFML:file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar]
+[14:11:57] [main/DEBUG] [mixin/]: Creating FML remapper adapter: org.spongepowered.asm.bridge.RemapperAdapterFML
+[14:11:57] [main/INFO] [mixin/]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@5b69fd74
+[14:11:57] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar]
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/net/minecraftforge/forge/1.10.2-12.18.3.2202/forge-1.10.2-12.18.3.2202.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/ow2/asm/asm-all/5.0.3/asm-all-5.0.3.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/jline/jline/2.13/jline-2.13.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/typesafe/config/1.2.1/config-1.2.1.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-continuations-library_2.11-1.0.2.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/lzma/lzma/0.0.1/lzma-0.0.1.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/java3d/vecmath/1.5.2/vecmath-1.5.2.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/mojang/netty/1.6/netty-1.6.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/oshi-project/oshi-core/1.1/oshi-core-1.1.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/ibm/icu/icu4j-core-mojang/51.2/icu4j-core-mojang-51.2.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/io/netty/netty-all/4.0.23.Final/netty-all-4.0.23.Final.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/google/guava/guava/17.0/guava-17.0.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/commons-codec/commons-codec/1.9/commons-codec-1.9.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/mojang/authlib/1.5.22/authlib-1.5.22.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/com/mojang/realms/1.9.8/realms-1.9.8.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/it/unimi/dsi/fastutil/7.0.12_mojang/fastutil-7.0.12_mojang.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9/log4j-api-2.0-beta9.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9/log4j-core-2.0-beta9.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/versions/1.10.2/1.10.2.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/BetterFoliage-MC1.10.2-2.1.3.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/OptiFine_1.10.2_HD_U_D8.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/soundphysics-mc1.10.2-v1.0.0.jar for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: Scanning asmgen:/ for mixin tweaker
+[14:11:57] [main/DEBUG] [mixin/]: injectIntoClassLoader running with 1 agents
+[14:11:57] [main/DEBUG] [mixin/]: Processing injectIntoClassLoader() for PlatformAgent[MixinPlatformAgentFML:file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar]
+[14:11:57] [main/DEBUG] [mixin/]: FML agent is co-initialising coremod instance LoadingPlugin {[]} for file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar
+[14:11:57] [main/DEBUG] [FML/]: Injecting coremod LoadingPlugin {com.replaymod.core.LoadingPlugin} class transformers
+[14:11:57] [main/DEBUG] [FML/]: Injection complete
+[14:11:57] [main/DEBUG] [FML/]: Running coremod plugin for LoadingPlugin {com.replaymod.core.LoadingPlugin}
+[14:11:57] [main/DEBUG] [FML/]: Running coremod plugin LoadingPlugin
+[14:11:57] [main/DEBUG] [FML/]: Coremod plugin class LoadingPlugin run successfully
+[14:11:57] [main/DEBUG] [mixin/]: Processing injectIntoClassLoader() for PlatformAgent[MixinPlatformAgentDefault:file:/home/bobcao3/Game/Wisdom-V1%20(copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar]
+[14:11:57] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:11:57] [main/DEBUG] [FML/]: Loaded 195 rules from AccessTransformer config file forge_at.cfg
+[14:11:57] [main/DEBUG] [FML/]: Loaded 56 rules from AccessTransformer mod jar file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar!META-INF/replaymod_at.cfg
+
+[14:11:57] [main/DEBUG] [FML/]: Loaded 9 rules from AccessTransformer mod jar file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/mods/BetterFoliage-MC1.10.2-2.1.3.jar!META-INF/BetterFoliage_at.cfg
+
+[14:11:57] [main/DEBUG] [mixin/]: Adding new mixin transformer proxy #2
+[14:11:57] [main/DEBUG] [FML/]: Validating minecraft
+[14:11:57] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[INIT]
+[14:11:58] [main/DEBUG] [FML/]: Minecraft validated, launching...
+[14:11:58] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:11:58] [main/INFO] [LaunchWrapper/]: Loading tweak class name org.spongepowered.asm.mixin.MixinEnvironment$EnvironmentStateTweaker
+[14:11:58] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:11:58] [main/INFO] [LaunchWrapper/]: Calling tweak class org.spongepowered.asm.mixin.MixinEnvironment$EnvironmentStateTweaker
+[14:11:58] [main/INFO] [STDOUT/]: [optifine.OptiFineForgeTweaker:dbg:56]: OptiFineForgeTweaker: getLaunchArguments
+[14:11:58] [main/DEBUG] [mixin/]: Adding new mixin transformer proxy #3
+[14:11:58] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[14:11:58] [main/DEBUG] [mixin/]: Selecting config mixins.recording.replaymod.json
+[14:11:58] [main/DEBUG] [mixin/]: Selecting config mixins.render.replaymod.json
+[14:11:58] [main/DEBUG] [mixin/]: Selecting config mixins.replay.replaymod.json
+[14:11:58] [main/DEBUG] [mixin/]: Selecting config mixins.compat.shaders.replaymod.json
+[14:11:58] [main/DEBUG] [mixin/]: Preparing mixins.recording.replaymod.json (6)
+[14:11:58] [main/DEBUG] [mixin/]: Rebuilding transformer delegation list:
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    net.minecraftforge.fml.common.asm.transformers.PatchingTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Excluding: org.spongepowered.asm.mixin.transformer.MixinTransformer$Proxy
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    optifine.OptiFineClassTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    $wrapper.net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    $wrapper.net.minecraftforge.fml.common.asm.transformers.SideTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Excluding: $wrapper.net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    $wrapper.net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    $wrapper.mods.betterfoliage.loader.BetterFoliageTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    $wrapper.com.sonicether.soundphysics.SoundPhysicsCore
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    net.minecraftforge.fml.common.asm.transformers.DeobfuscationTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    net.minecraftforge.fml.common.asm.transformers.AccessTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    net.minecraftforge.fml.common.asm.transformers.ModAccessTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Adding:    net.minecraftforge.fml.common.asm.transformers.ItemStackTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Excluding: org.spongepowered.asm.mixin.transformer.MixinTransformer$Proxy
+[14:11:58] [main/DEBUG] [mixin/]:   Excluding: net.minecraftforge.fml.common.asm.transformers.TerminalTransformer
+[14:11:58] [main/DEBUG] [mixin/]:   Excluding: org.spongepowered.asm.mixin.transformer.MixinTransformer$Proxy
+[14:11:58] [main/DEBUG] [mixin/]: Transformer delegation list created with 11 entries
+[14:11:58] [main/DEBUG] [mixin/]: Found name transformer: net.minecraftforge.fml.common.asm.transformers.DeobfuscationTransformer
+[14:11:58] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/network/NetHandlerLoginClient to metadata cache
+[14:11:58] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/network/NetHandlerPlayClient to metadata cache
+[14:11:58] [main/TRACE] [mixin/]: Added class metadata for net/minecraftforge/fml/common/network/handshake/NetworkDispatcher to metadata cache
+[14:11:58] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/multiplayer/PlayerControllerMP to metadata cache
+[14:11:58] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/RenderGlobal to metadata cache
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: bln -> net.minecraft.client.multiplayer.WorldClient
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: a (IIIILjava/util/Random;ZLcm$a;)V -> showBarrierParticles (IIIILjava/util/Random;ZLnet/minecraft/util/math/BlockPos$MutableBlockPos;)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lbll;Laig;ILqp;Loq;)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              makeWorldProvider (I)Latl;
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              d ()V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (IIIIII)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              n ()Lasq;
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (IIZ)Z
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a ()V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              j ()V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (IIZ)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lrw;)Z
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              e (Lrw;)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Lrw;)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Lrw;)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (ILrw;)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (I)Lrw;
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              e (I)Lrw;
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Lcm;Lars;)Z
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              M ()V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              t ()V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (IILasv;)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (III)V
+[14:11:58] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (IIIILjava/util/Random;ZLcm$a;)V
+[14:11:58] [main/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying random display tick call hook
+[14:11:58] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/multiplayer/WorldClient to metadata cache
+[14:11:58] [main/DEBUG] [mixin/]: Preparing mixins.render.replaymod.json (5)
+[14:11:58] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/EntityRenderer to metadata cache
+[14:11:58] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/particle/ParticleManager to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/entity/Render to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/entity/RenderManager to metadata cache
+[14:11:59] [main/DEBUG] [mixin/]: Preparing mixins.replay.replaymod.json (11)
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/gui/GuiSpectator to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/entity/RenderArmorStand to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/entity/RenderArrow to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/RenderItem to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/entity/RenderLivingBase to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/tileentity/TileEntityEndPortalRenderer to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/ViewFrustum to metadata cache
+[14:11:59] [main/DEBUG] [mixin/]: Preparing mixins.compat.shaders.replaymod.json (4)
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: bqy -> net.minecraft.client.renderer.chunk.RenderChunk
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: b (FFFLbqs;)V -> rebuildChunk (FFFLnet/minecraft/client/renderer/chunk/ChunkCompileTaskGenerator;)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Laid;Lboh;I)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (I)Z
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (I)Lbwn;
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (III)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (FFFLbqs;)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (FFFLbqs;)V
+[14:11:59] [main/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying RenderChunk block render override
+[14:11:59] [main/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying RenderChunk block layer override
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/chunk/RenderChunk to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for shadersmod/client/ShadersRender to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/network/play/server/SPacketPlayerListItem$AddPlayerData to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for com/replaymod/recording/handler/RecordingEventHandler$RecordingEventSender to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/network/play/server/SPacketPlayerListItem$Action to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for com/replaymod/render/mixin/MixinEntityRenderer$1 to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for org/spongepowered/asm/mixin/injection/At$Shift to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for com/replaymod/render/capturer/CubicOpenGlFrameCapturer$Data to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for com/replaymod/render/hooks/EntityRendererHandler$IEntityRenderer to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for com/replaymod/render/hooks/EntityRendererHandler$GluPerspective to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for com/replaymod/render/capturer/StereoscopicOpenGlFrameCapturer$Data to metadata cache
+[14:11:59] [main/DEBUG] [mixin/]: Prepared 26 mixins in 0.712 sec (27.4 msec avg.)
+[14:11:59] [main/INFO] [LaunchWrapper/]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: bln -> net.minecraft.client.multiplayer.WorldClient
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: a (IIIILjava/util/Random;ZLcm$a;)V -> showBarrierParticles (IIIILjava/util/Random;ZLnet/minecraft/util/math/BlockPos$MutableBlockPos;)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lbll;Laig;ILqp;Loq;)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              makeWorldProvider (I)Latl;
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              d ()V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (IIIIII)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              n ()Lasq;
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (IIZ)Z
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a ()V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              j ()V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (IIZ)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lrw;)Z
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              e (Lrw;)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Lrw;)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Lrw;)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (ILrw;)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (I)Lrw;
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              e (I)Lrw;
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Lcm;Lars;)Z
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              M ()V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              t ()V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (IILasv;)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (III)V
+[14:11:59] [main/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (IIIILjava/util/Random;ZLcm$a;)V
+[14:11:59] [main/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying random display tick call hook
+[14:11:59] [main/DEBUG] [mixin/]: Mixing MixinWorldClient from mixins.recording.replaymod.json into net.minecraft.client.multiplayer.WorldClient
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/world/World to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraftforge/common/capabilities/ICapabilityProvider to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/world/IBlockAccess to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/Minecraft to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for com/replaymod/recording/handler/RecordingEventHandler to metadata cache
+[14:11:59] [main/DEBUG] [mixin/]: Mixing MixinWorldClient from mixins.replay.replaymod.json into net.minecraft.client.multiplayer.WorldClient
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/Entity to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/entity/EntityPlayerSP to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/client/entity/AbstractClientPlayer to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/player/EntityPlayer to metadata cache
+[14:11:59] [main/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/EntityLivingBase to metadata cache
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: art$a -> net.minecraft.block.state.BlockStateContainer$StateImplementation
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: j ()F -> getAmbientOcclusionLightValue ()F
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lakf;Lcom/google/common/collect/ImmutableMap;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lakf;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableTable;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              r ()Ljava/util/Collection;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Lasi;)Ljava/lang/Comparable;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lasi;Ljava/lang/Comparable;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              s ()Lcom/google/common/collect/ImmutableMap;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              t ()Lakf;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              equals (Ljava/lang/Object;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              hashCode ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Ljava/util/Map;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Lasi;Ljava/lang/Comparable;)Ljava/util/Map;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a ()Laxx;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lrw;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              d ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              e ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              f ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              g ()Laxy;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laos;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lanf;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              h ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              i ()Laop;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laih;Lcm;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              j ()F
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: art$a -> net.minecraft.block.state.BlockStateContainer$StateImplementation
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: f ()Z -> useNeighborBrightness ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lakf;Lcom/google/common/collect/ImmutableMap;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lakf;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableTable;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              r ()Ljava/util/Collection;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Lasi;)Ljava/lang/Comparable;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lasi;Ljava/lang/Comparable;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              s ()Lcom/google/common/collect/ImmutableMap;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              t ()Lakf;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              equals (Ljava/lang/Object;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              hashCode ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Ljava/util/Map;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Lasi;Ljava/lang/Comparable;)Ljava/util/Map;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a ()Laxx;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lrw;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              d ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              e ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              f ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: art$a -> net.minecraft.block.state.BlockStateContainer$StateImplementation
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: doesSideBlockRendering (Laih;Lcm;Lct;)Z -> doesSideBlockRendering (Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lakf;Lcom/google/common/collect/ImmutableMap;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lakf;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableTable;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              r ()Ljava/util/Collection;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Lasi;)Ljava/lang/Comparable;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lasi;Ljava/lang/Comparable;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              s ()Lcom/google/common/collect/ImmutableMap;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              t ()Lakf;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              equals (Ljava/lang/Object;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              hashCode ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Ljava/util/Map;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Lasi;Ljava/lang/Comparable;)Ljava/util/Map;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a ()Laxx;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lrw;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              d ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              e ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              f ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              g ()Laxy;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laos;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lanf;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              h ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              i ()Laop;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laih;Lcm;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              j ()F
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              k ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              l ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              m ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laih;Lcm;Lct;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              n ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laid;Lcm;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Laid;Lcm;)F
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lzs;Laid;Lcm;)F
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Laih;Lcm;Lct;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              o ()Laya;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Laih;Lcm;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Laid;Lcm;)Lbby;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Laih;Lcm;Lct;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              p ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              d (Laid;Lcm;)Lbby;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laid;Lcm;Lbby;Ljava/util/List;Lrw;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Laih;Lcm;)Lbby;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laid;Lcm;Lbcb;Lbcb;)Lbbz;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              q ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laid;Lcm;II)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laid;Lcm;Lakf;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              getPropertyValueTable ()Lcom/google/common/collect/ImmutableTable;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              getLightOpacity (Laih;Lcm;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              getLightValue (Laih;Lcm;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              isSideSolid (Laih;Lcm;Lct;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              doesSideBlockRendering (Laih;Lcm;Lct;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: art$a -> net.minecraft.block.state.BlockStateContainer$StateImplementation
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: p ()Z -> isOpaqueCube ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lakf;Lcom/google/common/collect/ImmutableMap;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lakf;Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableTable;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              r ()Ljava/util/Collection;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Lasi;)Ljava/lang/Comparable;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lasi;Ljava/lang/Comparable;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              s ()Lcom/google/common/collect/ImmutableMap;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              t ()Lakf;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              equals (Ljava/lang/Object;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              hashCode ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Ljava/util/Map;)V
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Lasi;Ljava/lang/Comparable;)Ljava/util/Map;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a ()Laxx;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lrw;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              d ()I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              e ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              f ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              g ()Laxy;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laos;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lanf;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              h ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              i ()Laop;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laih;Lcm;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              j ()F
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              k ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              l ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              m ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laih;Lcm;Lct;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              n ()Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Laid;Lcm;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Laid;Lcm;)F
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a (Lzs;Laid;Lcm;)F
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Laih;Lcm;Lct;)I
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              o ()Laya;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              b (Laih;Lcm;)Lars;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Laid;Lcm;)Lbby;
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              c (Laih;Lcm;Lct;)Z
+[14:12:01] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              p ()Z
+[14:12:01] [Client thread/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying getAmbientOcclusionLightValue() override
+[14:12:01] [Client thread/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying useNeighborBrightness() override
+[14:12:01] [Client thread/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying doesSideBlockRendering() override
+[14:12:01] [Client thread/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying isOpaqueCube() override
+[14:12:04] [Client thread/DEBUG] [FML/]: Creating vanilla freeze snapshot
+[14:12:04] [Client thread/DEBUG] [FML/]: Vanilla freeze snapshot created
+[14:12:04] [Client thread/INFO] [Config/]: [OptiFine] *** Reflector Forge ***
+[14:12:04] [Client thread/INFO] [Config/]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
+[14:12:04] [Client thread/DEBUG] [mixin/]: Mixing MixinEntityRenderer from mixins.render.replaymod.json into net.minecraft.client.renderer.EntityRenderer
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for com/replaymod/render/hooks/EntityRendererHandler to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for com/replaymod/render/RenderSettings to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for org/spongepowered/asm/mixin/injection/callback/CallbackInfo to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/util/IThreadListener to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/profiler/ISnooperInfo to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for com/replaymod/replay/camera/CameraEntity to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/client/settings/GameSettings to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for org/lwjgl/util/ReadableColor to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/GlStateManager to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for org/lwjgl/util/glu/Project to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for org/lwjgl/util/glu/Util to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/Enum to metadata cache
+[14:12:04] [Client thread/DEBUG] [mixin/]: Mixing MixinShaderEntityRenderer from mixins.compat.shaders.replaymod.json into net.minecraft.client.renderer.EntityRenderer
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for com/replaymod/replay/ReplayModReplay to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for com/replaymod/compat/shaders/ShaderReflection to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for com/replaymod/replay/ReplayHandler to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for com/replaymod/replay/ReplaySender to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/Float to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/Number to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/io/Serializable to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/Comparable to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/reflect/Field to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/Exception to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/Throwable to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/String to metadata cache
+[14:12:04] [Client thread/DEBUG] [mixin/]: Mixing MixinNetHandlerPlayClient from mixins.recording.replaymod.json into net.minecraft.client.network.NetHandlerPlayClient
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/network/play/server/SPacketPlayerListItem to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/util/List to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/util/Iterator to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for com/mojang/authlib/GameProfile to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/util/UUID to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for java/util/Map to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityFallingBlock to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/EntityAreaEffectCloud to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityItem to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityEnderCrystal to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityArmorStand to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityTNTPrimed to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityBoat to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityExpBottle to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityThrowable to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityPotion to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityEgg to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityShulkerBullet to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityWitherSkull to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityFireball to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntitySmallFireball to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityDragonFireball to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityLargeFireball to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityFireworkRocket to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityEnderEye to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityEnderPearl to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/EntityLeashKnot to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/EntityHanging to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityItemFrame to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntitySnowball to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntitySpectralArrow to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityArrow to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityTippedArrow to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/projectile/EntityFishHook to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/item/EntityMinecart to metadata cache
+[14:12:04] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/tileentity/TileEntitySign to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/tileentity/TileEntity to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/scoreboard/Team$CollisionRule to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/scoreboard/Team$EnumVisible to metadata cache
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinParticleManager from mixins.render.replaymod.json into net.minecraft.client.particle.ParticleManager
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/client/particle/Particle to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/Math to metadata cache
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinParticleManager from mixins.replay.replaymod.json into net.minecraft.client.particle.ParticleManager
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for java/util/Queue to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for java/util/Collection to metadata cache
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinRenderGlobal from mixins.recording.replaymod.json into net.minecraft.client.renderer.RenderGlobal
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinRenderGlobal from mixins.render.replaymod.json into net.minecraft.client.renderer.RenderGlobal
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for com/replaymod/render/hooks/ChunkLoadingRenderGlobal to metadata cache
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinShaderRenderGlobal from mixins.compat.shaders.replaymod.json into net.minecraft.client.renderer.RenderGlobal
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for java/lang/Boolean to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for java/util/Set to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/DestroyBlockProgress to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/culling/Frustum to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/client/renderer/culling/ICamera to metadata cache
+[14:12:05] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: net.minecraftforge.client.model.ModelLoader -> net.minecraftforge.client.model.ModelLoader
+[14:12:05] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: a ()Lde; -> setupModelRegistry ()Lnet/minecraft/util/registry/IRegistry;
+[14:12:05] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              isLoading ()Z
+[14:12:05] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lbxd;Lbwd;Lbou;)V
+[14:12:05] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              a ()Lde;
+[14:12:05] [Client thread/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying ModelLoader lifecycle callback
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinRenderManager from mixins.render.replaymod.json into net.minecraft.client.renderer.entity.RenderManager
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinRenderManager from mixins.replay.replaymod.json into net.minecraft.client.renderer.entity.RenderManager
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/passive/EntityAnimal to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/EntityAgeable to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/EntityCreature to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/entity/EntityLiving to metadata cache
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinRender from mixins.render.replaymod.json into net.minecraft.client.renderer.entity.Render
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinRenderLivingBase from mixins.replay.replaymod.json into net.minecraft.client.renderer.entity.RenderLivingBase
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for org/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable to metadata cache
+[14:12:05] [Client thread/INFO] [Config/]: [OptiFine] *** Reflector Vanilla ***
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinPlayerControllerMP from mixins.recording.replaymod.json into net.minecraft.client.multiplayer.PlayerControllerMP
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinPlayerControllerMP from mixins.replay.replaymod.json into net.minecraft.client.multiplayer.PlayerControllerMP
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/command/ICommandSender to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraftforge/common/capabilities/ICapabilitySerializable to metadata cache
+[14:12:05] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraftforge/common/util/INBTSerializable to metadata cache
+[14:12:05] [Client thread/DEBUG] [mixin/]: Mixing MixinRenderItem from mixins.replay.replaymod.json into net.minecraft.client.renderer.RenderItem
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] 
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] OptiFine_1.10.2_HD_U_D8
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] Build: 20170504-185853
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] OS: Linux (amd64) version 4.11.8-aosc-main
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] Java: 1.8.0_121-AOSC, Oracle Corporation
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] VM: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] LWJGL: 2.9.4
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] OpenGL: Mesa DRI Intel(R) HD Graphics 5500 (Broadwell GT2) , version 3.0 Mesa 17.1.1, Intel Open Source Technology Center
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] OpenGL Version: 3.0.0
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] OpenGL Fancy fog: Not available (GL_NV_fog_distance)
+[14:12:06] [Client thread/INFO] [Config/]: [OptiFine] Maximum texture size: 16384x16384
+[14:12:06] [Thread-5/INFO] [Config/]: [OptiFine] Checking for new version
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] ShadersMod version: 2.4.12
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] OpenGL Version: 3.0 Mesa 17.1.1
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] Vendor:  Intel Open Source Technology Center
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] Renderer: Mesa DRI Intel(R) HD Graphics 5500 (Broadwell GT2) 
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] Capabilities:  2.0  2.1  3.0  -  - 
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] Load ShadersMod configuration.
+[14:12:06] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] Loaded shaderpack: Wisdom-Shaders
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine] Ambiguous shader option: multi
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in composite.fsh: 0.125f
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in composite.fsh: 0.265f
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine] Ambiguous shader option: multi
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in composite.fsh, composite2.fsh: 0.125f
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in composite2.fsh: 0.265f
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine] Ambiguous shader option: multi
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in composite.fsh, composite2.fsh, composite3.fsh: 0.125f
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in composite3.fsh: 0.265f
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine] Ambiguous shader option: AVR_SOURCE
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in final.fsh: gcolor
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in final.fsh: composite
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine] Ambiguous shader option: SHADOW_MAP_BIAS
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in composite.fsh, composite1.fsh, composite2.fsh, composite3.fsh, final.fsh: 0.85f
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine]  - in shadow.vsh: 0.85
+[14:12:06] [Client thread/WARN] [Config/]: [OptiFine] [Shaders] Invalid value: ambientOcclusionLevel=0.4f
+[14:12:06] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - LanguageManager took 0.002s
+[14:12:06] [Client thread/INFO] [FML/]: Forge Mod Loader has detected optifine OptiFine_1.10.2_HD_U_D8, enabling compatibility features
+[14:12:06] [Client thread/INFO] [STDOUT/]: [net.minecraftforge.fml.client.SplashProgress:start:219]: ---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  BetterFoliageLoader (BetterFoliage-MC1.10.2-2.1.3.jar)
+  SPFMLLoadingPlugin (soundphysics-mc1.10.2-v1.0.0.jar)
+  LoadingPlugin (replaymod-1.10.2-2.0.0-b6.jar)
+Contact their authors BEFORE contacting forge
+
+// Surprise! Haha. Well, this is awkward.
+
+Time: 7/17/17 2:12 PM
+Description: Loading screen debug info
+
+This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Linux (amd64) version 4.11.8-aosc-main
+	Java Version: 1.8.0_121-AOSC, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 129238096 bytes (123 MB) / 340643840 bytes (324 MB) up to 2083782656 bytes (1987 MB)
+	JVM Flags: 5 total; -Xincgc -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow -Xmn128m -Xmx2000m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+BetterFoliageLoader (BetterFoliage-MC1.10.2-2.1.3.jar)
+  mods.betterfoliage.loader.BetterFoliageTransformer
+SPFMLLoadingPlugin (soundphysics-mc1.10.2-v1.0.0.jar)
+  com.sonicether.soundphysics.SoundPhysicsCore
+LoadingPlugin (replaymod-1.10.2-2.0.0-b6.jar)
+  
+	GL info: ' Vendor: 'Intel Open Source Technology Center' Version: '3.0 Mesa 17.1.1' Renderer: 'Mesa DRI Intel(R) HD Graphics 5500 (Broadwell GT2) '
+[14:12:06] [Client thread/INFO] [FML/]: MinecraftForge v12.18.3.2202 Initialized
+[14:12:06] [Client thread/INFO] [FML/]: Replaced 231 ore recipes
+[14:12:06] [Client thread/DEBUG] [FML/]: File /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/config/injectedDependencies.json not found. No dependencies injected
+[14:12:06] [Client thread/DEBUG] [FML/]: Building injected Mod Containers [net.minecraftforge.fml.common.FMLContainer, net.minecraftforge.common.ForgeModContainer]
+[14:12:06] [Client thread/WARN] [FML/]: Enabling removal of erroring Entities - USE AT YOUR OWN RISK
+[14:12:06] [Client thread/WARN] [FML/]: Enabling removal of erroring Tile Entities - USE AT YOUR OWN RISK
+[14:12:06] [Client thread/DEBUG] [FML/]: Attempting to load mods contained in the minecraft jar file and associated classes
+[14:12:06] [Client thread/DEBUG] [FML/]: Found a minecraft related file at /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/minecraftforge/forge/1.10.2-12.18.3.2202/forge-1.10.2-12.18.3.2202.jar, examining for mod candidates
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/ow2/asm/asm-all/5.0.3/asm-all-5.0.3.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/jline/jline/2.13/jline-2.13.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/typesafe/akka/akka-actor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/typesafe/config/1.2.1/config-1.2.1.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-actors-migration_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-continuations-library_2.11-1.0.2.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-library/2.11.1/scala-library-2.11.1.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-parser-combinators_2.11/1.0.1/scala-parser-combinators_2.11-1.0.1.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/lzma/lzma/0.0.1/lzma-0.0.1.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/java3d/vecmath/1.5.2/vecmath-1.5.2.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/mojang/netty/1.6/netty-1.6.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/oshi-project/oshi-core/1.1/oshi-core-1.1.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/ibm/icu/icu4j-core-mojang/51.2/icu4j-core-mojang-51.2.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/io/netty/netty-all/4.0.23.Final/netty-all-4.0.23.Final.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/google/guava/guava/17.0/guava-17.0.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/commons-codec/commons-codec/1.9/commons-codec-1.9.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/mojang/authlib/1.5.22/authlib-1.5.22.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/com/mojang/realms/1.9.8/realms-1.9.8.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/it/unimi/dsi/fastutil/7.0.12_mojang/fastutil-7.0.12_mojang.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9/log4j-api-2.0-beta9.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9/log4j-core-2.0-beta9.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar
+[14:12:06] [Client thread/DEBUG] [FML/]: Found a minecraft related file at /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/versions/1.10.2/1.10.2.jar, examining for mod candidates
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/mods/BetterFoliage-MC1.10.2-2.1.3.jar
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/mods/OptiFine_1.10.2_HD_U_D8.jar
+[14:12:06] [Client thread/DEBUG] [FML/]: Found a minecraft related file at /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar, examining for mod candidates
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping known library file /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/mods/soundphysics-mc1.10.2-v1.0.0.jar
+[14:12:06] [Client thread/DEBUG] [FML/]: Minecraft jar mods loaded successfully
+[14:12:06] [Client thread/INFO] [FML/]: Found 0 mods from the command line. Injecting into mod discoverer
+[14:12:06] [Client thread/INFO] [FML/]: Searching /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/mods for mods
+[14:12:06] [Client thread/DEBUG] [FML/]: Found a candidate zip or jar file BetterFoliage-MC1.10.2-2.1.3.jar
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file Camera-Studio-Mod-1.8.zip.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Found a candidate mod directory camerastudio
+[14:12:06] [Client thread/DEBUG] [FML/]: Found a candidate zip or jar file CoralReef-1.2.jar
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file Galacticraft-Planets-1.11.2-4.0.0.108.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file GalacticraftCore-1.11.2-4.0.0.108.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file InputFix-1.8.x-v2.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file MicdoodleCore-1.11.2-4.0.0.108.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file Mineshot-v1.71-1.10.2.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file OptiFine_1.10.2_HD_U_D7_MOD.jar.disabled in mods directory
+[14:12:06] [Client thread/TRACE] [FML/]: Skipping already parsed coremod or tweaker OptiFine_1.10.2_HD_U_D8.jar
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file OptiFine_1.10_HD_U_C1.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file OptiFine_1.10_HD_U_C1_MOD.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file OptiFine_1.11.2_HD_U_B5.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file OptiFine_1.11_HD_U_B8.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file OptiFine_1.8.0_HD_U_H5.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file OptiFine_1.8.8_HD_U_G9.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file OptiFine_1.8.8_HD_U_H6.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file preview-OptiFine_1.11.2_HD_U_C1_pre.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Found a candidate zip or jar file replaymod-1.10.2-2.0.0-b6.jar
+[14:12:06] [Client thread/TRACE] [FML/]:   Skipping already in list /home/bobcao3/Game/Wisdom-V1 (copy)/.minecraft/mods/replaymod-1.10.2-2.0.0-b6.jar
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file RTG-1.10.2-4.1.2.1.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Found a candidate zip or jar file soundphysics-mc1.10.2-v1.0.0.jar
+[14:12:06] [Client thread/DEBUG] [FML/]: Ignoring unknown file TickrateChanger-1.0.8.jar.disabled in mods directory
+[14:12:06] [Client thread/DEBUG] [FML/]: Examining file forge-1.10.2-12.18.3.2202.jar for potential mods
+[14:12:06] [Client thread/DEBUG] [FML/]: The mod container forge-1.10.2-12.18.3.2202.jar appears to be missing an mcmod.info file
+[14:12:07] [Thread-5/INFO] [Config/]: [OptiFine] Version found: E3
+[14:12:07] [Client thread/DEBUG] [FML/]: Examining file 1.10.2.jar for potential mods
+[14:12:07] [Client thread/DEBUG] [FML/]: The mod container 1.10.2.jar appears to be missing an mcmod.info file
+[14:12:08] [Client thread/DEBUG] [FML/]: Examining file replaymod-1.10.2-2.0.0-b6.jar for potential mods
+[14:12:08] [Client thread/TRACE] [FML/]: Located mcmod.info file in file replaymod-1.10.2-2.0.0-b6.jar
+[14:12:08] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.replaymod.replay.ReplayModReplay) - loading
+[14:12:08] [Client thread/TRACE] [replaymod-replay/]: Parsed dependency info : [] [] []
+[14:12:08] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.replaymod.simplepathing.ReplayModSimplePathing) - loading
+[14:12:08] [Client thread/TRACE] [replaymod-simplepathing/]: Parsed dependency info : [] [] []
+[14:12:08] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.replaymod.extras.ReplayModExtras) - loading
+[14:12:08] [Client thread/TRACE] [replaymod-extras/]: Parsed dependency info : [] [] []
+[14:12:08] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.replaymod.recording.ReplayModRecording) - loading
+[14:12:08] [Client thread/TRACE] [replaymod-recording/]: Parsed dependency info : [] [] []
+[14:12:08] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.replaymod.editor.ReplayModEditor) - loading
+[14:12:08] [Client thread/TRACE] [replaymod-editor/]: Parsed dependency info : [] [] []
+[14:12:08] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.replaymod.online.ReplayModOnline) - loading
+[14:12:08] [Client thread/TRACE] [replaymod-online/]: Parsed dependency info : [] [] []
+[14:12:08] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.replaymod.core.ReplayMod) - loading
+[14:12:08] [Client thread/TRACE] [replaymod/]: Parsed dependency info : [] [] []
+[14:12:08] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.replaymod.compat.ReplayModCompat) - loading
+[14:12:08] [Client thread/TRACE] [replaymod-compat/]: Parsed dependency info : [] [] []
+[14:12:08] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.replaymod.render.ReplayModRender) - loading
+[14:12:08] [Client thread/TRACE] [replaymod-render/]: Parsed dependency info : [] [] []
+[14:12:09] [Client thread/DEBUG] [FML/]: Examining file BetterFoliage-MC1.10.2-2.1.3.jar for potential mods
+[14:12:09] [Client thread/TRACE] [FML/]: Located mcmod.info file in file BetterFoliage-MC1.10.2-2.1.3.jar
+[14:12:09] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (mods.betterfoliage.BetterFoliageMod) - loading
+[14:12:09] [Client thread/TRACE] [betterfoliage/]: Parsed dependency info : [] [] []
+[14:12:09] [Client thread/DEBUG] [betterfoliage/]: Attempting to load the file version.properties from BetterFoliage-MC1.10.2-2.1.3.jar to locate a version number for betterfoliage
+[14:12:09] [Client thread/WARN] [betterfoliage/]: Mod betterfoliage is missing the required element 'version' and a version.properties file could not be found. Falling back to metadata version 2.1.3
+[14:12:10] [Client thread/DEBUG] [FML/]: Examining directory camerastudio for potential mods
+[14:12:10] [Client thread/DEBUG] [FML/]: No mcmod.info file found in directory camerastudio
+[14:12:10] [Client thread/TRACE] [FML/]: Recursing into package path
+[14:12:10] [Client thread/DEBUG] [FML/]: Examining file CoralReef-1.2.jar for potential mods
+[14:12:10] [Client thread/TRACE] [FML/]: Located mcmod.info file in file CoralReef-1.2.jar
+[14:12:10] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (primetoxinz.coralreef.CoralReef) - loading
+[14:12:10] [Client thread/TRACE] [coralreef/]: Parsed dependency info : [] [] []
+[14:12:10] [Client thread/DEBUG] [FML/]: Examining file soundphysics-mc1.10.2-v1.0.0.jar for potential mods
+[14:12:10] [Client thread/TRACE] [FML/]: Located mcmod.info file in file soundphysics-mc1.10.2-v1.0.0.jar
+[14:12:10] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.sonicether.soundphysics.SoundPhysicsCore) - loading
+[14:12:10] [Client thread/TRACE] [soundphysics/]: Parsed dependency info : [] [] []
+[14:12:10] [Client thread/INFO] [FML/]: Forge Mod Loader has identified 15 mods to load
+[14:12:10] [Client thread/TRACE] [FML/]: Received a system property request ''
+[14:12:10] [Client thread/TRACE] [FML/]: System property request managing the state of 0 mods
+[14:12:10] [Client thread/DEBUG] [FML/]: After merging, found state information for 0 mods
+[14:12:10] [Client thread/DEBUG] [replaymod-replay/]: Enabling mod replaymod-replay
+[14:12:10] [Client thread/DEBUG] [replaymod-simplepathing/]: Enabling mod replaymod-simplepathing
+[14:12:10] [Client thread/DEBUG] [replaymod-extras/]: Enabling mod replaymod-extras
+[14:12:10] [Client thread/DEBUG] [replaymod-recording/]: Enabling mod replaymod-recording
+[14:12:10] [Client thread/DEBUG] [replaymod-editor/]: Enabling mod replaymod-editor
+[14:12:10] [Client thread/DEBUG] [replaymod-online/]: Enabling mod replaymod-online
+[14:12:10] [Client thread/DEBUG] [replaymod/]: Enabling mod replaymod
+[14:12:10] [Client thread/DEBUG] [replaymod-compat/]: Enabling mod replaymod-compat
+[14:12:10] [Client thread/DEBUG] [replaymod-render/]: Enabling mod replaymod-render
+[14:12:10] [Client thread/DEBUG] [betterfoliage/]: Enabling mod betterfoliage
+[14:12:10] [Client thread/DEBUG] [coralreef/]: Enabling mod coralreef
+[14:12:10] [Client thread/DEBUG] [soundphysics/]: Enabling mod soundphysics
+[14:12:10] [Client thread/TRACE] [FML/]: Verifying mod requirements are satisfied
+[14:12:10] [Client thread/TRACE] [FML/]: All mod requirements are satisfied
+[14:12:10] [Client thread/TRACE] [FML/]: Sorting mods into an ordered list
+[14:12:10] [Client thread/TRACE] [FML/]: Mod sorting completed successfully
+[14:12:10] [Client thread/DEBUG] [FML/]: Mod sorting data
+[14:12:10] [Client thread/DEBUG] [FML/]: 	replaymod-replay(Replay Mod - Replay:1.10.2-2.0.0-b6): replaymod-1.10.2-2.0.0-b6.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	replaymod-simplepathing(Replay Mod - Simple Pathing:1.10.2-2.0.0-b6): replaymod-1.10.2-2.0.0-b6.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	replaymod-extras(Replay Mod - Extras:1.10.2-2.0.0-b6): replaymod-1.10.2-2.0.0-b6.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	replaymod-recording(Replay Mod - Recording:1.10.2-2.0.0-b6): replaymod-1.10.2-2.0.0-b6.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	replaymod-editor(Replay Mod - Replay Editor:1.10.2-2.0.0-b6): replaymod-1.10.2-2.0.0-b6.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	replaymod-online(Replay Mod - Online:1.10.2-2.0.0-b6): replaymod-1.10.2-2.0.0-b6.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	replaymod(Replay Mod:1.10.2-2.0.0-b6): replaymod-1.10.2-2.0.0-b6.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	replaymod-compat(Replay Mod - Compatibility:1.10.2-2.0.0-b6): replaymod-1.10.2-2.0.0-b6.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	replaymod-render(Replay Mod - Render:1.10.2-2.0.0-b6): replaymod-1.10.2-2.0.0-b6.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	betterfoliage(Better Foliage:2.1.3): BetterFoliage-MC1.10.2-2.1.3.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	coralreef(Coral Reef:1.0): CoralReef-1.2.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: 	soundphysics(Sound Physics:1.0.0): soundphysics-mc1.10.2-v1.0.0.jar ()
+[14:12:10] [Client thread/DEBUG] [FML/]: Loading @Config anotation data
+[14:12:10] [Client thread/TRACE] [mcp/mcp]: Sending event FMLConstructionEvent to mod mcp
+[14:12:10] [Client thread/TRACE] [mcp/mcp]: Sent event FMLConstructionEvent to mod mcp
+[14:12:10] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Coder Pack took 0.001s
+[14:12:10] [Client thread/TRACE] [FML/FML]: Sending event FMLConstructionEvent to mod FML
+[14:12:10] [Client thread/TRACE] [FML/FML]: Mod FML is using network checker : Invoking method checkModLists
+[14:12:10] [Client thread/TRACE] [FML/FML]: Testing mod FML to verify it accepts its own version in a remote connection
+[14:12:10] [Client thread/TRACE] [FML/FML]: The mod FML accepts its own version (8.0.99.99)
+[14:12:10] [Client thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, replaymod-replay, replaymod-simplepathing, replaymod-extras, replaymod-recording, replaymod-editor, replaymod-online, replaymod, replaymod-compat, replaymod-render, betterfoliage, coralreef, soundphysics] at CLIENT
+[14:12:10] [Client thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, replaymod-replay, replaymod-simplepathing, replaymod-extras, replaymod-recording, replaymod-editor, replaymod-online, replaymod, replaymod-compat, replaymod-render, betterfoliage, coralreef, soundphysics] at SERVER
+[14:12:11] [Client thread/TRACE] [FML/FML]: Sent event FMLConstructionEvent to mod FML
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Forge Mod Loader took 0.590s
+[14:12:11] [Client thread/TRACE] [Forge/Forge]: Sending event FMLConstructionEvent to mod Forge
+[14:12:11] [Client thread/DEBUG] [Forge/Forge]: Preloading CrashReport Classes
+[14:12:11] [Client thread/DEBUG] [Forge/Forge]: 	net/minecraftforge/fml/client/SplashProgress$1
+[14:12:11] [Client thread/DEBUG] [Forge/Forge]: 	net/minecraftforge/fml/common/FMLCommonHandler$1
+[14:12:11] [Client thread/DEBUG] [Forge/Forge]: 	net/minecraftforge/fml/common/Loader$3
+[14:12:11] [Client thread/TRACE] [FML/Forge]: Mod Forge is using network checker : No network checking performed
+[14:12:11] [Client thread/TRACE] [FML/Forge]: Testing mod Forge to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/Forge]: The mod Forge accepts its own version (12.18.3.2202)
+[14:12:11] [Client thread/DEBUG] [FML/Forge]: Attempting to inject @Config classes into Forge for type INSTANCE
+[14:12:11] [Client thread/TRACE] [Forge/Forge]: Sent event FMLConstructionEvent to mod Forge
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Forge took 0.025s
+[14:12:11] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sending event FMLConstructionEvent to mod replaymod-replay
+[14:12:11] [Client thread/WARN] [FML/replaymod-replay]: =============================================================
+[14:12:11] [Client thread/WARN] [FML/replaymod-replay]: MOD HAS DIRECT REFERENCE System.exit() THIS IS NOT ALLOWED REROUTING TO FML!
+[14:12:11] [Client thread/WARN] [FML/replaymod-replay]: Offender: com/replaymod/core/ReplayMod.testIfMoeshAndExitMinecraft()V
+[14:12:11] [Client thread/WARN] [FML/replaymod-replay]: Use FMLCommonHandler.exitJava instead
+[14:12:11] [Client thread/WARN] [FML/replaymod-replay]: =============================================================
+[14:12:11] [Client thread/TRACE] [FML/replaymod-replay]: Mod replaymod-replay is using network checker : Accepting version 1.10.2-2.0.0-b6
+[14:12:11] [Client thread/TRACE] [FML/replaymod-replay]: Testing mod replaymod-replay to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/replaymod-replay]: The mod replaymod-replay accepts its own version (1.10.2-2.0.0-b6)
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-replay]: Attempting to inject @SidedProxy classes into replaymod-replay
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-replay]: Attempting to inject @EventBusSubscriber classes into the eventbus for replaymod-replay
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-replay]: Attempting to inject @Config classes into replaymod-replay for type INSTANCE
+[14:12:11] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sent event FMLConstructionEvent to mod replaymod-replay
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Replay Mod - Replay took 0.119s
+[14:12:11] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sending event FMLConstructionEvent to mod replaymod-simplepathing
+[14:12:11] [Client thread/TRACE] [FML/replaymod-simplepathing]: Mod replaymod-simplepathing is using network checker : Accepting version 1.10.2-2.0.0-b6
+[14:12:11] [Client thread/TRACE] [FML/replaymod-simplepathing]: Testing mod replaymod-simplepathing to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/replaymod-simplepathing]: The mod replaymod-simplepathing accepts its own version (1.10.2-2.0.0-b6)
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-simplepathing]: Attempting to inject @SidedProxy classes into replaymod-simplepathing
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-simplepathing]: Attempting to inject @EventBusSubscriber classes into the eventbus for replaymod-simplepathing
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-simplepathing]: Attempting to inject @Config classes into replaymod-simplepathing for type INSTANCE
+[14:12:11] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sent event FMLConstructionEvent to mod replaymod-simplepathing
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Replay Mod - Simple Pathing took 0.050s
+[14:12:11] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sending event FMLConstructionEvent to mod replaymod-extras
+[14:12:11] [Client thread/TRACE] [FML/replaymod-extras]: Mod replaymod-extras is using network checker : Accepting version 1.10.2-2.0.0-b6
+[14:12:11] [Client thread/TRACE] [FML/replaymod-extras]: Testing mod replaymod-extras to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/replaymod-extras]: The mod replaymod-extras accepts its own version (1.10.2-2.0.0-b6)
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-extras]: Attempting to inject @SidedProxy classes into replaymod-extras
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-extras]: Attempting to inject @EventBusSubscriber classes into the eventbus for replaymod-extras
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-extras]: Attempting to inject @Config classes into replaymod-extras for type INSTANCE
+[14:12:11] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sent event FMLConstructionEvent to mod replaymod-extras
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Replay Mod - Extras took 0.003s
+[14:12:11] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sending event FMLConstructionEvent to mod replaymod-recording
+[14:12:11] [Client thread/TRACE] [FML/replaymod-recording]: Mod replaymod-recording is using network checker : Accepting version 1.10.2-2.0.0-b6
+[14:12:11] [Client thread/TRACE] [FML/replaymod-recording]: Testing mod replaymod-recording to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/replaymod-recording]: The mod replaymod-recording accepts its own version (1.10.2-2.0.0-b6)
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-recording]: Attempting to inject @SidedProxy classes into replaymod-recording
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-recording]: Attempting to inject @EventBusSubscriber classes into the eventbus for replaymod-recording
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-recording]: Attempting to inject @Config classes into replaymod-recording for type INSTANCE
+[14:12:11] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sent event FMLConstructionEvent to mod replaymod-recording
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Replay Mod - Recording took 0.004s
+[14:12:11] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sending event FMLConstructionEvent to mod replaymod-editor
+[14:12:11] [Client thread/TRACE] [FML/replaymod-editor]: Mod replaymod-editor is using network checker : Accepting version 1.10.2-2.0.0-b6
+[14:12:11] [Client thread/TRACE] [FML/replaymod-editor]: Testing mod replaymod-editor to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/replaymod-editor]: The mod replaymod-editor accepts its own version (1.10.2-2.0.0-b6)
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-editor]: Attempting to inject @SidedProxy classes into replaymod-editor
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-editor]: Attempting to inject @EventBusSubscriber classes into the eventbus for replaymod-editor
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-editor]: Attempting to inject @Config classes into replaymod-editor for type INSTANCE
+[14:12:11] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sent event FMLConstructionEvent to mod replaymod-editor
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Replay Mod - Replay Editor took 0.004s
+[14:12:11] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sending event FMLConstructionEvent to mod replaymod-online
+[14:12:11] [Client thread/TRACE] [FML/replaymod-online]: Mod replaymod-online is using network checker : Accepting version 1.10.2-2.0.0-b6
+[14:12:11] [Client thread/TRACE] [FML/replaymod-online]: Testing mod replaymod-online to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/replaymod-online]: The mod replaymod-online accepts its own version (1.10.2-2.0.0-b6)
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-online]: Attempting to inject @SidedProxy classes into replaymod-online
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-online]: Attempting to inject @EventBusSubscriber classes into the eventbus for replaymod-online
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-online]: Attempting to inject @Config classes into replaymod-online for type INSTANCE
+[14:12:11] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sent event FMLConstructionEvent to mod replaymod-online
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Replay Mod - Online took 0.022s
+[14:12:11] [Client thread/TRACE] [replaymod/replaymod]: Sending event FMLConstructionEvent to mod replaymod
+[14:12:11] [Client thread/TRACE] [FML/replaymod]: Mod replaymod is using network checker : Accepting version 1.10.2-2.0.0-b6
+[14:12:11] [Client thread/TRACE] [FML/replaymod]: Testing mod replaymod to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/replaymod]: The mod replaymod accepts its own version (1.10.2-2.0.0-b6)
+[14:12:11] [Client thread/DEBUG] [FML/replaymod]: Attempting to inject @SidedProxy classes into replaymod
+[14:12:11] [Client thread/DEBUG] [FML/replaymod]: Attempting to inject @EventBusSubscriber classes into the eventbus for replaymod
+[14:12:11] [Client thread/DEBUG] [FML/replaymod]: Attempting to inject @Config classes into replaymod for type INSTANCE
+[14:12:11] [Client thread/TRACE] [replaymod/replaymod]: Sent event FMLConstructionEvent to mod replaymod
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Replay Mod took 0.004s
+[14:12:11] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sending event FMLConstructionEvent to mod replaymod-compat
+[14:12:11] [Client thread/TRACE] [FML/replaymod-compat]: Mod replaymod-compat is using network checker : Accepting version 1.10.2-2.0.0-b6
+[14:12:11] [Client thread/TRACE] [FML/replaymod-compat]: Testing mod replaymod-compat to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/replaymod-compat]: The mod replaymod-compat accepts its own version (1.10.2-2.0.0-b6)
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-compat]: Attempting to inject @SidedProxy classes into replaymod-compat
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-compat]: Attempting to inject @EventBusSubscriber classes into the eventbus for replaymod-compat
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-compat]: Attempting to inject @Config classes into replaymod-compat for type INSTANCE
+[14:12:11] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sent event FMLConstructionEvent to mod replaymod-compat
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Replay Mod - Compatibility took 0.006s
+[14:12:11] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sending event FMLConstructionEvent to mod replaymod-render
+[14:12:11] [Client thread/TRACE] [FML/replaymod-render]: Mod replaymod-render is using network checker : Accepting version 1.10.2-2.0.0-b6
+[14:12:11] [Client thread/TRACE] [FML/replaymod-render]: Testing mod replaymod-render to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/replaymod-render]: The mod replaymod-render accepts its own version (1.10.2-2.0.0-b6)
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-render]: Attempting to inject @SidedProxy classes into replaymod-render
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-render]: Attempting to inject @EventBusSubscriber classes into the eventbus for replaymod-render
+[14:12:11] [Client thread/DEBUG] [FML/replaymod-render]: Attempting to inject @Config classes into replaymod-render for type INSTANCE
+[14:12:11] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sent event FMLConstructionEvent to mod replaymod-render
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Replay Mod - Render took 0.004s
+[14:12:11] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sending event FMLConstructionEvent to mod betterfoliage
+[14:12:11] [Client thread/TRACE] [FML/betterfoliage]: Mod betterfoliage is using network checker : Invoking method checkVersion
+[14:12:11] [Client thread/TRACE] [FML/betterfoliage]: Testing mod betterfoliage to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/betterfoliage]: The mod betterfoliage accepts its own version (2.1.3)
+[14:12:11] [Client thread/DEBUG] [FML/betterfoliage]: Attempting to inject @SidedProxy classes into betterfoliage
+[14:12:11] [Client thread/DEBUG] [FML/betterfoliage]: Attempting to inject @EventBusSubscriber classes into the eventbus for betterfoliage
+[14:12:11] [Client thread/DEBUG] [FML/betterfoliage]: Attempting to inject @Config classes into betterfoliage for type INSTANCE
+[14:12:11] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sent event FMLConstructionEvent to mod betterfoliage
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Better Foliage took 0.006s
+[14:12:11] [Client thread/TRACE] [coralreef/coralreef]: Sending event FMLConstructionEvent to mod coralreef
+[14:12:11] [Client thread/TRACE] [FML/coralreef]: Mod coralreef is using network checker : Accepting version 1.0
+[14:12:11] [Client thread/TRACE] [FML/coralreef]: Testing mod coralreef to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/coralreef]: The mod coralreef accepts its own version (1.0)
+[14:12:11] [Client thread/DEBUG] [FML/coralreef]: Attempting to inject @SidedProxy classes into coralreef
+[14:12:11] [Client thread/DEBUG] [FML/coralreef]: Attempting to inject @EventBusSubscriber classes into the eventbus for coralreef
+[14:12:11] [Client thread/DEBUG] [FML/coralreef]: Attempting to inject @Config classes into coralreef for type INSTANCE
+[14:12:11] [Client thread/TRACE] [coralreef/coralreef]: Sent event FMLConstructionEvent to mod coralreef
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Coral Reef took 0.018s
+[14:12:11] [Client thread/TRACE] [soundphysics/soundphysics]: Sending event FMLConstructionEvent to mod soundphysics
+[14:12:11] [Client thread/TRACE] [FML/soundphysics]: Mod soundphysics is using network checker : Accepting version 1.0.0
+[14:12:11] [Client thread/TRACE] [FML/soundphysics]: Testing mod soundphysics to verify it accepts its own version in a remote connection
+[14:12:11] [Client thread/TRACE] [FML/soundphysics]: The mod soundphysics accepts its own version (1.0.0)
+[14:12:11] [Client thread/DEBUG] [FML/soundphysics]: Attempting to inject @SidedProxy classes into soundphysics
+[14:12:11] [Client thread/DEBUG] [FML/soundphysics]: Attempting to inject @EventBusSubscriber classes into the eventbus for soundphysics
+[14:12:11] [Client thread/DEBUG] [FML/soundphysics]: Attempting to inject @Config classes into soundphysics for type INSTANCE
+[14:12:11] [Client thread/TRACE] [soundphysics/soundphysics]: Sent event FMLConstructionEvent to mod soundphysics
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Sound Physics took 0.004s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Finished: Construction took 0.860s
+[14:12:11] [Client thread/DEBUG] [FML/]: Mod signature data
+[14:12:11] [Client thread/DEBUG] [FML/]:  	Valid Signatures:
+[14:12:11] [Client thread/DEBUG] [FML/]: 		(e3c3d50c7c986df74c645c0ac54639741c90a557) FML	(Forge Mod Loader	8.0.99.99)	forge-1.10.2-12.18.3.2202.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		(e3c3d50c7c986df74c645c0ac54639741c90a557) Forge	(Minecraft Forge	12.18.3.2202)	forge-1.10.2-12.18.3.2202.jar
+[14:12:11] [Client thread/DEBUG] [FML/]:  	Missing Signatures:
+[14:12:11] [Client thread/DEBUG] [FML/]: 		mcp	(Minecraft Coder Pack	9.19)	minecraft.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		replaymod-replay	(Replay Mod - Replay	1.10.2-2.0.0-b6)	replaymod-1.10.2-2.0.0-b6.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		replaymod-simplepathing	(Replay Mod - Simple Pathing	1.10.2-2.0.0-b6)	replaymod-1.10.2-2.0.0-b6.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		replaymod-extras	(Replay Mod - Extras	1.10.2-2.0.0-b6)	replaymod-1.10.2-2.0.0-b6.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		replaymod-recording	(Replay Mod - Recording	1.10.2-2.0.0-b6)	replaymod-1.10.2-2.0.0-b6.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		replaymod-editor	(Replay Mod - Replay Editor	1.10.2-2.0.0-b6)	replaymod-1.10.2-2.0.0-b6.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		replaymod-online	(Replay Mod - Online	1.10.2-2.0.0-b6)	replaymod-1.10.2-2.0.0-b6.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		replaymod	(Replay Mod	1.10.2-2.0.0-b6)	replaymod-1.10.2-2.0.0-b6.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		replaymod-compat	(Replay Mod - Compatibility	1.10.2-2.0.0-b6)	replaymod-1.10.2-2.0.0-b6.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		replaymod-render	(Replay Mod - Render	1.10.2-2.0.0-b6)	replaymod-1.10.2-2.0.0-b6.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		betterfoliage	(Better Foliage	2.1.3)	BetterFoliage-MC1.10.2-2.1.3.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		coralreef	(Coral Reef	1.0)	CoralReef-1.2.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: 		soundphysics	(Sound Physics	1.0.0)	soundphysics-mc1.10.2-v1.0.0.jar
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0.004s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0.003s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0.003s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Replay took 0.015s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Simple Pathing took 0.015s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Extras took 0.037s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Recording took 0.012s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Replay Editor took 0.010s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Online took 0.009s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod took 0.010s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Compatibility took 0.007s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Render took 0.009s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Better Foliage took 0.002s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Coral Reef took 0.000s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Sound Physics took 0.000s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - [1.10] R3D CRAFT DR-128x (v0.1.5) took 0.001s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - [1.10] R3D CRAFT 128x POM (v0.3.0) took 0.000s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - R3D DR - PBR Extension.zip took 0.001s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading - LanguageManager took 0.071s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 0.072s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resources took 0.211s
+[14:12:11] [Client thread/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Replay Mod - Replay/]: Mod Replay Mod - Replay is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Replay Mod - Simple Pathing/]: Mod Replay Mod - Simple Pathing is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Replay Mod - Extras/]: Mod Replay Mod - Extras is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Replay Mod - Recording/]: Mod Replay Mod - Recording is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Replay Mod - Replay Editor/]: Mod Replay Mod - Replay Editor is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Replay Mod - Online/]: Mod Replay Mod - Online is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Replay Mod/]: Mod Replay Mod is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Replay Mod - Compatibility/]: Mod Replay Mod - Compatibility is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Replay Mod - Render/]: Mod Replay Mod - Render is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Coral Reef/]: Mod Coral Reef is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/DEBUG] [Sound Physics/]: Mod Sound Physics is missing a pack.mcmeta file, substituting a dummy one
+[14:12:11] [Client thread/INFO] [FML/]: Processing ObjectHolder annotations
+[14:12:11] [Client thread/INFO] [FML/]: Found 423 ObjectHolder annotations
+[14:12:11] [Client thread/INFO] [FML/]: Identifying ItemStackHolder annotations
+[14:12:11] [Client thread/INFO] [FML/]: Found 0 ItemStackHolder annotations
+[14:12:11] [Client thread/INFO] [FML/]: Applying holder lookups
+[14:12:11] [Client thread/INFO] [FML/]: Holder lookups applied
+[14:12:11] [Client thread/INFO] [FML/]: Applying holder lookups
+[14:12:11] [Client thread/INFO] [FML/]: Holder lookups applied
+[14:12:11] [Client thread/INFO] [FML/]: Applying holder lookups
+[14:12:11] [Client thread/INFO] [FML/]: Holder lookups applied
+[14:12:11] [Client thread/TRACE] [mcp/mcp]: Sending event FMLPreInitializationEvent to mod mcp
+[14:12:11] [Client thread/TRACE] [mcp/mcp]: Sent event FMLPreInitializationEvent to mod mcp
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Coder Pack took 0.001s
+[14:12:11] [Client thread/TRACE] [FML/FML]: Sending event FMLPreInitializationEvent to mod FML
+[14:12:11] [Client thread/TRACE] [FML/FML]: Sent event FMLPreInitializationEvent to mod FML
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Forge Mod Loader took 0.023s
+[14:12:11] [Client thread/TRACE] [Forge/Forge]: Sending event FMLPreInitializationEvent to mod Forge
+[14:12:11] [Client thread/INFO] [FML/Forge]: Configured a dormant chunk cache size of 256
+[14:12:11] [Client thread/TRACE] [Forge/Forge]: Sent event FMLPreInitializationEvent to mod Forge
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Forge took 0.087s
+[14:12:11] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sending event FMLPreInitializationEvent to mod replaymod-replay
+[14:12:11] [Forge Version Check/INFO] [ForgeVersionCheck/Forge]: [Forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[14:12:11] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sent event FMLPreInitializationEvent to mod replaymod-replay
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Replay Mod - Replay took 0.019s
+[14:12:11] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sending event FMLPreInitializationEvent to mod replaymod-simplepathing
+[14:12:11] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sent event FMLPreInitializationEvent to mod replaymod-simplepathing
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Replay Mod - Simple Pathing took 0.039s
+[14:12:11] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sending event FMLPreInitializationEvent to mod replaymod-extras
+[14:12:11] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sent event FMLPreInitializationEvent to mod replaymod-extras
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Replay Mod - Extras took 0.000s
+[14:12:11] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sending event FMLPreInitializationEvent to mod replaymod-recording
+[14:12:11] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sent event FMLPreInitializationEvent to mod replaymod-recording
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Replay Mod - Recording took 0.003s
+[14:12:11] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sending event FMLPreInitializationEvent to mod replaymod-editor
+[14:12:11] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sent event FMLPreInitializationEvent to mod replaymod-editor
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Replay Mod - Replay Editor took 0.002s
+[14:12:11] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sending event FMLPreInitializationEvent to mod replaymod-online
+[14:12:11] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sent event FMLPreInitializationEvent to mod replaymod-online
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Replay Mod - Online took 0.025s
+[14:12:11] [Client thread/TRACE] [replaymod/replaymod]: Sending event FMLPreInitializationEvent to mod replaymod
+[14:12:11] [Client thread/TRACE] [replaymod/replaymod]: Sent event FMLPreInitializationEvent to mod replaymod
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Replay Mod took 0.007s
+[14:12:11] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sending event FMLPreInitializationEvent to mod replaymod-compat
+[14:12:11] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sent event FMLPreInitializationEvent to mod replaymod-compat
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Replay Mod - Compatibility took 0.001s
+[14:12:11] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sending event FMLPreInitializationEvent to mod replaymod-render
+[14:12:11] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sent event FMLPreInitializationEvent to mod replaymod-render
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Replay Mod - Render took 0.004s
+[14:12:11] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sending event FMLPreInitializationEvent to mod betterfoliage
+[14:12:11] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sent event FMLPreInitializationEvent to mod betterfoliage
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Better Foliage took 0.003s
+[14:12:11] [Client thread/TRACE] [coralreef/coralreef]: Sending event FMLPreInitializationEvent to mod coralreef
+[14:12:11] [Client thread/TRACE] [coralreef/coralreef]: Sent event FMLPreInitializationEvent to mod coralreef
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Coral Reef took 0.025s
+[14:12:11] [Client thread/TRACE] [soundphysics/soundphysics]: Sending event FMLPreInitializationEvent to mod soundphysics
+[14:12:11] [Client thread/TRACE] [soundphysics/soundphysics]: Sent event FMLPreInitializationEvent to mod soundphysics
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Sound Physics took 0.002s
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Finished: PreInitialization took 0.241s
+[14:12:11] [Client thread/INFO] [FML/]: Applying holder lookups
+[14:12:11] [Client thread/INFO] [FML/]: Holder lookups applied
+[14:12:11] [Client thread/INFO] [FML/]: Injecting itemstacks
+[14:12:11] [Client thread/INFO] [FML/]: Itemstack injection complete
+[14:12:11] [Client thread/INFO] [Config/]: [OptiFine] *** Reloading textures ***
+[14:12:11] [Client thread/INFO] [Config/]: [OptiFine] Resource packs: [1.10] R3D CRAFT DR-128x (v0.1.5), [1.10] R3D CRAFT 128x POM (v0.3.0), R3D DR - PBR Extension.zip
+[14:12:11] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - TextureManager took 0.001s
+[14:12:12] [Forge Version Check/DEBUG] [ForgeVersionCheck/Forge]: [Forge] Received version check data:
+{
+  "homepage": "http://files.minecraftforge.net/maven/net/minecraftforge/forge/",
+  "promos": {
+    "1.10-latest": "12.18.0.2000",
+    "1.10.2-latest": "12.18.3.2316",
+    "1.10.2-recommended": "12.18.3.2185",
+    "1.11-latest": "13.19.1.2199",
+    "1.11-recommended": "13.19.1.2189",
+    "1.11.2-latest": "13.20.1.2414",
+    "1.11.2-recommended": "13.20.1.2386",
+    "1.12-latest": "14.21.1.2413",
+    "1.12-recommended": "14.21.1.2387",
+    "1.5.2-latest": "7.8.1.738",
+    "1.5.2-recommended": "7.8.1.737",
+    "1.6.1-latest": "8.9.0.775",
+    "1.6.2-latest": "9.10.1.871",
+    "1.6.2-recommended": "9.10.1.871",
+    "1.6.3-latest": "9.11.0.878",
+    "1.6.4-latest": "9.11.1.1345",
+    "1.6.4-recommended": "9.11.1.1345",
+    "1.7.10-latest": "10.13.4.1614",
+    "1.7.10-latest-1.7.10": "10.13.2.1343",
+    "1.7.10-recommended": "10.13.4.1558",
+    "1.7.2-latest": "10.12.2.1147",
+    "1.7.2-recommended": "10.12.2.1121",
+    "1.8-latest": "11.14.4.1577",
+    "1.8-recommended": "11.14.4.1563",
+    "1.8.8-latest": "11.15.0.1655",
+    "1.8.9-latest": "11.15.1.2318",
+    "1.8.9-recommended": "11.15.1.1722",
+    "1.9-latest": "12.16.0.1942",
+    "1.9-recommended": "12.16.1.1887",
+    "1.9.4-latest": "12.17.0.2051",
+    "1.9.4-recommended": "12.17.0.1976",
+    "latest": "13.20.1.2414",
+    "latest-1.7.10": "10.13.2.1343",
+    "recommended": "14.21.1.2387"
+  }
+}
+[14:12:12] [Forge Version Check/INFO] [ForgeVersionCheck/Forge]: [Forge] Found status: OUTDATED Target: 12.18.3.2316
+[14:12:12] [Forge Version Check/INFO] [ForgeVersionCheck/Forge]: [replaymod] Starting version check at https://raw.githubusercontent.com/ReplayMod/ReplayMod/master/versions.json
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - SoundHandler took 0.946s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0.011s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0.010s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - GrassColorReloadListener took 0.025s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FoliageColorReloadListener took 0.021s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - GL Setup took 0.004s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Texture Map took 0.007s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - B3DLoader took 0.000s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - OBJLoader took 0.000s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelFluid$FluidLoader took 0.000s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ItemLayerModel$Loader took 0.000s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - MultiLayerModel$Loader took 0.000s
+[14:12:13] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelDynBucket$LoaderDynBucket took 0.000s
+[14:12:13] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Initializing Sound Physics...
+[14:12:13] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: EFX Extension recognized.
+[14:12:13] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 33 created
+[14:12:13] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 34 created
+[14:12:13] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 35 created
+[14:12:13] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 36 created
+[14:12:14] [Forge Version Check/DEBUG] [ForgeVersionCheck/Forge]: [replaymod] Received version check data:
+{
+    "homepage": "https://www.replaymod.com/download/",
+    "promos": {
+        "1.8-latest": "1.8-2.0.0",
+        "1.8-recommended": "1.8-2.0.0",
+        "1.8.9-latest": "1.8.9-2.0.0",
+        "1.8.9-recommended": "1.8.9-2.0.0",
+        "1.9.4-latest": "1.9.4-2.0.0",
+        "1.9.4-recommended": "1.9.4-2.0.0",
+        "1.10.2-latest": "1.10.2-2.0.0",
+        "1.10.2-recommended": "1.10.2-2.0.0",
+        "1.11-latest": "1.11-2.0.0",
+        "1.11-recommended": "1.11-2.0.0",
+        "1.11.2-latest": "1.11.2-2.0.0",
+        "1.11.2-recommended": "1.11.2-2.0.0",
+        "1.12-latest": "1.12-2.0.0",
+        "1.12-recommended": "1.12-2.0.0"
+    },
+    "1.8": {
+        "1.8-2.0.0": "See https://github.com/ReplayMod/ReplayMod/releases/1.8-2.0.0",
+        "1.8-2.0.0-b6": "See https://github.com/ReplayMod/ReplayMod/releases/1.8-2.0.0-b6",
+        "1.8-2.0.0-b5": "See https://github.com/ReplayMod/ReplayMod/releases/1.8-2.0.0-b5",
+        "1.8-2.0.0-b4": "See https://github.com/ReplayMod/ReplayMod/releases/1.8-2.0.0-b4",
+        "1.8-2.0.0-b3": "See https://github.com/ReplayMod/ReplayMod/releases/1.8-2.0.0-b3",
+        "1.8-2.0.0-b2": "See https://github.com/ReplayMod/ReplayMod/releases/1.8-2.0.0-b2",
+        "1.8-2.0.0-b1": "See https://github.com/ReplayMod/ReplayMod/releases/1.8-2.0.0-b1"
+    },
+    "1.8.9": {
+        "1.8.9-2.0.0": "See https://github.com/ReplayMod/ReplayMod/releases/1.8.9-2.0.0",
+        "1.8.9-2.0.0-b6": "See https://github.com/ReplayMod/ReplayMod/releases/1.8.9-2.0.0-b6",
+        "1.8.9-2.0.0-b5": "See https://github.com/ReplayMod/ReplayMod/releases/1.8.9-2.0.0-b5"
+    },
+    "1.9.4": {
+        "1.9.4-2.0.0": "See https://github.com/ReplayMod/ReplayMod/releases/1.9.4-2.0.0",
+        "1.9.4-2.0.0-b6": "See https://github.com/ReplayMod/ReplayMod/releases/1.9.4-2.0.0-b6",
+        "1.9.4-2.0.0-b5": "See https://github.com/ReplayMod/ReplayMod/releases/1.9.4-2.0.0-b5",
+        "1.9.4-2.0.0-b4": "See https://github.com/ReplayMod/ReplayMod/releases/1.9.4-2.0.0-b4",
+        "1.9.4-2.0.0-b3": "See https://github.com/ReplayMod/ReplayMod/releases/1.9.4-2.0.0-b3",
+        "1.9.4-2.0.0-b2": "See https://github.com/ReplayMod/ReplayMod/releases/1.9.4-2.0.0-b2",
+        "1.9.4-2.0.0-b1": "See https://github.com/ReplayMod/ReplayMod/releases/1.9.4-2.0.0-b1"
+    },
+    "1.10.2": {
+        "1.10.2-2.0.0": "See https://github.com/ReplayMod/ReplayMod/releases/1.10.2-2.0.0",
+        "1.10.2-2.0.0-b6": "See https://github.com/ReplayMod/ReplayMod/releases/1.10.2-2.0.0-b6",
+        "1.10.2-2.0.0-b5": "See https://github.com/ReplayMod/ReplayMod/releases/1.10.2-2.0.0-b5",
+        "1.10.2-2.0.0-b4": "See https://github.com/ReplayMod/ReplayMod/releases/1.10.2-2.0.0-b4",
+        "1.10.2-2.0.0-b3": "See https://github.com/ReplayMod/ReplayMod/releases/1.10.2-2.0.0-b3"
+    },
+    "1.11": {
+        "1.11-2.0.0": "See https://github.com/ReplayMod/ReplayMod/releases/1.11-2.0.0",
+        "1.11-2.0.0-b6": "See https://github.com/ReplayMod/ReplayMod/releases/1.11-2.0.0-b6",
+        "1.11-2.0.0-b5": "See https://github.com/ReplayMod/ReplayMod/releases/1.11-2.0.0-b5",
+        "1.11-2.0.0-b4": "See https://github.com/ReplayMod/ReplayMod/releases/1.11-2.0.0-b4"
+    },
+    "1.11.2": {
+        "1.11.2-2.0.0": "See https://github.com/ReplayMod/ReplayMod/releases/1.11.2-2.0.0",
+        "1.11.2-2.0.0-b6": "See https://github.com/ReplayMod/ReplayMod/releases/1.11.2-2.0.0-b6",
+        "1.11.2-2.0.0-b5": "See https://github.com/ReplayMod/ReplayMod/releases/1.11.2-2.0.0-b5"
+    },
+    "1.12": {
+        "1.12-2.0.0": "See https://github.com/ReplayMod/ReplayMod/releases/1.12-2.0.0",
+        "1.12-2.0.0-b7": "See https://github.com/ReplayMod/ReplayMod/releases/1.12-2.0.0-b7"
+    }
+}
+[14:12:14] [Forge Version Check/INFO] [ForgeVersionCheck/Forge]: [replaymod] Found status: OUTDATED Target: 1.10.2-2.0.0
+[14:12:16] [Client thread/DEBUG] [FML/]: Bar Finished: ModelLoader: blocks took 2.620s
+[14:12:16] [Client thread/DEBUG] [FML/]: Item json isn't found for 'coralreef:reef1#inventory', trying to load the variant from the blockstate json
+[14:12:16] [Client thread/DEBUG] [FML/]: Item json isn't found for 'coralreef:reef2#inventory', trying to load the variant from the blockstate json
+[14:12:16] [Client thread/DEBUG] [FML/]: Bar Finished: ModelLoader: items took 0.600s
+[14:12:17] [Client thread/INFO] [Config/]: [OptiFine] Mipmap levels: 4
+[14:12:17] [Client thread/INFO] [Config/]: [OptiFine] Multitexture: false
+[14:12:17] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:17] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:17] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:17] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:17] [Client thread/INFO] [Config/]: [OptiFine] BetterGrass: Parsing default configuration optifine/bettergrass.properties
+[14:12:17] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] allocateTextureMap 4 16 16 
+[14:12:18] [Client thread/DEBUG] [FML/]: Bar Finished: ModelLoader: baking took 1.518s
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelManager took 5.821s
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Model Manager took 5.862s
+[14:12:19] [Client thread/DEBUG] [mixin/]: Mixing MixinRenderArrow from mixins.replay.replaymod.json into net.minecraft.client.renderer.entity.RenderArrow
+[14:12:19] [Client thread/TRACE] [mixin/]: Added class metadata for net/optifine/entity/model/IEntityRenderer to metadata cache
+[14:12:19] [Client thread/DEBUG] [mixin/]: Mixing MixinRenderArmorStand from mixins.replay.replaymod.json into net.minecraft.client.renderer.entity.RenderArmorStand
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderItem took 0.004s
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Item Renderer took 0.331s
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - EntityRenderer took 0.000s
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - BlockRendererDispatcher took 0.000s
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: box$b -> net.minecraft.client.renderer.BlockModelRenderer$AmbientOcclusionFace
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: <init> (Lbox;)V -> <init> (Lnet/minecraft/client/renderer/BlockModelRenderer;)V
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> ()V
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> (Lbox;)V
+[14:12:19] [Client thread/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Setting AmbientOcclusionFace constructor public
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]: Found class: shadersmod.client.SVertexBuilder -> shadersmod.client.SVertexBuilder
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:   searching: pushEntity (Lars;Lcm;Laih;Lbnt;)V -> pushEntity (Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/IBlockAccess;Lnet/minecraft/client/renderer/VertexBuffer;)V
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              <init> ()V
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              initVertexBuilder (Lbnt;)V
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              pushEntity (J)V
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              popEntity ()V
+[14:12:19] [Client thread/DEBUG] [mods.betterfoliage.loader.BetterFoliageTransformer/]:              pushEntity (Lars;Lcm;Laih;Lbnt;)V
+[14:12:19] [Client thread/INFO] [mods.betterfoliage.loader.BetterFoliageTransformer/]: [BetterFoliageLoader] Applying SVertexBuilder.pushEntity() block ID override
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderGlobal took 0.000s
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Entity Renderer took 0.190s
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Finished: Rendering Setup took 6.394s
+[14:12:19] [Client thread/TRACE] [mcp/mcp]: Sending event FMLInitializationEvent to mod mcp
+[14:12:19] [Client thread/TRACE] [mcp/mcp]: Sent event FMLInitializationEvent to mod mcp
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Coder Pack took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/FML]: Sending event FMLInitializationEvent to mod FML
+[14:12:19] [Client thread/TRACE] [FML/FML]: Sent event FMLInitializationEvent to mod FML
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Forge Mod Loader took 0.000s
+[14:12:19] [Client thread/TRACE] [Forge/Forge]: Sending event FMLInitializationEvent to mod Forge
+[14:12:19] [Client thread/TRACE] [Forge/Forge]: Sent event FMLInitializationEvent to mod Forge
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Forge took 0.000s
+[14:12:19] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sending event FMLInitializationEvent to mod replaymod-replay
+[14:12:19] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sent event FMLInitializationEvent to mod replaymod-replay
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Replay Mod - Replay took 0.007s
+[14:12:19] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sending event FMLInitializationEvent to mod replaymod-simplepathing
+[14:12:19] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sent event FMLInitializationEvent to mod replaymod-simplepathing
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Replay Mod - Simple Pathing took 0.000s
+[14:12:19] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sending event FMLInitializationEvent to mod replaymod-extras
+[14:12:19] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sent event FMLInitializationEvent to mod replaymod-extras
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Replay Mod - Extras took 0.130s
+[14:12:19] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sending event FMLInitializationEvent to mod replaymod-recording
+[14:12:19] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sent event FMLInitializationEvent to mod replaymod-recording
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Replay Mod - Recording took 0.044s
+[14:12:19] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sending event FMLInitializationEvent to mod replaymod-editor
+[14:12:19] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sent event FMLInitializationEvent to mod replaymod-editor
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Replay Mod - Replay Editor took 0.004s
+[14:12:19] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sending event FMLInitializationEvent to mod replaymod-online
+[14:12:19] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sent event FMLInitializationEvent to mod replaymod-online
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Replay Mod - Online took 0.016s
+[14:12:19] [Client thread/TRACE] [replaymod/replaymod]: Sending event FMLInitializationEvent to mod replaymod
+[14:12:19] [Client thread/TRACE] [replaymod/replaymod]: Sent event FMLInitializationEvent to mod replaymod
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Replay Mod took 0.005s
+[14:12:19] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sending event FMLInitializationEvent to mod replaymod-compat
+[14:12:19] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sent event FMLInitializationEvent to mod replaymod-compat
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Replay Mod - Compatibility took 0.016s
+[14:12:19] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sending event FMLInitializationEvent to mod replaymod-render
+[14:12:19] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sent event FMLInitializationEvent to mod replaymod-render
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Replay Mod - Render took 0.000s
+[14:12:19] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sending event FMLInitializationEvent to mod betterfoliage
+[14:12:19] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sent event FMLInitializationEvent to mod betterfoliage
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Better Foliage took 0.000s
+[14:12:19] [Client thread/TRACE] [coralreef/coralreef]: Sending event FMLInitializationEvent to mod coralreef
+[14:12:19] [Client thread/TRACE] [coralreef/coralreef]: Sent event FMLInitializationEvent to mod coralreef
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Coral Reef took 0.000s
+[14:12:19] [Client thread/TRACE] [soundphysics/soundphysics]: Sending event FMLInitializationEvent to mod soundphysics
+[14:12:19] [Client thread/TRACE] [soundphysics/soundphysics]: Sent event FMLInitializationEvent to mod soundphysics
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Sound Physics took 0.001s
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Finished: Initialization took 0.226s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod mcp
+[14:12:19] [Client thread/TRACE] [mcp/mcp]: Sending event IMCEvent to mod mcp
+[14:12:19] [Client thread/TRACE] [mcp/mcp]: Sent event IMCEvent to mod mcp
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Coder Pack took 0.005s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod FML
+[14:12:19] [Client thread/TRACE] [FML/FML]: Sending event IMCEvent to mod FML
+[14:12:19] [Client thread/TRACE] [FML/FML]: Sent event IMCEvent to mod FML
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Forge Mod Loader took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod Forge
+[14:12:19] [Client thread/TRACE] [Forge/Forge]: Sending event IMCEvent to mod Forge
+[14:12:19] [Client thread/TRACE] [Forge/Forge]: Sent event IMCEvent to mod Forge
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Forge took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod replaymod-replay
+[14:12:19] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sending event IMCEvent to mod replaymod-replay
+[14:12:19] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sent event IMCEvent to mod replaymod-replay
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Replay Mod - Replay took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod replaymod-simplepathing
+[14:12:19] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sending event IMCEvent to mod replaymod-simplepathing
+[14:12:19] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sent event IMCEvent to mod replaymod-simplepathing
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Replay Mod - Simple Pathing took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod replaymod-extras
+[14:12:19] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sending event IMCEvent to mod replaymod-extras
+[14:12:19] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sent event IMCEvent to mod replaymod-extras
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Replay Mod - Extras took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod replaymod-recording
+[14:12:19] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sending event IMCEvent to mod replaymod-recording
+[14:12:19] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sent event IMCEvent to mod replaymod-recording
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Replay Mod - Recording took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod replaymod-editor
+[14:12:19] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sending event IMCEvent to mod replaymod-editor
+[14:12:19] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sent event IMCEvent to mod replaymod-editor
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Replay Mod - Replay Editor took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod replaymod-online
+[14:12:19] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sending event IMCEvent to mod replaymod-online
+[14:12:19] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sent event IMCEvent to mod replaymod-online
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Replay Mod - Online took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod replaymod
+[14:12:19] [Client thread/TRACE] [replaymod/replaymod]: Sending event IMCEvent to mod replaymod
+[14:12:19] [Client thread/TRACE] [replaymod/replaymod]: Sent event IMCEvent to mod replaymod
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Replay Mod took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod replaymod-compat
+[14:12:19] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sending event IMCEvent to mod replaymod-compat
+[14:12:19] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sent event IMCEvent to mod replaymod-compat
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Replay Mod - Compatibility took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod replaymod-render
+[14:12:19] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sending event IMCEvent to mod replaymod-render
+[14:12:19] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sent event IMCEvent to mod replaymod-render
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Replay Mod - Render took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod betterfoliage
+[14:12:19] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sending event IMCEvent to mod betterfoliage
+[14:12:19] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sent event IMCEvent to mod betterfoliage
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Better Foliage took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod coralreef
+[14:12:19] [Client thread/TRACE] [coralreef/coralreef]: Sending event IMCEvent to mod coralreef
+[14:12:19] [Client thread/TRACE] [coralreef/coralreef]: Sent event IMCEvent to mod coralreef
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Coral Reef took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod soundphysics
+[14:12:19] [Client thread/TRACE] [soundphysics/soundphysics]: Sending event IMCEvent to mod soundphysics
+[14:12:19] [Client thread/TRACE] [soundphysics/soundphysics]: Sent event IMCEvent to mod soundphysics
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Sound Physics took 0.000s
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Finished: InterModComms$IMC took 0.008s
+[14:12:19] [Client thread/INFO] [FML/]: Injecting itemstacks
+[14:12:19] [Client thread/INFO] [FML/]: Itemstack injection complete
+[14:12:19] [Client thread/TRACE] [mcp/mcp]: Sending event FMLPostInitializationEvent to mod mcp
+[14:12:19] [Client thread/TRACE] [mcp/mcp]: Sent event FMLPostInitializationEvent to mod mcp
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Coder Pack took 0.000s
+[14:12:19] [Client thread/TRACE] [FML/FML]: Sending event FMLPostInitializationEvent to mod FML
+[14:12:19] [Client thread/TRACE] [FML/FML]: Sent event FMLPostInitializationEvent to mod FML
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Forge Mod Loader took 0.000s
+[14:12:19] [Client thread/TRACE] [Forge/Forge]: Sending event FMLPostInitializationEvent to mod Forge
+[14:12:19] [Client thread/TRACE] [Forge/Forge]: Sent event FMLPostInitializationEvent to mod Forge
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Forge took 0.010s
+[14:12:19] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sending event FMLPostInitializationEvent to mod replaymod-replay
+[14:12:19] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sent event FMLPostInitializationEvent to mod replaymod-replay
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Replay Mod - Replay took 0.000s
+[14:12:19] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sending event FMLPostInitializationEvent to mod replaymod-simplepathing
+[14:12:19] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sent event FMLPostInitializationEvent to mod replaymod-simplepathing
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Replay Mod - Simple Pathing took 0.000s
+[14:12:19] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sending event FMLPostInitializationEvent to mod replaymod-extras
+[14:12:19] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sent event FMLPostInitializationEvent to mod replaymod-extras
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Replay Mod - Extras took 0.000s
+[14:12:19] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sending event FMLPostInitializationEvent to mod replaymod-recording
+[14:12:19] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sent event FMLPostInitializationEvent to mod replaymod-recording
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Replay Mod - Recording took 0.000s
+[14:12:19] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sending event FMLPostInitializationEvent to mod replaymod-editor
+[14:12:19] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sent event FMLPostInitializationEvent to mod replaymod-editor
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Replay Mod - Replay Editor took 0.000s
+[14:12:19] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sending event FMLPostInitializationEvent to mod replaymod-online
+[14:12:19] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sent event FMLPostInitializationEvent to mod replaymod-online
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Replay Mod - Online took 0.055s
+[14:12:19] [Client thread/TRACE] [replaymod/replaymod]: Sending event FMLPostInitializationEvent to mod replaymod
+[14:12:19] [Client thread/TRACE] [replaymod/replaymod]: Sent event FMLPostInitializationEvent to mod replaymod
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Replay Mod took 0.002s
+[14:12:19] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sending event FMLPostInitializationEvent to mod replaymod-compat
+[14:12:19] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sent event FMLPostInitializationEvent to mod replaymod-compat
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Replay Mod - Compatibility took 0.000s
+[14:12:19] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sending event FMLPostInitializationEvent to mod replaymod-render
+[14:12:19] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sent event FMLPostInitializationEvent to mod replaymod-render
+[14:12:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Replay Mod - Render took 0.000s
+[14:12:19] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sending event FMLPostInitializationEvent to mod betterfoliage
+[14:12:21] [Client thread/INFO] [betterfoliage/betterfoliage]: [BetterFoliage] ShadersMod integration enabled
+[14:12:21] [Client thread/INFO] [betterfoliage/betterfoliage]: [BetterFoliage] Optifine CTM support is disabled
+[14:12:21] [Client thread/INFO] [betterfoliage/betterfoliage]: [BetterFoliage] BetterFoliage initialized
+[14:12:21] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sent event FMLPostInitializationEvent to mod betterfoliage
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Better Foliage took 1.211s
+[14:12:21] [Client thread/TRACE] [coralreef/coralreef]: Sending event FMLPostInitializationEvent to mod coralreef
+[14:12:21] [Client thread/TRACE] [coralreef/coralreef]: Sent event FMLPostInitializationEvent to mod coralreef
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Coral Reef took 0.000s
+[14:12:21] [Client thread/TRACE] [soundphysics/soundphysics]: Sending event FMLPostInitializationEvent to mod soundphysics
+[14:12:21] [Client thread/TRACE] [soundphysics/soundphysics]: Sent event FMLPostInitializationEvent to mod soundphysics
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Sound Physics took 0.000s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Finished: PostInitialization took 1.280s
+[14:12:21] [Client thread/TRACE] [mcp/mcp]: Sending event FMLLoadCompleteEvent to mod mcp
+[14:12:21] [Client thread/TRACE] [mcp/mcp]: Sent event FMLLoadCompleteEvent to mod mcp
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Coder Pack took 0.000s
+[14:12:21] [Client thread/TRACE] [FML/FML]: Sending event FMLLoadCompleteEvent to mod FML
+[14:12:21] [Client thread/TRACE] [FML/FML]: Sent event FMLLoadCompleteEvent to mod FML
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Forge Mod Loader took 0.004s
+[14:12:21] [Client thread/TRACE] [Forge/Forge]: Sending event FMLLoadCompleteEvent to mod Forge
+[14:12:21] [Client thread/DEBUG] [FML/Forge]: Forge RecipeSorter Baking:
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   16: RecipeEntry("Before", UNKNOWN, )
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   15: RecipeEntry("minecraft:shaped", SHAPED, net.minecraft.item.crafting.ShapedRecipes) Before: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   14: RecipeEntry("forge:shapedore", SHAPED, net.minecraftforge.oredict.ShapedOreRecipe) Before: minecraft:shapeless After: minecraft:shaped
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   13: RecipeEntry("minecraft:mapextending", SHAPED, net.minecraft.item.crafting.RecipesMapExtending) Before: minecraft:shapeless After: minecraft:shaped
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   12: RecipeEntry("minecraft:shapeless", SHAPELESS, net.minecraft.item.crafting.ShapelessRecipes) After: minecraft:shaped
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   11: RecipeEntry("minecraft:repair", SHAPELESS, net.minecraft.item.crafting.RecipeRepairItem) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   10: RecipeEntry("minecraft:shield_deco", SHAPELESS, net.minecraft.item.crafting.ShieldRecipes$Decoration) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   9: RecipeEntry("minecraft:armordyes", SHAPELESS, net.minecraft.item.crafting.RecipesArmorDyes) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   8: RecipeEntry("minecraft:fireworks", SHAPELESS, net.minecraft.item.crafting.RecipeFireworks) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   7: RecipeEntry("minecraft:pattern_dupe", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeDuplicatePattern) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   6: RecipeEntry("minecraft:tippedarrow", SHAPELESS, net.minecraft.item.crafting.RecipeTippedArrow) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   5: RecipeEntry("minecraft:mapcloning", SHAPELESS, net.minecraft.item.crafting.RecipesMapCloning) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   4: RecipeEntry("forge:shapelessore", SHAPELESS, net.minecraftforge.oredict.ShapelessOreRecipe) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   3: RecipeEntry("minecraft:pattern_add", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeAddPattern) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   2: RecipeEntry("minecraft:bookcloning", SHAPELESS, net.minecraft.item.crafting.RecipeBookCloning) After: minecraft:shapeless
+[14:12:21] [Client thread/DEBUG] [FML/Forge]:   1: RecipeEntry("After", UNKNOWN, )
+[14:12:21] [Client thread/DEBUG] [FML/Forge]: Sorting recipes
+[14:12:21] [Client thread/TRACE] [Forge/Forge]: Sent event FMLLoadCompleteEvent to mod Forge
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Forge took 0.066s
+[14:12:21] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sending event FMLLoadCompleteEvent to mod replaymod-replay
+[14:12:21] [Client thread/TRACE] [replaymod-replay/replaymod-replay]: Sent event FMLLoadCompleteEvent to mod replaymod-replay
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Replay Mod - Replay took 0.000s
+[14:12:21] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sending event FMLLoadCompleteEvent to mod replaymod-simplepathing
+[14:12:21] [Client thread/TRACE] [replaymod-simplepathing/replaymod-simplepathing]: Sent event FMLLoadCompleteEvent to mod replaymod-simplepathing
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Replay Mod - Simple Pathing took 0.000s
+[14:12:21] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sending event FMLLoadCompleteEvent to mod replaymod-extras
+[14:12:21] [Client thread/TRACE] [replaymod-extras/replaymod-extras]: Sent event FMLLoadCompleteEvent to mod replaymod-extras
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Replay Mod - Extras took 0.000s
+[14:12:21] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sending event FMLLoadCompleteEvent to mod replaymod-recording
+[14:12:21] [Client thread/TRACE] [replaymod-recording/replaymod-recording]: Sent event FMLLoadCompleteEvent to mod replaymod-recording
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Replay Mod - Recording took 0.000s
+[14:12:21] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sending event FMLLoadCompleteEvent to mod replaymod-editor
+[14:12:21] [Client thread/TRACE] [replaymod-editor/replaymod-editor]: Sent event FMLLoadCompleteEvent to mod replaymod-editor
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Replay Mod - Replay Editor took 0.000s
+[14:12:21] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sending event FMLLoadCompleteEvent to mod replaymod-online
+[14:12:21] [Client thread/TRACE] [replaymod-online/replaymod-online]: Sent event FMLLoadCompleteEvent to mod replaymod-online
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Replay Mod - Online took 0.000s
+[14:12:21] [Client thread/TRACE] [replaymod/replaymod]: Sending event FMLLoadCompleteEvent to mod replaymod
+[14:12:21] [Client thread/TRACE] [replaymod/replaymod]: Sent event FMLLoadCompleteEvent to mod replaymod
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Replay Mod took 0.000s
+[14:12:21] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sending event FMLLoadCompleteEvent to mod replaymod-compat
+[14:12:21] [Client thread/TRACE] [replaymod-compat/replaymod-compat]: Sent event FMLLoadCompleteEvent to mod replaymod-compat
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Replay Mod - Compatibility took 0.000s
+[14:12:21] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sending event FMLLoadCompleteEvent to mod replaymod-render
+[14:12:21] [Client thread/TRACE] [replaymod-render/replaymod-render]: Sent event FMLLoadCompleteEvent to mod replaymod-render
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Replay Mod - Render took 0.001s
+[14:12:21] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sending event FMLLoadCompleteEvent to mod betterfoliage
+[14:12:21] [Client thread/TRACE] [betterfoliage/betterfoliage]: Sent event FMLLoadCompleteEvent to mod betterfoliage
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Better Foliage took 0.001s
+[14:12:21] [Client thread/TRACE] [coralreef/coralreef]: Sending event FMLLoadCompleteEvent to mod coralreef
+[14:12:21] [Client thread/TRACE] [coralreef/coralreef]: Sent event FMLLoadCompleteEvent to mod coralreef
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Coral Reef took 0.001s
+[14:12:21] [Client thread/TRACE] [soundphysics/soundphysics]: Sending event FMLLoadCompleteEvent to mod soundphysics
+[14:12:21] [Client thread/TRACE] [soundphysics/soundphysics]: Sent event FMLLoadCompleteEvent to mod soundphysics
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Sound Physics took 0.001s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Finished: LoadComplete took 0.076s
+[14:12:21] [Client thread/DEBUG] [FML/]: Freezing block and item id maps
+[14:12:21] [Client thread/INFO] [FML/]: Forge Mod Loader has successfully loaded 15 mods
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0.001s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0.003s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0.002s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Replay took 0.014s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Simple Pathing took 0.014s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Extras took 0.010s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Recording took 0.012s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Replay Editor took 0.012s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Online took 0.012s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod took 0.012s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Compatibility took 0.032s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Render took 0.023s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Better Foliage took 0.004s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Coral Reef took 0.000s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Sound Physics took 0.000s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - ReplayModLocalizationResourcePack took 0.000s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Better Foliage generated took 0.000s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - [1.10] R3D CRAFT DR-128x (v0.1.5) took 0.000s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - [1.10] R3D CRAFT 128x POM (v0.3.0) took 0.000s
+[14:12:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - R3D DR - PBR Extension.zip took 0.001s
+[14:12:30] [Client thread/INFO] [Config/]: [OptiFine] *** Reloading textures ***
+[14:12:30] [Client thread/INFO] [Config/]: [OptiFine] Resource packs: [1.10] R3D CRAFT DR-128x (v0.1.5), [1.10] R3D CRAFT 128x POM (v0.3.0), R3D DR - PBR Extension.zip
+[14:12:31] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Initializing Sound Physics...
+[14:12:31] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: EFX Extension recognized.
+[14:12:31] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 33 created
+[14:12:31] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 34 created
+[14:12:31] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 35 created
+[14:12:31] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 36 created
+[14:12:33] [Client thread/DEBUG] [FML/]: Bar Finished: ModelLoader: blocks took 2.023s
+[14:12:33] [Client thread/DEBUG] [FML/]: Item json isn't found for 'coralreef:reef1#inventory', trying to load the variant from the blockstate json
+[14:12:33] [Client thread/DEBUG] [FML/]: Item json isn't found for 'coralreef:reef2#inventory', trying to load the variant from the blockstate json
+[14:12:34] [Client thread/DEBUG] [FML/]: Bar Finished: ModelLoader: items took 0.778s
+[14:12:34] [Client thread/INFO] [Config/]: [OptiFine] Mipmap levels: 4
+[14:12:34] [Client thread/INFO] [Config/]: [OptiFine] Multitexture: false
+[14:12:34] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:34] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:34] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:34] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:34] [Client thread/INFO] [Config/]: [OptiFine] BetterGrass: Parsing default configuration optifine/bettergrass.properties
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 5 grass textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 2 snowed grass textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 4 mycelium textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 2 cactus arm textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 3 lilypad root textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 2 lilypad flower textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 4 reed textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 4 algae textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 6 coral textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 4 coral crust textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 3 netherrack textures
+[14:12:34] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 2 soul particle textures
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Custom loader: TextureAtlasSprite{name='minecraft:white', frameCount=1, rotated=false, x=0, y=0, height=16, width=16, u0=6.25E-4, u1=0.999375, v0=6.25E-4, v1=0.999375}
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_jungle_0, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_spruce_3, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_spruce_2, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_spruce_1, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_spruce_0, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: bettergrassandleaves:blocks/soul_track, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_default_2, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_default_1, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_default_0, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_default_3, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_jungle_3, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_jungle_2, 8 -> 16
+[14:12:35] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_jungle_1, 8 -> 16
+[14:12:35] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] allocateTextureMap 4 2048 2048 
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Finished: ModelLoader: baking took 1.038s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading took 19.788s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 19.788s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resources took 19.942s
+[14:12:41] [Client thread/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Replay Mod - Replay/]: Mod Replay Mod - Replay is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Replay Mod - Simple Pathing/]: Mod Replay Mod - Simple Pathing is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Replay Mod - Extras/]: Mod Replay Mod - Extras is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Replay Mod - Recording/]: Mod Replay Mod - Recording is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Replay Mod - Replay Editor/]: Mod Replay Mod - Replay Editor is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Replay Mod - Online/]: Mod Replay Mod - Online is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Replay Mod/]: Mod Replay Mod is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Replay Mod - Compatibility/]: Mod Replay Mod - Compatibility is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Replay Mod - Render/]: Mod Replay Mod - Render is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Coral Reef/]: Mod Coral Reef is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [Sound Physics/]: Mod Sound Physics is missing a pack.mcmeta file, substituting a dummy one
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Finished: Loading took 34.431s
+[14:12:41] [Client thread/DEBUG] [mixin/]: Mixing MixinGuiSpectator from mixins.replay.replaymod.json into net.minecraft.client.gui.GuiSpectator
+[14:12:41] [Client thread/TRACE] [mixin/]: Added class metadata for net/minecraft/client/gui/Gui to metadata cache
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0.000s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0.002s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0.002s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Replay took 0.008s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Simple Pathing took 0.007s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Extras took 0.007s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Recording took 0.054s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Replay Editor took 0.012s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Online took 0.013s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod took 0.014s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Compatibility took 0.013s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Replay Mod - Render took 0.012s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Better Foliage took 0.005s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Coral Reef took 0.000s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Sound Physics took 0.000s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - ReplayModLocalizationResourcePack took 0.000s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Better Foliage generated took 0.000s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - [1.10] R3D CRAFT DR-128x (v0.1.5) took 0.001s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - [1.10] R3D CRAFT 128x POM (v0.3.0) took 0.000s
+[14:12:41] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - R3D DR - PBR Extension.zip took 0.001s
+[14:12:46] [Client thread/INFO] [Config/]: [OptiFine] *** Reloading textures ***
+[14:12:46] [Client thread/INFO] [Config/]: [OptiFine] Resource packs: [1.10] R3D CRAFT DR-128x (v0.1.5), [1.10] R3D CRAFT 128x POM (v0.3.0), R3D DR - PBR Extension.zip
+[14:12:47] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Initializing Sound Physics...
+[14:12:47] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: EFX Extension recognized.
+[14:12:47] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 33 created
+[14:12:47] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 34 created
+[14:12:47] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 35 created
+[14:12:47] [Sound Library Loader/INFO] [STDOUT/]: [com.sonicether.soundphysics.SoundPhysics:log:897]: [SOUND PHYSICS]: Aux slot 36 created
+[14:12:47] [Client thread/DEBUG] [FML/]: Bar Finished: ModelLoader: blocks took 0.836s
+[14:12:47] [Client thread/DEBUG] [FML/]: Item json isn't found for 'coralreef:reef1#inventory', trying to load the variant from the blockstate json
+[14:12:47] [Client thread/DEBUG] [FML/]: Item json isn't found for 'coralreef:reef2#inventory', trying to load the variant from the blockstate json
+[14:12:48] [Client thread/DEBUG] [FML/]: Bar Finished: ModelLoader: items took 0.448s
+[14:12:48] [Client thread/INFO] [Config/]: [OptiFine] Mipmap levels: 4
+[14:12:48] [Client thread/INFO] [Config/]: [OptiFine] Multitexture: false
+[14:12:48] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:48] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:48] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:48] [Client thread/INFO] [Config/]: [OptiFine] Multipass connected textures: false
+[14:12:48] [Client thread/INFO] [Config/]: [OptiFine] BetterGrass: Parsing default configuration optifine/bettergrass.properties
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 5 grass textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 2 snowed grass textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 4 mycelium textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 2 cactus arm textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 3 lilypad root textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 2 lilypad flower textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 4 reed textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 4 algae textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 6 coral textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 4 coral crust textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 3 netherrack textures
+[14:12:48] [Client thread/INFO] [betterfoliage/]: [BetterFoliage] Registered 2 soul particle textures
+[14:12:48] [Client thread/INFO] [Config/]: [OptiFine] Custom loader: TextureAtlasSprite{name='minecraft:white', frameCount=1, rotated=false, x=752, y=1920, height=16, width=16, u0=0.3671924, u1=0.3749951, v0=0.9375049, v1=0.9453076}
+[14:12:48] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_jungle_0, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_spruce_3, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_spruce_2, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_spruce_1, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_spruce_0, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: bettergrassandleaves:blocks/soul_track, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_default_2, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_default_1, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_default_0, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_default_3, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_jungle_3, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_jungle_2, 8 -> 16
+[14:12:49] [Client thread/INFO] [Config/]: [OptiFine] Scaled too small texture: betterfoliage:blocks/falling_leaf_jungle_1, 8 -> 16
+[14:12:49] [Client thread/INFO] [shadersmod.common.SMCLog/]: [Shaders] allocateTextureMap 4 2048 2048 

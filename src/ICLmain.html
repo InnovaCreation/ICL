@@ -1,10 +1,61 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hello World!</title>
+		<title>ICLauncher</title>
 	</head>
 	<body>
-		<h1>Hello World!</h1>
-		We are using node.js <script>document.write(process.version)</script>.
+		<header>
+			<h1>Hello World!</h1>
+			We are using node.js <script>document.write(process.version)</script>.
+		</header>
+		
+		<div>
+			<div><a>path/to/java</a><input id="java_path"></input></div>
+			<div><a>JVM args</a><input id="jvm_args"></input></div>
+			<div><a>Class Path</a><input id="class_path"></input></div>
+			<div><a>Main Class</a><input id="mainClass"></input></div>
+			<div><a>Minecraft Arguments</a><input id="minecraftArguments"></input></div>
+			
+			<button id="launch_button">Launch!</button>
+		
+			<script>
+			document.getElementById('launch_button').onclick =
+				function(){ LaunchGame(AssemblyLaunchCMD(
+					document.getElementById('java_path').value,
+					document.getElementById('jvm_args').value,
+					document.getElementById('class_path').value,
+					document.getElementById('mainClass').value,
+					document.getElementById('minecraftArguments').value
+				)); };
+
+			function AssemblyLaunchCMD(
+				java_path,
+				jvm_args,
+				class_path,
+				mainClass,
+				minecraftArguments)
+			{
+				return java_path  + " "
+				     + jvm_args   + " "
+				     + class_path + " "
+				     + mainClass  + " "
+				     + minecraftArguments;
+			}
+
+			function LaunchGame(args) {
+				alert('Launch Minecraft with: ' + args);
+				
+				var sys = require('sys')
+				var exec = require('child_process').exec;
+				var child = exec(args, function (error, stdout, stderr) {
+					sys.print('stdout: ' + stdout);
+					sys.print('stderr: ' + stderr);
+					if (error !== null) {
+						console.log('exec error: ' + error);
+					}
+				});
+			}
+			</script>
+		</div>
 	</body>
 </html>

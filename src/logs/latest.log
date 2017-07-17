@@ -1,0 +1,16 @@
+[14:25:03] [Client thread/INFO]: Setting user: bobcao3
+[14:25:04] [Client thread/WARN]: Skipping bad option: lastServer:
+[14:25:04] [Client thread/INFO]: LWJGL Version: 2.9.4
+[14:25:04] [Client thread/WARN]: Removed selected resource pack [1.10] R3D CRAFT DR-128x (v0.1.5) because it's no longer compatible
+[14:25:04] [Client thread/WARN]: Removed selected resource pack [1.10] R3D CRAFT 128x POM (v0.3.0) because it's no longer compatible
+[14:25:04] [Client thread/WARN]: Removed selected resource pack R3D DR - PBR Extension.zip because it's no longer compatible
+[14:25:04] [Client thread/INFO]: Reloading ResourceManager: Default
+[14:25:05] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[14:25:05] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[14:25:05] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[14:25:05] [Thread-5/INFO]: OpenAL initialized.
+[14:25:05] [Sound Library Loader/INFO]: Sound engine started
+[14:25:06] [Client thread/INFO]: Created: 1024x512 textures-atlas
+[14:25:12] [Client thread/INFO]: Stopping!
+[14:25:12] [Client thread/INFO]: SoundSystem shutting down...
+[14:25:12] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
