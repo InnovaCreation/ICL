@@ -110,8 +110,23 @@ function GlobalProfile() {
 	this.minMemory = Math.floor(this.maxMemory / 8);
 }
 
-GlobalProfile.prototype.StoreToJSON = function() {
+Profile.prototype.StoreJSON = function() {
+	var string = JSON.stringify(this);
 	
+	var fs = require('fs');
+	fs.writeFile(
+		$path.join($GameRoot, "GlobalProfile.json"), 
+		string
+	);
+}
+
+Profile.prototype.LoadFromJSON = function() {
+	var json = require($path.join($GameRoot, "GlobalProfile.json"));
+	
+	this.player_id = json.player_id;
+
+	this.maxMemory = json.maxMemory;
+	this.minMemory = json.minMemory;
 }
 
 //module.exports.GlobalProfile = GlobalProfile;
