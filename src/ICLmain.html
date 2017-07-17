@@ -3,23 +3,9 @@
 	<head>
 		<title>ICLauncher</title>
 		
-		<script>
-		// Initialize
-		const $path = require('path');
-		const $os = require('os');
-		var $GameRoot = $path.join($path.join(nw.__dirname, '../'), './Game')
-		var $OSType;
-		switch ($os.platform()) {
-			case 'linux' :
-				$OSType = 'linux';
-				break;
-			case 'darwin' :
-				$OSType = 'osx';
-				break;
-			case 'win32' :
-				$OSType = 'windows';
-		}
-		</script>
+		<script src="initialize.js"></script>
+		<script src="lib/MinecraftVersionsJSON.js"></script>
+		
 	</head>
 	<body>
 		<header>
@@ -38,43 +24,13 @@
 		
 			<script>
 			document.getElementById('launch_button').onclick =
-				function(){ LaunchGame(AssemblyLaunchCMD(
+				function(){ $Launcher.LaunchGame($Launcher.AssemblyLaunchCMD(
 					document.getElementById('java_path').value,
 					document.getElementById('jvm_args').value,
 					document.getElementById('class_path').value,
 					document.getElementById('mainClass').value,
 					document.getElementById('minecraftArguments').value
 				)); };
-
-			function AssemblyLaunchCMD(
-				java_path,
-				jvm_args,
-				class_path,
-				mainClass,
-				minecraftArguments)
-			{
-				return java_path  + " "
-				     + jvm_args   + " "
-				     + class_path + " "
-				     + mainClass  + " "
-				     + minecraftArguments;
-			}
-
-			function LaunchGame(args) {
-				alert('Launch Minecraft with: ' + args);
-				
-				var sys = require('sys')
-				var exec = require('child_process').exec;
-				var child = exec(args, function (error, stdout, stderr) {
-					sys.print('stdout: ' + stdout);
-					sys.print('stderr: ' + stderr);
-					if (error !== null) {
-						console.log('exec error: ' + error);
-					}
-				});
-				
-				console.log(args);
-			}
 			</script>
 		</div>
 		
@@ -82,40 +38,6 @@
 			<h1>Load arguments from Minecraft's json</h1>
 			<div><a>path/to/json</a><input id="json_file_path"></input></div>
 			<button id="launch_button" onclick="LoadMinecraftArgsFromJSON(document.getElementById('json_file_path').value)">Load</button>
-			
-			<script>
-			function LoadMinecraftArgsFromJSON(file) {
-				var json = require(file);
-				
-				// Automatically fill in java (though it could be javaw, or others)
-				document.getElementById('java_path').value = 'java';
-				
-				// Fill direct accessed data from JSON
-				document.getElementById('mainClass').value = json.mainClass;
-				
-				// Fill the lib jars
-				var lib_dir = $path.join($GameRoot, './gamedir/libs/');
-				var lib_args = '-cp "';
-				json.libraries.forEach(function(lib) {
-					console.log("Get Library " + lib.name);
-					
-					var artifact;
-					if (lib.downloads.classifiers)
-						artifact = lib.downloads.classifiers[lib.natives[$OSType]];
-					else
-						artifact = lib.downloads.artifact;
-					
-					console.log("Path:" + artifact.path);						
-					lib_args += lib_dir + artifact.path + ":"
-				});
-				// Add main jar to those libs
-				var versions_dir = $path.join($GameRoot, './gamedir/versions/');
-				var version_id = '1.11.2';
-				lib_args += versions_dir + version_id + '.jar"'
-				// Output args
-				document.getElementById('class_path').value = lib_args;
-			}
-			</script>
 		</div>
 	</body>
 </html>
