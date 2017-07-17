@@ -6,6 +6,8 @@
 		<script src="initialize.js"></script>
 		<script src="lib/MinecraftVersionsJSON.js"></script>
 		
+		<link rel="stylesheet" href="lib/uikit/css/uikit.css">
+		
 	</head>
 	<body>
 		<header>
@@ -20,7 +22,7 @@
 			<div><a>Main Class</a><input id="mainClass"></input></div>
 			<div><a>Minecraft Arguments</a><input id="minecraftArguments"></input></div>
 			
-			<button id="launch_button">Launch!</button>
+			<button id="launch_button" class="uk-button uk-button-default">Launch!</button>
 		
 			<script>
 			document.getElementById('launch_button').onclick =
@@ -37,7 +39,7 @@
 		<div>
 			<h1>Load arguments from Minecraft's json</h1>
 			<div><a>path/to/json</a><input id="json_file_path"></input></div>
-			<button id="launch_button" onclick="LoadMinecraftArgsFromJSON(document.getElementById('json_file_path').value)">Load</button>
+			<button id="launch_button" onclick="LoadMinecraftArgsFromJSON(document.getElementById('json_file_path').value)" class="uk-button uk-button-default">Load</button>
 		</div>
 	</body>
 </html>

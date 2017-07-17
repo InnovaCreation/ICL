@@ -20,6 +20,11 @@ Packages can have dependency on other packages, which gives us ability to make *
 
 # LICENSE / etc.
 
+## Other's work
+- node.webkit (NW.js)
+- UIKit
+- We are greatful to the authors of these great products. Although UIKit is directly bundled in the code, the UIKit part of the project follows its original license.
+
 ## About the License
 - This License only applies to the Launcher itself, the packages used by the launcher and the profile created are not appliable to this License. Those packages can follow their own License.
 - This software (not including its service) is licensed under AGPL. Dynamic linking is treated as using the source code.
