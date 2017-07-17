@@ -57,5 +57,45 @@
 			}
 			</script>
 		</div>
+		
+		<div>
+			<h1>Load arguments from Minecraft's json</h1>
+			<div><a>path/to/json</a><input id="json_file_path"></input></div>
+			<button id="launch_button" onclick="LoadMinecraftArgsFromJSON(document.getElementById('json_file_path').value)">Load</button>
+			
+			<script>
+			function LoadMinecraftArgsFromJSON(file) {
+				var json = require(file);
+				
+				// Automatically fill in java (though it could be javaw, or others)
+				document.getElementById('java_path').value = 'java';
+				
+				// Fill direct accessed data from JSON
+				document.getElementById('mainClass').value = json.mainClass;
+				
+				// Fill the lib jars
+				var lib_dir = '/path/to/library/';
+				var lib_args = '-cp "';
+				json.libraries.forEach(function(lib) {
+					console.log(lib.name);
+					
+					if (lib.downloads.classifiers) {
+						// Lib classifiers stuff
+						
+					} else {
+						console.log(lib.downloads.artifact.path);
+					
+						lib_args += lib_dir + lib.downloads.artifact.path + ":"
+					}
+				});
+				// Add main jar to those libs
+				var versions_dir = '/path/to/versions/';
+				var version_id = '1.11.2';
+				lib_args += versions_dir + version_id + '.jar"'
+				// Output args
+				console.log(lib_args);
+			}
+			</script>
+		</div>
 	</body>
 </html>
