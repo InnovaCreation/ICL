@@ -67,8 +67,8 @@ Profile.prototype.GenerateMinecraftArguments = function(gp) {
 function GlobalProfile() {
 	//this.auth_method = plain // Not implemented
 	this.player_id = '';
-	this.maxMemory = Math.round($os.freemem / 1024 / 1024 / 512) * 512;
-	this.minMemory = Math.round(this.maxMemory / 8);
+	this.maxMemory = Math.floor($os.freemem / 1024 / 1024 / 512) * 512;
+	this.minMemory = Math.floor(this.maxMemory / 8);
 }
 
 GlobalProfile.prototype.StoreToJSON = function() {
