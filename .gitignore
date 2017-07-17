@@ -2,3 +2,5 @@ Game/gamedir/versions_descriptor/*
 Game/gamedir/versions/*
 Game/gamedir/libs/*
 src/logs
+
+Game/.minecraft/*
