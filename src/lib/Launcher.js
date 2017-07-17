@@ -16,6 +16,10 @@ function LaunchGame(args) {
 	game.stderr.on('data', function(data) {
 		console.log("[Game Error]" + data.toString()); 
 	});
+	
+	game.on('exit', function(code) {
+		console.log("Game exited with code " + code.toString());
+	});
 }
 
 function AssemblyLaunchCMD(
