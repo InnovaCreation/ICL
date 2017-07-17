@@ -41,6 +41,7 @@
 		<div>
 			<h2>Game Profile</h2>
 			
+			<div><a>Profile Name</a><input id="profile_name"></input></div>
 			<div><a>Path/to/java</a><input id="java_path"></input></div>
 			<div><a>Custom JVM args</a><input id="custom_jvm_args"></input></div>
 			<div><a>Minecraft Version String</a><input id="mc_version_string"></input></div>
@@ -52,19 +53,30 @@
 			
 			<button id="apply_profle" class="uk-button uk-button-default">Apply Game Profile</button>
 			<button id="profile2args" class="uk-button uk-button-default">Generate Args</button>
+			<button id="p2json" class="uk-button uk-button-default">Store Profile</button>
+			<button id="json2p" class="uk-button uk-button-default">Load Profile</button>
 			
 			<script>
 				var $p = new Profile();
-				document.getElementById('java_path').value = $p.java_path;
-				document.getElementById('custom_jvm_args').value = $p.custom_jvm_args;
-				document.getElementById('mc_version_string').value = $p.mc_version_string;
-				document.getElementById('custom_minecraft_args').value = $p.custom_minecraft_args;
-				document.getElementById('native_path').value = $p.native_path;
 				
-				document.getElementById('height').value = $p.height;
-				document.getElementById('width').value = $p.width;
+				function refresh_profile_blob() {
+					document.getElementById('profile_name').value = $p.profile_name;
+					document.getElementById('java_path').value = $p.java_path;
+					document.getElementById('custom_jvm_args').value = $p.custom_jvm_args;
+					document.getElementById('mc_version_string').value = $p.mc_version_string;
+					document.getElementById('custom_minecraft_args').value = $p.custom_minecraft_args;
+					document.getElementById('native_path').value = $p.native_path;
 				
-				document.getElementById('apply_profle').onclick = function(){
+					document.getElementById('height').value = $p.height;
+					document.getElementById('width').value = $p.width;
+				
+					document.getElementById('apply_profle').onclick = apply_profile_blob;
+				}
+				
+				refresh_profile_blob();
+				
+				function apply_profile_blob() {
+					$p.profile_name = document.getElementById('profile_name').value;
 					$p.java_path = document.getElementById('java_path').value;
 					$p.custom_jvm_args = document.getElementById('custom_jvm_args').value;
 					$p.mc_version_string = document.getElementById('mc_version_string').value;
@@ -73,7 +85,7 @@
 					
 					$p.height = document.getElementById('height').value;
 					$p.width = document.getElementById('width').value;
-				};
+				}
 				
 				document.getElementById('profile2args').onclick = function() {
 					document.getElementById('java_path').value = $p.java_path;
@@ -81,12 +93,20 @@
 
 					document.getElementById('minecraftArguments').value = $p.GenerateMinecraftArguments($gp);
 				};
+				
+				document.getElementById('p2json').onclick = function() {
+					$p.StoreJSON();
+				};
+				
+				document.getElementById('json2p').onclick = function() {
+					$p.LoadFromJSON(document.getElementById('profile_name').value);
+					refresh_profile_blob();
+				};
 			</script>
 		</div>
 		
 		<div>
 			<h2>Directly control all the launch arguments</h2>
-			<div><a>path/to/java</a><input id="java_path"></input></div>
 			<div><a>JVM args</a><input id="jvm_args"></input></div>
 			<div><a>Class Path</a><input id="class_path"></input></div>
 			<div><a>Main Class</a><input id="mainClass"></input></div>
