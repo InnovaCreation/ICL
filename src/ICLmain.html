@@ -47,6 +47,7 @@
 			<div><a>Minecraft Version String</a><input id="mc_version_string"></input></div>
 			<div><a>Custom Minecraft Args</a><input id="custom_minecraft_args"></input></div>
 			<div><a>Native Path</a><input id="native_path"></input></div>
+			<div><a>Asset Index</a><input id="asset_index"></input></div>
 			<div><a>Window Height</a><input id="height"></input></div>
 			<div><a>Window Width</a><input id="width"></input></div>
 			
@@ -67,6 +68,8 @@
 					document.getElementById('custom_minecraft_args').value = $p.custom_minecraft_args;
 					document.getElementById('native_path').value = $p.native_path;
 				
+					document.getElementById('asset_index').value = $p.asset_index;
+				
 					document.getElementById('height').value = $p.height;
 					document.getElementById('width').value = $p.width;
 				
@@ -82,6 +85,8 @@
 					$p.mc_version_string = document.getElementById('mc_version_string').value;
 					$p.custom_minecraft_args = document.getElementById('custom_minecraft_args').value;
 					$p.native_path = document.getElementById('native_path').value;
+					
+					$p.asset_index = document.getElementById('asset_index').value;
 					
 					$p.height = document.getElementById('height').value;
 					$p.width = document.getElementById('width').value;

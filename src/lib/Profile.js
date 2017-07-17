@@ -11,6 +11,8 @@ function Profile() {
 	this.custom_minecraft_args = '';
 	this.native_path = '';
 	
+	this.asset_index = '';
+	
 	this.uuid = uuidv4();
 	
 	this.height = 0;
@@ -49,12 +51,13 @@ function uuidv4() {
 Profile.prototype.GenerateMinecraftArguments = function(gp) {
 	var args = '--username ' + gp.player_id
 	
-	args += ' --version "ICL 0.X"'
-	args += ' --gameDir "' + $path.join($GameRoot, './.minecraft') + '"'
-	args += ' --assetsDir "' + $path.join($GameRoot, './.minecraft/assets') + '"'
-	args += ' --assetIndex 1.11 --uuid ' + this.uuid + ' --accessToken ' + this.uuid;
+	args += ' --version "ICL 0.X"';
+	args += ' --gameDir "' + $path.join($GameRoot, './.minecraft') + '"';
+	args += ' --assetsDir "' + $path.join($GameRoot, './.minecraft/assets') + '"';
+	args += ' --assetIndex ' + this.asset_index;
+	args += ' --uuid ' + this.uuid + ' --accessToken ' + this.uuid;
 	
-	args += ' --userType Legacy'
+	args += ' --userType Legacy';
 	args += ' --versionType "ICL 0.X"';
 	
 	if (this.height > 0) {
@@ -81,8 +84,9 @@ Profile.prototype.StoreJSON = function() {
 }
 
 Profile.prototype.LoadFromJSON = function(profile_name) {
-	var json = require($path.join($GameRoot, profile_name + ".profile.json"));
-	
+	fs = require('fs');
+	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, profile_name + ".profile.json")));
+
 	this.profile_name = json.profile_name;
 
 	this.java_path = json.java_path;
@@ -92,6 +96,8 @@ Profile.prototype.LoadFromJSON = function(profile_name) {
 	this.native_path = json.native_path;
 	
 	this.uuid = json.uuid;
+	
+	this.asset_index = json.asset_index;
 	
 	this.height = json.height;
 	this.width = json.width;
@@ -110,7 +116,7 @@ function GlobalProfile() {
 	this.minMemory = Math.floor(this.maxMemory / 8);
 }
 
-Profile.prototype.StoreJSON = function() {
+GlobalProfile.prototype.StoreJSON = function() {
 	var string = JSON.stringify(this);
 	
 	var fs = require('fs');
@@ -120,8 +126,9 @@ Profile.prototype.StoreJSON = function() {
 	);
 }
 
-Profile.prototype.LoadFromJSON = function() {
-	var json = require($path.join($GameRoot, "GlobalProfile.json"));
+GlobalProfile.prototype.LoadFromJSON = function() {
+	fs = require('fs');
+	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, "GlobalProfile.json")));
 	
 	this.player_id = json.player_id;
 
