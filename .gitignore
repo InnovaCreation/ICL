@@ -4,3 +4,6 @@ Game/gamedir/libs/*
 src/logs
 
 Game/.minecraft/*
+
+Game/*.profile.json
+
