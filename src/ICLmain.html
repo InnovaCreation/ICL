@@ -2,6 +2,24 @@
 <html>
 	<head>
 		<title>ICLauncher</title>
+		
+		<script>
+		// Initialize
+		const $path = require('path');
+		const $os = require('os');
+		var $GameRoot = $path.join($path.join(nw.__dirname, '../'), './Game')
+		var $OSType;
+		switch ($os.platform()) {
+			case 'linux' :
+				$OSType = 'linux';
+				break;
+			case 'darwin' :
+				$OSType = 'osx';
+				break;
+			case 'win32' :
+				$OSType = 'windows';
+		}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -74,14 +92,17 @@
 				document.getElementById('mainClass').value = json.mainClass;
 				
 				// Fill the lib jars
-				var lib_dir = '/path/to/library/';
+				var lib_dir = $path.join($GameRoot, './gamedir/libs/');
 				var lib_args = '-cp "';
 				json.libraries.forEach(function(lib) {
 					console.log(lib.name);
 					
 					if (lib.downloads.classifiers) {
 						// Lib classifiers stuff
+						var artifact = lib.downloads.classifiers[lib.natives[$OSType]];
+						console.log(artifact.path);
 						
+						lib_args += lib_dir + artifact.path + ":"
 					} else {
 						console.log(lib.downloads.artifact.path);
 					
@@ -89,7 +110,7 @@
 					}
 				});
 				// Add main jar to those libs
-				var versions_dir = '/path/to/versions/';
+				var versions_dir = $path.join($GameRoot, './versions/');
 				var version_id = '1.11.2';
 				lib_args += versions_dir + version_id + '.jar"'
 				// Output args
