@@ -1,5 +1,3 @@
-//class
-
 function LoadMinecraftArgsFromJSON(file) {
 	var json = require(file);
 				

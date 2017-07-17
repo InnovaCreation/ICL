@@ -17,4 +17,5 @@ switch ($os.platform()) {
 
 // Load other JS
 //var $MCJSON = require($path.join($SrcRoot, './lib/MinecraftVersionsJSON.js'));
-var $Launcher = require($path.join($SrcRoot, './lib/Launcher.js'));
+//var $Launcher = require($path.join($SrcRoot, './lib/Launcher.js'));
+//var $MCProfile = require($path.join($SrcRoot, './lib/Profile.js'));

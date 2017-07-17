@@ -32,5 +32,5 @@ function AssemblyLaunchCMD(
 	     + minecraftArguments;
 }
 
-module.exports.LaunchGame = LaunchGame;
-module.exports.AssemblyLaunchCMD = AssemblyLaunchCMD;
+//module.exports.LaunchGame = LaunchGame;
+//module.exports.AssemblyLaunchCMD = AssemblyLaunchCMD;
