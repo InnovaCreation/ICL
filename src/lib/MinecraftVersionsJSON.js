@@ -6,6 +6,9 @@ function LoadMinecraftArgsFromJSON(file) {
 	
 	// Fill direct accessed data from JSON
 	document.getElementById('mainClass').value = json.mainClass;
+	
+	// Asset index
+	document.getElementById('asset_index').value = json.assetIndex.id;
 				
 	// Fill the lib jars
 	var lib_dir = $path.join($GameRoot, './gamedir/libs/');
