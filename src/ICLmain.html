@@ -119,12 +119,15 @@
 						$gp.StoreJSON();
 					};
 
-					document.getElementById('load_gp').onclick = function() {
+					document.getElementById('load_gp').onclick = load_gp;
+					function load_gp() {
 						$gp.LoadFromJSON();
 						document.getElementById('player_id').value = $gp.player_id;
 						document.getElementById('maxMemory').value = $gp.maxMemory;
 						document.getElementById('minMemory').value = $gp.minMemory;
 					};
+
+					load_gp();
 				</script>
 			</div>
 		</div>
