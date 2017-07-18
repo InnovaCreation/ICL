@@ -61,6 +61,7 @@ Profile.prototype.GenerateMinecraftArguments = function(gp, launch_args) {
 	args = args.replace("${version_name}", version_name);
 	args = args.replace("${game_directory}", game_directory);
 	args = args.replace("${assets_root}", assets_root);
+	args = args.replace("${game_assets}", assets_root);
 	args = args.replace("${assets_index_name}", assets_index_name);
 	args = args.replace("${auth_uuid}", auth_uuid);
 	args = args.replace("${auth_access_token}", auth_access_token);
