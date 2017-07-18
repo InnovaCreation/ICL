@@ -3,7 +3,7 @@
 // ==============================================
 // Constructor
 function Profile() {
-	this.profile_name = 'Default'
+	this.profile_name = ''
 
 	this.java_path = 'java';
 	this.custom_jvm_args = '';

@@ -78,15 +78,30 @@
 			</div>
 		</div>
 
-		<button id='make_p' class="uk-button uk-button-default">Make Profile</button>
-		<button id='create_default' class="uk-button uk-button-default">Create Default Profile</button>
+		<input id="load_profile_name" value="Default"></input>
+		<button id='create_p' class="uk-button uk-button-default">Create Profile</button>
+		<button id='load_p' class="uk-button uk-button-default">Reload</button>
 		<script>
-			make_p.onclick = function() {
+			load_p.onclick = function() {
+				var fs = require('fs');
+				fs.readdirSync($GameRoot).forEach(
+					function(f,index) {
+						if(!fs.statSync($path.join($GameRoot, f)).isDirectory()){
+							var index = f.indexOf('.profile.json');
+							if (index > 0) {
+								var json_name = f.slice(0, index);
+								load_profile(json_name);
+							}
+						}
+					})
+			}
+
+			function load_profile(name) {
 				var model = document.getElementById('model_profile');
 				var cloned = model.cloneNode(true);
 
-				cloned.id = 'profile_Default';
-				cloned.children[0].children[0].textContent = 'Default';
+				cloned.id = 'profile_' + name;
+				cloned.children[0].children[0].textContent = name;
 				cloned.children[0].children[1].onclick = function() {edit(cloned);};
 				cloned.children[0].children[2].onclick = function() {launch(cloned);};
 
@@ -95,8 +110,10 @@
 				cloned.hidden = false;
 			}
 
-			create_default.onclick = function() {
+			create_p.onclick = function() {
+				var name = document.getElementById('load_profile_name').value;
 				$p = new Profile();
+				$p.profile_name = name;
 				$p.StoreJSON();
 			}
 		</script>
@@ -133,7 +150,7 @@
 						document.getElementById('custom_jvm_args').value = $p.custom_jvm_args;
 						document.getElementById('mc_version_string').value = $p.mc_version_string;
 						document.getElementById('custom_minecraft_args').value = $p.custom_minecraft_args;
-					
+
 						document.getElementById('height').value = $p.height;
 						document.getElementById('width').value = $p.width;
 
