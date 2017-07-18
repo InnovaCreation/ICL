@@ -18,6 +18,22 @@ Every instance of game is build from a **profile**. Each **profile** decribes th
 
 Packages can have dependency on other packages, which gives us ability to make **meta package** for mod packs, customized integration, etc.
 
+## Directory organization
+
+- [src]
+- [Game]
+	- xxx.profile.json
+	- Default.profile.json
+	- GlobalProfile.json
+	- [gamedir]
+		- [libs]
+			- ...
+		- [versions]
+			- 1.11.2.jar
+			- [1.11.2-natives]
+		- [versions_descriptor]
+			- 1.11.2.json
+
 # LICENSE / etc.
 
 ## Other's work
