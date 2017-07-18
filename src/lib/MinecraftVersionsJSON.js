@@ -1,4 +1,14 @@
+function LaunchArgument() {
+	this.java_path = '';
+	this.mainClass = '';
+	this.asset_index = '';
+	this.class_path = '';
+	this.minecraftArguments = '';
+}
+
 function LoadMinecraftArgsFromJSON(file) {
+	var launch_args = new LaunchArgument();
+
 	fs = require('fs');
 	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, "./gamedir/versions_descriptor/" + file + ".json")));
 
@@ -21,13 +31,13 @@ function LoadMinecraftArgsFromJSON(file) {
 	json = inherit(json);
 
 	// Automatically fill in java (though it could be javaw, or others)
-	document.getElementById('java_path').value = 'java';
+	launch_args.java_path = 'java';
 
 	// Fill direct accessed data from JSON
-	document.getElementById('mainClass').value = json.mainClass;
+	launch_args.mainClass = json.mainClass;
 
 	// Asset index
-	document.getElementById('asset_index').value = json.assetIndex.id;
+	launch_args.asset_index = json.assetIndex.id;
 
 	// Fill the lib jars
 	var lib_dir = $path.join($GameRoot, './gamedir/libs/');
@@ -45,9 +55,10 @@ function LoadMinecraftArgsFromJSON(file) {
 	var version_id = json.jar ? json.jar : file;
 	lib_args += versions_dir + version_id + '.jar"'
 	// Output args
-	document.getElementById('class_path').value = lib_args;
+	launch_args.class_path = lib_args;
+	launch_args.minecraftArguments = json.minecraftArguments;
 
-	return json.minecraftArguments;
+	return launch_args;
 }
 
 function Artifact() {
