@@ -41,10 +41,31 @@ function LoadMinecraftArgsFromJSON(file) {
 	json.libraries.forEach(function(lib) {
 		console.log("Get Library " + lib.name);
 
-		var artifact = JSONLibGetArtifact(lib);
+		var allowed = false;
+		if (lib.rules) {
+			lib.rules.forEach(function(rule) {
+				function validateOS(classifier) {
+					if ($OSType == classifier) return true;
+					return false;
+				}
+				if (rule.action == 'allow') {
+					if (rule.os) {
+						if (validateOS(rule.os.name)) allowed = true;
+					} else allowed = true;
+				} else if (rule.action == 'disallow') {
+					if (rule.os) {
+						if (validateOS(rule.os.name)) allowed = true;
+					} else allowed = false;
+				}
+			});
+		} else allowed = true;
 
-		console.log("Path:" + artifact.path);
-		lib_args += lib_dir + artifact.path + ":"
+		if (allowed) {
+			var artifact = JSONLibGetArtifact(lib);
+
+			console.log("Path:" + artifact.path);
+			lib_args += lib_dir + artifact.path + ":"
+		}
 	});
 	// Add main jar to those libs
 	var versions_dir = $path.join($GameRoot, './gamedir/versions/');
