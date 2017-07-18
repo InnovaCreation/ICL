@@ -69,12 +69,8 @@ Profile.prototype.GenerateMinecraftArguments = function(gp) {
 	args = args.replace("${user_type}", user_type);
 	args = args.replace("${version_type}", version_type);
 	
-	if (this.height > 0) {
-		args += ' -height ' + this.height.toString();
-	}
-	if (this.width > 0) {
-		args += ' -width ' + this.width.toString();
-	}
+	if (this.height > 0) args += ' -height ' + this.height.toString();
+	if (this.width > 0) args += ' -width ' + this.width.toString();
 	
 	// Custom flags
 	args += this.custom_minecraft_args;
