@@ -26,141 +26,208 @@
 			</div>
 		</nav>
 
-		<div uk-grid>
-			<div class="uk-width-2-3@s">
-				<div>
-					<h2>Game Profile</h2>
+		<!-- Model profile -->
+		<div id="model_profile" hidden='true'>
+			<div class="uk-card uk-card-default uk-card-body">
+				<h2 id="ModelProfileName">Profile Name</h2>
+				<button id="ModelProfileEdit" class="uk-button uk-button-default">Edit</button>
+				<button id="ModelProfileLaunch" class="uk-button uk-button-default">Launch</button>
 
-					<div><a>Profile Name</a><input id="profile_name"></input></div>
-					<div><a>Path/to/java</a><input id="java_path"></input></div>
-					<div><a>Custom JVM args</a><input id="custom_jvm_args"></input></div>
-					<div><a>Minecraft Version String</a><input id="mc_version_string"></input></div>
-					<div><a>Custom Minecraft Args</a><input id="custom_minecraft_args"></input></div>
-					<!--<div><a>Minecraft Args Model</a><input id="minecraft_arguments_model"></input></div>-->
-					<div><a>Native Path</a><input id="native_path"></input></div>
-					<div><a>Asset Index</a><input id="asset_index"></input></div>
-					<div><a>Window Height</a><input id="height"></input></div>
-					<div><a>Window Width</a><input id="width"></input></div>
-
-					<button id="apply_profle" class="uk-button uk-button-default">Apply Game Profile</button>
-					<button id="profile2args" class="uk-button uk-button-default">Generate Args</button>
-					<button id="p2json" class="uk-button uk-button-default">Store Profile</button>
-					<button id="json2p" class="uk-button uk-button-default">Load Profile</button>
-
-					<script>
-						var $p = new Profile();
-
-						function refresh_profile_blob() {
-							document.getElementById('profile_name').value = $p.profile_name;
-							document.getElementById('java_path').value = $p.java_path;
-							document.getElementById('custom_jvm_args').value = $p.custom_jvm_args;
-							document.getElementById('mc_version_string').value = $p.mc_version_string;
-							document.getElementById('custom_minecraft_args').value = $p.custom_minecraft_args;
-							document.getElementById('native_path').value = $p.native_path;
-
-							document.getElementById('asset_index').value = $p.asset_index;
-
-							document.getElementById('height').value = $p.height;
-							document.getElementById('width').value = $p.width;
-
-							document.getElementById('apply_profle').onclick = apply_profile_blob;
-						}
-
+				<script>
+					function edit(profile_window) {
+						var profile_name_element = profile_window.children[0].children[0];
+						$p.LoadFromJSON(profile_name_element.textContent);
 						refresh_profile_blob();
 
-						function apply_profile_blob() {
-							$p.profile_name = document.getElementById('profile_name').value;
-							$p.java_path = document.getElementById('java_path').value;
-							$p.custom_jvm_args = document.getElementById('custom_jvm_args').value;
-							$p.mc_version_string = document.getElementById('mc_version_string').value;
-							$p.custom_minecraft_args = document.getElementById('custom_minecraft_args').value;
-							$p.native_path = document.getElementById('native_path').value;
+						var modal = UIkit.modal(document.getElementById('game_profile_settings_window'));
+						modal.toggle();
+					}
 
-							$p.asset_index = document.getElementById('asset_index').value;
+					function launch(profile_window) {
+						var p = new Profile();
+						var profile_name_element = profile_window.children[0].children[0];
+						p.LoadFromJSON(profile_name_element.textContent);
 
-							$p.height = document.getElementById('height').value;
-							$p.width = document.getElementById('width').value;
-						}
+						var launch_args = LoadMinecraftArgsFromJSON(p.mc_version_string);
 
-						document.getElementById('profile2args').onclick = function() {
-							var mc_arg_model = LoadMinecraftArgsFromJSON($p.mc_version_string);
+						var java_path = p.java_path;
+						var jvm_args = p.GenerateJVMArgs($gp);
 
-							document.getElementById('java_path').value = $p.java_path;
-							document.getElementById('jvm_args').value = $p.GenerateJVMArgs($gp);
+						var minecraftArguments = p.GenerateMinecraftArguments($gp, launch_args.minecraftArguments);
 
-							document.getElementById('minecraftArguments').value = $p.GenerateMinecraftArguments($gp, mc_arg_model);
-						};
+						var launch_cmd = AssemblyLaunchCMD(
+							java_path,
+							jvm_args,
+							launch_args.class_path,
+							launch_args.mainClass,
+							minecraftArguments
+						);
 
-						document.getElementById('p2json').onclick = function() {
-							$p.StoreJSON();
-						};
+						console.log(launch_cmd);
 
-						document.getElementById('json2p').onclick = function() {
-							$p.LoadFromJSON(document.getElementById('profile_name').value);
-							refresh_profile_blob();
-						};
-					</script>
-				</div>
-
-				<div>
-					<h2>Directly control launch arguments</h2>
-					<div><a>JVM args</a><input id="jvm_args"></input></div>
-					<div><a>Class Path</a><input id="class_path"></input></div>
-					<div><a>Main Class</a><input id="mainClass"></input></div>
-					<div><a>Minecraft Arguments</a><input id="minecraftArguments"></input></div>
-
-					<button id="launch_button" class="uk-button uk-button-default">Launch!</button>
-
-					<script>
-						document.getElementById('launch_button').onclick =
-						function(){ LaunchGame(AssemblyLaunchCMD(
-							document.getElementById('java_path').value,
-							document.getElementById('jvm_args').value,
-							document.getElementById('class_path').value,
-							document.getElementById('mainClass').value,
-							document.getElementById('minecraftArguments').value
-							)); };
-					</script>
-				</div>
+						LaunchGame(launch_cmd);
+					}
+				</script>
 			</div>
+		</div>
+		<!-- End model profile -->
 
-			<div class="uk-width-3-3@s">
-				<div>
-					<div class="uk-card uk-card-default uk-card-body">
+		<div id="profiles_window">
+			<div id="profiles_window_grid" class="uk-child-width-1-3" uk-grid>
 
-						<h2>Global Profile</h2>
-						<div><a>Player ID</a><input id="player_id"></input></div>
-						<div><a>Max Memory</a><input id="maxMemory" type="number"></input></div>
-						<div><a>Min Memory</a><input id="minMemory" type="number"></input></div>
+			</div>
+		</div>
 
-						<button id="apply_gp" class="uk-button uk-button-default">Apply</button>
-						<button id="store_gp" class="uk-button uk-button-default">Save</button>
-						<button id="load_gp" class="uk-button uk-button-default">Load</button>
+		<button id='make_p' class="uk-button uk-button-default">Make Profile</button>
+		<script>
+			make_p.onclick = function() {
+				var model = document.getElementById('model_profile');
+				var cloned = model.cloneNode(true);
 
-						<script>
-							var $gp = new GlobalProfile();
-							document.getElementById('maxMemory').value = $gp.maxMemory;
-							document.getElementById('minMemory').value = $gp.minMemory;
+				cloned.id = 'profile_Default';
+				cloned.children[0].children[0].textContent = 'Default';
+				cloned.children[0].children[1].onclick = function() {edit(cloned);};
+				cloned.children[0].children[2].onclick = function() {launch(cloned);};
 
-							document.getElementById('apply_gp').onclick = function(){
-								$gp.player_id = document.getElementById('player_id').value;
-								$gp.maxMemory = Math.floor(document.getElementById('maxMemory').value);
-								$gp.minMemory = Math.floor(document.getElementById('minMemory').value);
-							};
+				document.getElementById('profiles_window_grid').appendChild(cloned);
 
-							document.getElementById('store_gp').onclick = function() {
-								$gp.StoreJSON();
-							};
+				cloned.hidden = false;
+			}
+		</script>
 
-							document.getElementById('load_gp').onclick = function() {
-								$gp.LoadFromJSON();
-								document.getElementById('player_id').value = $gp.player_id;
-								document.getElementById('maxMemory').value = $gp.maxMemory;
-								document.getElementById('minMemory').value = $gp.minMemory;
-							};
-						</script>
-					</div>
-				</div>
+		<div id="game_profile_settings_window" class="uk-modal-full" uk-modal>
+			<div class="uk-modal-dialog">
+				<h2>Edit Game Profile</h2>
+
+				<button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+
+				<div><a>Profile Name</a><input id="profile_name"></input></div>
+				<div><a>Path/to/java</a><input id="java_path"></input></div>
+				<div><a>Custom JVM args</a><input id="custom_jvm_args"></input></div>
+				<div><a>Minecraft Version String</a><input id="mc_version_string"></input></div>
+				<div><a>Custom Minecraft Args</a><input id="custom_minecraft_args"></input></div>
+				<!--<div><a>Minecraft Args Model</a><input id="minecraft_arguments_model"></input></div>-->
+				<div><a>Native Path</a><input id="native_path"></input></div>
+				<div><a>Asset Index</a><input id="asset_index"></input></div>
+				<div><a>Window Height</a><input id="height"></input></div>
+				<div><a>Window Width</a><input id="width"></input></div>
+
+				<button id="apply_profle" class="uk-button uk-button-default">Apply Game Profile</button>
+				<button id="profile2args" class="uk-button uk-button-default">Generate Args</button>
+				<button id="p2json" class="uk-button uk-button-default">Store Profile</button>
+				<button id="json2p" class="uk-button uk-button-default">Load Profile</button>
+
+				<script>
+					var $p = new Profile();
+
+					function refresh_profile_blob() {
+						document.getElementById('profile_name').value = $p.profile_name;
+						document.getElementById('java_path').value = $p.java_path;
+						document.getElementById('custom_jvm_args').value = $p.custom_jvm_args;
+						document.getElementById('mc_version_string').value = $p.mc_version_string;
+						document.getElementById('custom_minecraft_args').value = $p.custom_minecraft_args;
+						document.getElementById('native_path').value = $p.native_path;
+
+						document.getElementById('asset_index').value = $p.asset_index;
+
+						document.getElementById('height').value = $p.height;
+						document.getElementById('width').value = $p.width;
+
+						document.getElementById('apply_profle').onclick = apply_profile_blob;
+					}
+
+					refresh_profile_blob();
+
+					function apply_profile_blob() {
+						$p.profile_name = document.getElementById('profile_name').value;
+						$p.java_path = document.getElementById('java_path').value;
+						$p.custom_jvm_args = document.getElementById('custom_jvm_args').value;
+						$p.mc_version_string = document.getElementById('mc_version_string').value;
+						$p.custom_minecraft_args = document.getElementById('custom_minecraft_args').value;
+						$p.native_path = document.getElementById('native_path').value;
+
+						$p.asset_index = document.getElementById('asset_index').value;
+
+						$p.height = document.getElementById('height').value;
+						$p.width = document.getElementById('width').value;
+					}
+
+					document.getElementById('profile2args').onclick = function() {
+						var mc_arg_model = LoadMinecraftArgsFromJSON($p.mc_version_string);
+
+						document.getElementById('java_path').value = $p.java_path;
+						document.getElementById('jvm_args').value = $p.GenerateJVMArgs($gp);
+
+						document.getElementById('minecraftArguments').value = $p.GenerateMinecraftArguments($gp, mc_arg_model);
+					};
+
+					document.getElementById('p2json').onclick = function() {
+						$p.StoreJSON();
+					};
+
+					document.getElementById('json2p').onclick = function() {
+						$p.LoadFromJSON(document.getElementById('profile_name').value);
+						refresh_profile_blob();
+					};
+				</script>
+			</div>
+		</div>
+
+		<div id="direct_launch_argument_control" uk-modal>
+			<h2>Directly control launch arguments</h2>
+			<div><a>JVM args</a><input id="jvm_args"></input></div>
+			<div><a>Class Path</a><input id="class_path"></input></div>
+			<div><a>Main Class</a><input id="mainClass"></input></div>
+			<div><a>Minecraft Arguments</a><input id="minecraftArguments"></input></div>
+
+			<button id="launch_button" class="uk-button uk-button-default">Launch!</button>
+
+			<script>
+				document.getElementById('launch_button').onclick =
+				function(){ LaunchGame(AssemblyLaunchCMD(
+					document.getElementById('java_path').value,
+					document.getElementById('jvm_args').value,
+					document.getElementById('class_path').value,
+					document.getElementById('mainClass').value,
+					document.getElementById('minecraftArguments').value
+					)); };
+			</script>
+		</div>
+
+		<div>
+			<div class="uk-card uk-card-default uk-card-body">
+
+				<h2>Global Profile</h2>
+				<div><a>Player ID</a><input id="player_id"></input></div>
+				<div><a>Max Memory</a><input id="maxMemory" type="number"></input></div>
+				<div><a>Min Memory</a><input id="minMemory" type="number"></input></div>
+
+				<button id="apply_gp" class="uk-button uk-button-default">Apply</button>
+				<button id="store_gp" class="uk-button uk-button-default">Save</button>
+				<button id="load_gp" class="uk-button uk-button-default">Load</button>
+
+				<script>
+					var $gp = new GlobalProfile();
+					document.getElementById('maxMemory').value = $gp.maxMemory;
+					document.getElementById('minMemory').value = $gp.minMemory;
+
+					document.getElementById('apply_gp').onclick = function(){
+						$gp.player_id = document.getElementById('player_id').value;
+						$gp.maxMemory = Math.floor(document.getElementById('maxMemory').value);
+						$gp.minMemory = Math.floor(document.getElementById('minMemory').value);
+					};
+
+					document.getElementById('store_gp').onclick = function() {
+						$gp.StoreJSON();
+					};
+
+					document.getElementById('load_gp').onclick = function() {
+						$gp.LoadFromJSON();
+						document.getElementById('player_id').value = $gp.player_id;
+						document.getElementById('maxMemory').value = $gp.maxMemory;
+						document.getElementById('minMemory').value = $gp.minMemory;
+					};
+				</script>
 			</div>
 		</div>
 
