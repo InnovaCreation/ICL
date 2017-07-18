@@ -1,5 +1,4 @@
 function LaunchArgument() {
-	this.java_path = '';
 	this.mainClass = '';
 	this.asset_index = '';
 	this.class_path = '';
@@ -29,9 +28,6 @@ function LoadMinecraftArgsFromJSON(file) {
 		return to;
 	}
 	json = inherit(json);
-
-	// Automatically fill in java (though it could be javaw, or others)
-	launch_args.java_path = 'java';
 
 	// Fill direct accessed data from JSON
 	launch_args.mainClass = json.mainClass;

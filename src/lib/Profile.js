@@ -5,13 +5,10 @@
 function Profile() {
 	this.profile_name = 'Default'
 
-	this.java_path = '';
+	this.java_path = 'java';
 	this.custom_jvm_args = '';
 	this.mc_version_string = '';
 	this.custom_minecraft_args = '';
-	this.native_path = '';
-
-	this.asset_index = '';
 
 	this.height = 0;
 	this.width = 0;
@@ -25,7 +22,8 @@ Profile.prototype.GenerateJVMArgs = function(gp) {
 	args += ' -Xmx' + gp.maxMemory.toString() + 'm';
 
 	// Librarys (natives)
-	args += ' "-Djava.library.path=' + this.native_path + '"';
+	var natives_dir = $path.join($GameRoot, './gamedir/versions/' + this.mc_version_string + '-natives');
+	args += ' "-Djava.library.path=' + natives_dir + '"';
 
 	// FML defaults
 	args += ' -Dfml.ignoreInvalidMinecraftCertificates=true -Dfml.ignorePatchDiscrepancies=true';
@@ -46,18 +44,18 @@ function uuidv4() {
 	)
 }
 
-Profile.prototype.GenerateMinecraftArguments = function(gp, mc_arg_model) {
+Profile.prototype.GenerateMinecraftArguments = function(gp, launch_args) {
 	var auth_player_name = gp.player_id;
 	var version_name = '"ICL 0.X"';
 	var game_directory = '"' + $path.join($GameRoot, './.minecraft') + '"';
 	var assets_root = '"' + $path.join($GameRoot, './.minecraft/assets') + '"';
-	var assets_index_name = this.asset_index;
+	var assets_index_name = launch_args.asset_index;
 	var auth_uuid = gp.uuid;
 	var auth_access_token = gp.uuid;
 	var user_type = 'Legacy';
 	var version_type = '"ICL 0.X"';
 
-	var args = mc_arg_model;
+	var args = launch_args.minecraftArguments;
 
 	args = args.replace("${auth_player_name}", auth_player_name);
 	args = args.replace("${version_name}", version_name);

@@ -53,7 +53,7 @@
 						var java_path = p.java_path;
 						var jvm_args = p.GenerateJVMArgs($gp);
 
-						var minecraftArguments = p.GenerateMinecraftArguments($gp, launch_args.minecraftArguments);
+						var minecraftArguments = p.GenerateMinecraftArguments($gp, launch_args);
 
 						var launch_cmd = AssemblyLaunchCMD(
 							java_path,
@@ -79,6 +79,7 @@
 		</div>
 
 		<button id='make_p' class="uk-button uk-button-default">Make Profile</button>
+		<button id='create_default' class="uk-button uk-button-default">Create Default Profile</button>
 		<script>
 			make_p.onclick = function() {
 				var model = document.getElementById('model_profile');
@@ -93,32 +94,38 @@
 
 				cloned.hidden = false;
 			}
+
+			create_default.onclick = function() {
+				$p = new Profile();
+				$p.StoreJSON();
+			}
 		</script>
 
 		<div id="game_profile_settings_window" class="uk-modal-full" uk-modal>
 			<div class="uk-modal-dialog">
 				<h2>Edit Game Profile</h2>
 
-				<button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+				<button id="apply_profle" class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
 
 				<div><a>Profile Name</a><input id="profile_name"></input></div>
 				<div><a>Path/to/java</a><input id="java_path"></input></div>
 				<div><a>Custom JVM args</a><input id="custom_jvm_args"></input></div>
-				<div><a>Minecraft Version String</a><input id="mc_version_string"></input></div>
+				<div>
+					<a>Minecraft Version String</a>
+					<input id="mc_version_string"></input>
+					<!--<button id="load_json" class="uk-modal-close-full uk-close-large" type="button" uk-close></button>-->
+				</div>
 				<div><a>Custom Minecraft Args</a><input id="custom_minecraft_args"></input></div>
-				<!--<div><a>Minecraft Args Model</a><input id="minecraft_arguments_model"></input></div>-->
-				<div><a>Native Path</a><input id="native_path"></input></div>
-				<div><a>Asset Index</a><input id="asset_index"></input></div>
 				<div><a>Window Height</a><input id="height"></input></div>
 				<div><a>Window Width</a><input id="width"></input></div>
 
-				<button id="apply_profle" class="uk-button uk-button-default">Apply Game Profile</button>
-				<button id="profile2args" class="uk-button uk-button-default">Generate Args</button>
-				<button id="p2json" class="uk-button uk-button-default">Store Profile</button>
-				<button id="json2p" class="uk-button uk-button-default">Load Profile</button>
-
 				<script>
 					var $p = new Profile();
+					/*
+					load_json.onclick = function() {
+						var launch_args = LoadMinecraftArgsFromJSON(p.mc_version_string);
+
+					}*/
 
 					function refresh_profile_blob() {
 						document.getElementById('profile_name').value = $p.profile_name;
@@ -126,10 +133,7 @@
 						document.getElementById('custom_jvm_args').value = $p.custom_jvm_args;
 						document.getElementById('mc_version_string').value = $p.mc_version_string;
 						document.getElementById('custom_minecraft_args').value = $p.custom_minecraft_args;
-						document.getElementById('native_path').value = $p.native_path;
-
-						document.getElementById('asset_index').value = $p.asset_index;
-
+					
 						document.getElementById('height').value = $p.height;
 						document.getElementById('width').value = $p.width;
 
@@ -144,31 +148,12 @@
 						$p.custom_jvm_args = document.getElementById('custom_jvm_args').value;
 						$p.mc_version_string = document.getElementById('mc_version_string').value;
 						$p.custom_minecraft_args = document.getElementById('custom_minecraft_args').value;
-						$p.native_path = document.getElementById('native_path').value;
-
-						$p.asset_index = document.getElementById('asset_index').value;
 
 						$p.height = document.getElementById('height').value;
 						$p.width = document.getElementById('width').value;
-					}
 
-					document.getElementById('profile2args').onclick = function() {
-						var mc_arg_model = LoadMinecraftArgsFromJSON($p.mc_version_string);
-
-						document.getElementById('java_path').value = $p.java_path;
-						document.getElementById('jvm_args').value = $p.GenerateJVMArgs($gp);
-
-						document.getElementById('minecraftArguments').value = $p.GenerateMinecraftArguments($gp, mc_arg_model);
-					};
-
-					document.getElementById('p2json').onclick = function() {
 						$p.StoreJSON();
-					};
-
-					document.getElementById('json2p').onclick = function() {
-						$p.LoadFromJSON(document.getElementById('profile_name').value);
-						refresh_profile_blob();
-					};
+					}
 				</script>
 			</div>
 		</div>
