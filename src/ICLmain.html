@@ -3,55 +3,28 @@
 	<head>
 		<title>ICLauncher</title>
 		
+		<link rel="stylesheet" href="lib/uikit/css/uikit.min.css">
+		
+		<script src="lib/jquery.min.js"></script>
+		
+		<script src="lib/uikit/js/uikit.min.js"></script>
+		<script src="lib/uikit/js/uikit-icons.min.js"></script>
+		
 		<script src="initialize.js"></script>
 		<script src="lib/Profile.js"></script>
 		<script src="lib/Launcher.js"></script>
 		<script src="lib/MinecraftVersionsJSON.js"></script>
 		
-		<link rel="stylesheet" href="lib/uikit/css/uikit.min.css">
-		
 	</head>
-	<body>
+	<body uk-grid>
 		<header>
 			<h1>ICL Launcher!</h1>
 			Running on node.js <script>document.write(process.version)</script>.
 		</header>
 		
-		<div>
-			<h2>Global Profile</h2>
-			<div><a>Player ID</a><input id="player_id"></input></div>
-			<div><a>Max Memory</a><input id="maxMemory" type="number"></input></div>
-			<div><a>Min Memory</a><input id="minMemory" type="number"></input></div>
-			
-			<button id="apply_gp" class="uk-button uk-button-default">Apply Global Profile</button>
-			<button id="store_gp" class="uk-button uk-button-default">Save Global Profile</button>
-			<button id="load_gp" class="uk-button uk-button-default">Load Global Profile</button>
-			
-			<script>
-				var $gp = new GlobalProfile();
-				document.getElementById('maxMemory').value = $gp.maxMemory;
-				document.getElementById('minMemory').value = $gp.minMemory;
-				
-				document.getElementById('apply_gp').onclick = function(){
-					$gp.player_id = document.getElementById('player_id').value;
-					$gp.maxMemory = Math.floor(document.getElementById('maxMemory').value);
-					$gp.minMemory = Math.floor(document.getElementById('minMemory').value);
-				};
-				
-				document.getElementById('store_gp').onclick = function() {
-					$gp.StoreJSON();
-				};
-				
-				document.getElementById('load_gp').onclick = function() {
-					$gp.LoadFromJSON();
-					document.getElementById('player_id').value = $gp.player_id;
-					document.getElementById('maxMemory').value = $gp.maxMemory;
-					document.getElementById('minMemory').value = $gp.minMemory;
-				};
-			</script>
-		</div>
-		
-		<div>
+		<div class="uk-grid-divider" uk-grid>
+			<div class="uk-width-expand@s">
+				<div>
 			<h2>Game Profile</h2>
 			
 			<div><a>Profile Name</a><input id="profile_name"></input></div>
@@ -158,5 +131,44 @@
 			<div><a>path/to/json</a><input id="json_file_path"></input></div>
 			<button id="launch_button" onclick="LoadMinecraftArgsFromJSON(document.getElementById('json_file_path').value)" class="uk-button uk-button-default">Load</button>
 		</div>
+			</div>
+			<div class="uk-width-1-4@s">
+				<div>
+		
+					<h2>Global Profile</h2>
+					<div><a>Player ID</a><input id="player_id"></input></div>
+					<div><a>Max Memory</a><input id="maxMemory" type="number"></input></div>
+					<div><a>Min Memory</a><input id="minMemory" type="number"></input></div>
+			
+					<button id="apply_gp" class="uk-button uk-button-default">Apply Global Profile</button>
+					<button id="store_gp" class="uk-button uk-button-default">Save Global Profile</button>
+					<button id="load_gp" class="uk-button uk-button-default">Load Global Profile</button>
+			
+					<script>
+						var $gp = new GlobalProfile();
+						document.getElementById('maxMemory').value = $gp.maxMemory;
+						document.getElementById('minMemory').value = $gp.minMemory;
+				
+						document.getElementById('apply_gp').onclick = function(){
+							$gp.player_id = document.getElementById('player_id').value;
+							$gp.maxMemory = Math.floor(document.getElementById('maxMemory').value);
+							$gp.minMemory = Math.floor(document.getElementById('minMemory').value);
+						};
+				
+						document.getElementById('store_gp').onclick = function() {
+							$gp.StoreJSON();
+						};
+				
+						document.getElementById('load_gp').onclick = function() {
+							$gp.LoadFromJSON();
+							document.getElementById('player_id').value = $gp.player_id;
+							document.getElementById('maxMemory').value = $gp.maxMemory;
+							document.getElementById('minMemory').value = $gp.minMemory;
+						};
+					</script>
+				</div>
+			</div>
+		</div>
+		
 	</body>
 </html>
