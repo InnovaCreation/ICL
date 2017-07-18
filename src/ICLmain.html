@@ -24,6 +24,8 @@
 			<div><a>Min Memory</a><input id="minMemory" type="number"></input></div>
 			
 			<button id="apply_gp" class="uk-button uk-button-default">Apply Global Profile</button>
+			<button id="store_gp" class="uk-button uk-button-default">Save Global Profile</button>
+			<button id="load_gp" class="uk-button uk-button-default">Load Global Profile</button>
 			
 			<script>
 				var $gp = new GlobalProfile();
@@ -34,6 +36,17 @@
 					$gp.player_id = document.getElementById('player_id').value;
 					$gp.maxMemory = Math.floor(document.getElementById('maxMemory').value);
 					$gp.minMemory = Math.floor(document.getElementById('minMemory').value);
+				};
+				
+				document.getElementById('store_gp').onclick = function() {
+					$gp.StoreJSON();
+				};
+				
+				document.getElementById('load_gp').onclick = function() {
+					$gp.LoadFromJSON();
+					document.getElementById('player_id').value = $gp.player_id;
+					document.getElementById('maxMemory').value = $gp.maxMemory;
+					document.getElementById('minMemory').value = $gp.minMemory;
 				};
 			</script>
 		</div>
@@ -119,6 +132,14 @@
 			<div><a>Minecraft Arguments</a><input id="minecraftArguments"></input></div>
 			
 			<button id="launch_button" class="uk-button uk-button-default">Launch!</button>
+		
+			<div>
+				<pre class="uk-resize">
+					<code id="game_output">
+					Game Output
+					</code>
+				</pre>
+			</div>
 		
 			<script>
 			document.getElementById('launch_button').onclick =
