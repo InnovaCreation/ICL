@@ -10,32 +10,32 @@ function Profile() {
 	this.mc_version_string = '';
 	this.custom_minecraft_args = '';
 	this.native_path = '';
-	
+
 	this.asset_index = '';
-	
+
 	this.height = 0;
 	this.width = 0;
 }
 
 Profile.prototype.GenerateJVMArgs = function(gp) {
 	var args = '-Xincgc -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow'
-	
+
 	// Max & Min memory
 	args += ' -Xmn' + gp.minMemory.toString() + 'm';
 	args += ' -Xmx' + gp.maxMemory.toString() + 'm';
-	
+
 	// Librarys (natives)
 	args += ' "-Djava.library.path=' + this.native_path + '"';
-	
+
 	// FML defaults
 	args += ' -Dfml.ignoreInvalidMinecraftCertificates=true -Dfml.ignorePatchDiscrepancies=true';
-	
+
 	// JAVA User Home
 	args += ' "-Duser.home=' + $GameRoot + '"';
-	
+
 	// Custom flags
 	args += this.custom_jvm_args;
-	
+
 	return args;
 }
 
@@ -46,7 +46,7 @@ function uuidv4() {
 	)
 }
 
-Profile.prototype.GenerateMinecraftArguments = function(gp) {
+Profile.prototype.GenerateMinecraftArguments = function(gp, mc_arg_model) {
 	var auth_player_name = gp.player_id;
 	var version_name = '"ICL 0.X"';
 	var game_directory = '"' + $path.join($GameRoot, './.minecraft') + '"';
@@ -57,8 +57,8 @@ Profile.prototype.GenerateMinecraftArguments = function(gp) {
 	var user_type = 'Legacy';
 	var version_type = '"ICL 0.X"';
 
-	var args = document.getElementById('minecraft_arguments_model').value;
-	
+	var args = mc_arg_model;
+
 	args = args.replace("${auth_player_name}", auth_player_name);
 	args = args.replace("${version_name}", version_name);
 	args = args.replace("${game_directory}", game_directory);
@@ -68,22 +68,22 @@ Profile.prototype.GenerateMinecraftArguments = function(gp) {
 	args = args.replace("${auth_access_token}", auth_access_token);
 	args = args.replace("${user_type}", user_type);
 	args = args.replace("${version_type}", version_type);
-	
+
 	if (this.height > 0) args += ' -height ' + this.height.toString();
 	if (this.width > 0) args += ' -width ' + this.width.toString();
-	
+
 	// Custom flags
 	args += this.custom_minecraft_args;
-	
+
 	return args;
 }
 
 Profile.prototype.StoreJSON = function() {
 	var string = JSON.stringify(this);
-	
+
 	var fs = require('fs');
 	fs.writeFile(
-		$path.join($GameRoot, this.profile_name + ".profile.json"), 
+		$path.join($GameRoot, this.profile_name + ".profile.json"),
 		string
 	);
 }
@@ -106,16 +106,16 @@ function GlobalProfile() {
 	this.player_id = '';
 	this.maxMemory = Math.floor($os.freemem / 1024 / 1024 / 512) * 512;
 	this.minMemory = Math.floor(this.maxMemory / 8);
-	
+
 	this.uuid = uuidv4();
 }
 
 GlobalProfile.prototype.StoreJSON = function() {
 	var string = JSON.stringify(this);
-	
+
 	var fs = require('fs');
 	fs.writeFile(
-		$path.join($GameRoot, "GlobalProfile.json"), 
+		$path.join($GameRoot, "GlobalProfile.json"),
 		string
 	);
 }
@@ -123,7 +123,7 @@ GlobalProfile.prototype.StoreJSON = function() {
 GlobalProfile.prototype.LoadFromJSON = function() {
 	fs = require('fs');
 	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, "GlobalProfile.json")));
-	
+
 	for (var i in json) this[i] = json[i];
 }
 

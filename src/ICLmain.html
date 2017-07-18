@@ -38,12 +38,11 @@
 						<div><a>Custom JVM args</a><input id="custom_jvm_args"></input></div>
 						<div><a>Minecraft Version String</a><input id="mc_version_string"></input></div>
 						<div><a>Custom Minecraft Args</a><input id="custom_minecraft_args"></input></div>
-						<div><a>Minecraft Args Model</a><input id="minecraft_arguments_model"></input></div>
+						<!--<div><a>Minecraft Args Model</a><input id="minecraft_arguments_model"></input></div>-->
 						<div><a>Native Path</a><input id="native_path"></input></div>
 						<div><a>Asset Index</a><input id="asset_index"></input></div>
 						<div><a>Window Height</a><input id="height"></input></div>
 						<div><a>Window Width</a><input id="width"></input></div>
-
 
 						<button id="apply_profle" class="uk-button uk-button-default">Apply Game Profile</button>
 						<button id="profile2args" class="uk-button uk-button-default">Generate Args</button>
@@ -86,10 +85,12 @@
 							}
 
 							document.getElementById('profile2args').onclick = function() {
+								var mc_arg_model = LoadMinecraftArgsFromJSON($p.mc_version_string);
+
 								document.getElementById('java_path').value = $p.java_path;
 								document.getElementById('jvm_args').value = $p.GenerateJVMArgs($gp);
 
-								document.getElementById('minecraftArguments').value = $p.GenerateMinecraftArguments($gp);
+								document.getElementById('minecraftArguments').value = $p.GenerateMinecraftArguments($gp, mc_arg_model);
 							};
 
 							document.getElementById('p2json').onclick = function() {
@@ -131,12 +132,12 @@
 								)); };
 						</script>
 					</div>
-
+<!--
 					<div>
 						<h2>Load arguments from Minecraft's json</h2>
 						<div><a>path/to/json</a><input id="json_file_path"></input></div>
 						<button id="launch_button" onclick="LoadMinecraftArgsFromJSON(document.getElementById('json_file_path').value)" class="uk-button uk-button-default">Load</button>
-					</div>
+					</div>-->
 				</div>
 
 				<div class="uk-width-1-4@s">

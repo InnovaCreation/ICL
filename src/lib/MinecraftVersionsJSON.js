@@ -1,13 +1,13 @@
 function LoadMinecraftArgsFromJSON(file) {
 	fs = require('fs');
 	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, "./gamedir/versions_descriptor/" + file + ".json")));
-	
+
 	// Load inherit stuff
 	function inherit(to) {
 		if (to.inheritsFrom) {
 			var json_inherit = JSON.parse(fs.readFileSync($path.join($GameRoot, "./gamedir/versions_descriptor/" + to.inheritsFrom + ".json")));
 			json_inherit = inherit(json_inherit);
-			
+
 			for (i in to) {
 				if (json_inherit[i] instanceof Array)
 					json_inherit[i] = json_inherit[i].concat(to[i]);
@@ -19,25 +19,25 @@ function LoadMinecraftArgsFromJSON(file) {
 		return to;
 	}
 	json = inherit(json);
-				
+
 	// Automatically fill in java (though it could be javaw, or others)
 	document.getElementById('java_path').value = 'java';
-	
+
 	// Fill direct accessed data from JSON
 	document.getElementById('mainClass').value = json.mainClass;
-	
+
 	// Asset index
 	document.getElementById('asset_index').value = json.assetIndex.id;
-				
+
 	// Fill the lib jars
 	var lib_dir = $path.join($GameRoot, './gamedir/libs/');
 	var lib_args = '-cp "';
 	json.libraries.forEach(function(lib) {
 		console.log("Get Library " + lib.name);
-					
+
 		var artifact = JSONLibGetArtifact(lib);
-					
-		console.log("Path:" + artifact.path);						
+
+		console.log("Path:" + artifact.path);
 		lib_args += lib_dir + artifact.path + ":"
 	});
 	// Add main jar to those libs
@@ -46,7 +46,8 @@ function LoadMinecraftArgsFromJSON(file) {
 	lib_args += versions_dir + version_id + '.jar"'
 	// Output args
 	document.getElementById('class_path').value = lib_args;
-	document.getElementById('minecraft_arguments_model').value = json.minecraftArguments;
+
+	return json.minecraftArguments;
 }
 
 function Artifact() {
@@ -58,16 +59,16 @@ function JSONLibGetArtifact(lib) {
 		var artifact = new Artifact();
 		var name_strings = lib.name.slice(0, lib.name.indexOf(':')).split('.');
 		//lib.name.split(/[.:]+/);
-		
+
 		var path_string = '';
 		for (i in name_strings) path_string = $path.join(path_string, name_strings[i] + '/');
-		
+
 		name_strings = lib.name.slice(lib.name.indexOf(':'), lib.name.length).split(':');
 		for (i in name_strings) path_string = $path.join(path_string, name_strings[i] + '/');
 		path_string = $path.join(path_string, name_strings[1] + '-' + name_strings[2] + '.jar');
-		
+
 		artifact.path = path_string;
-		
+
 		return artifact;
 	} else if (lib.downloads.classifiers)
 		return lib.downloads.classifiers[lib.natives[$OSType]];
