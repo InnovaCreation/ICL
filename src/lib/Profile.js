@@ -49,16 +49,37 @@ function uuidv4() {
 }
 
 Profile.prototype.GenerateMinecraftArguments = function(gp) {
-	var args = '--username ' + gp.player_id
+	var auth_player_name = gp.player_id;
+	var version_name = '"ICL 0.X"';
+	var game_directory = '"' + $path.join($GameRoot, './.minecraft') + '"';
+	var assets_root = '"' + $path.join($GameRoot, './.minecraft/assets') + '"';
+	var assets_index_name = this.asset_index;
+	var auth_uuid = this.uuid;
+	var auth_access_token = this.uuid;
+	var user_type = 'Legacy';
+	var version_type = '"ICL 0.X"';
+
+	var args = document.getElementById('minecraft_arguments_model').value;
 	
-	args += ' --version "ICL 0.X"';
+	args = args.replace("${auth_player_name}", auth_player_name);
+	args = args.replace("${version_name}", version_name);
+	args = args.replace("${game_directory}", game_directory);
+	args = args.replace("${assets_root}", assets_root);
+	args = args.replace("${assets_index_name}", assets_index_name);
+	args = args.replace("${auth_uuid}", auth_uuid);
+	args = args.replace("${auth_access_token}", auth_access_token);
+	args = args.replace("${user_type}", user_type);
+	args = args.replace("${version_type}", version_type);
+	//'--username ' + gp.player_id
+	
+	/*args += ' --version "ICL 0.X"';
 	args += ' --gameDir "' + $path.join($GameRoot, './.minecraft') + '"';
 	args += ' --assetsDir "' + $path.join($GameRoot, './.minecraft/assets') + '"';
 	args += ' --assetIndex ' + this.asset_index;
 	args += ' --uuid ' + this.uuid + ' --accessToken ' + this.uuid;
 	
 	args += ' --userType Legacy';
-	args += ' --versionType "ICL 0.X"';
+	args += ' --versionType "ICL 0.X"';*/
 	
 	if (this.height > 0) {
 		args += ' -height ' + this.height.toString();
@@ -87,20 +108,7 @@ Profile.prototype.LoadFromJSON = function(profile_name) {
 	fs = require('fs');
 	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, profile_name + ".profile.json")));
 
-	this.profile_name = json.profile_name;
-
-	this.java_path = json.java_path;
-	this.custom_jvm_args = json.custom_jvm_args;
-	this.mc_version_string = json.mc_version_string;
-	this.custom_minecraft_args = json.custom_minecraft_args;
-	this.native_path = json.native_path;
-	
-	this.uuid = json.uuid;
-	
-	this.asset_index = json.asset_index;
-	
-	this.height = json.height;
-	this.width = json.width;
+	for (var i in json) this[i] = json[i];
 }
 
 //module.exports.Profile = Profile;
@@ -130,10 +138,7 @@ GlobalProfile.prototype.LoadFromJSON = function() {
 	fs = require('fs');
 	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, "GlobalProfile.json")));
 	
-	this.player_id = json.player_id;
-
-	this.maxMemory = json.maxMemory;
-	this.minMemory = json.minMemory;
+	for (var i in json) this[i] = json[i];
 }
 
 //module.exports.GlobalProfile = GlobalProfile;
