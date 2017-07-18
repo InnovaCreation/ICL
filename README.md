@@ -22,10 +22,16 @@ Packages can have dependency on other packages, which gives us ability to make *
 
 - [src]
 - [Game]
+	- [.minecraft]
+		- [saves]
+		- [resourcepacks]
+		- [...]
 	- xxx.profile.json
 	- Default.profile.json
 	- GlobalProfile.json
 	- [gamedir]
+		- [assets]
+			- ...
 		- [libs]
 			- ...
 		- [versions]
