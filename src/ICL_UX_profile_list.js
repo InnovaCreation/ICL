@@ -15,8 +15,14 @@ function refresh_profile() {
 }
 
 function load_profile(name) {
-	var model = document.getElementById('model_profile');
-	var cloned = model.cloneNode(true);
+	var cloned;
+
+	if (document.getElementById('profile_' + name)) {
+		cloned = document.getElementById('profile_' + name);
+	} else {
+		var model = document.getElementById('model_profile');
+		cloned = model.cloneNode(true);
+	}
 
 	cloned.id = 'profile_' + name;
 	cloned.children[0].children[0].textContent = name;
