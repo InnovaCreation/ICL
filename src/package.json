@@ -1,5 +1,17 @@
 {
 	"name": "InnovaCreationLauncher",
 	"version": "0.0.1",
-	"main": "ICLmain.html"
+	"main": "ICLmain.html",
+	"window": {
+		"title": "Innova Creation Launcher",
+		"toolbar": false,
+		"frame": true,
+		"width": 860,
+		"height": 480,
+		"position": "mouse",
+		"min_width": 480,
+		"min_height": 320,
+		"max_width": 1280,
+		"max_height": 720
+	}
 }
