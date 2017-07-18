@@ -13,14 +13,12 @@ function Profile() {
 	
 	this.asset_index = '';
 	
-	this.uuid = uuidv4();
-	
 	this.height = 0;
 	this.width = 0;
 }
 
 Profile.prototype.GenerateJVMArgs = function(gp) {
-	var args = '-Xincgc -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow'
+	var args = '-Xincgc -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow'
 	
 	// Max & Min memory
 	args += ' -Xmn' + gp.minMemory.toString() + 'm';
@@ -54,8 +52,8 @@ Profile.prototype.GenerateMinecraftArguments = function(gp) {
 	var game_directory = '"' + $path.join($GameRoot, './.minecraft') + '"';
 	var assets_root = '"' + $path.join($GameRoot, './.minecraft/assets') + '"';
 	var assets_index_name = this.asset_index;
-	var auth_uuid = this.uuid;
-	var auth_access_token = this.uuid;
+	var auth_uuid = gp.uuid;
+	var auth_access_token = gp.uuid;
 	var user_type = 'Legacy';
 	var version_type = '"ICL 0.X"';
 
@@ -112,6 +110,8 @@ function GlobalProfile() {
 	this.player_id = '';
 	this.maxMemory = Math.floor($os.freemem / 1024 / 1024 / 512) * 512;
 	this.minMemory = Math.floor(this.maxMemory / 8);
+	
+	this.uuid = uuidv4();
 }
 
 GlobalProfile.prototype.StoreJSON = function() {
