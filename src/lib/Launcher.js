@@ -1,6 +1,4 @@
 function LaunchGame(args) {
-	alert('Launch Minecraft with: ' + args);
-				
 	var sys = require('sys');
 	var game = require('child_process').exec(args, { 
 		// detachment and ignored stdin are the key here: 
