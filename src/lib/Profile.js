@@ -70,16 +70,6 @@ Profile.prototype.GenerateMinecraftArguments = function(gp) {
 	args = args.replace("${auth_access_token}", auth_access_token);
 	args = args.replace("${user_type}", user_type);
 	args = args.replace("${version_type}", version_type);
-	//'--username ' + gp.player_id
-	
-	/*args += ' --version "ICL 0.X"';
-	args += ' --gameDir "' + $path.join($GameRoot, './.minecraft') + '"';
-	args += ' --assetsDir "' + $path.join($GameRoot, './.minecraft/assets') + '"';
-	args += ' --assetIndex ' + this.asset_index;
-	args += ' --uuid ' + this.uuid + ' --accessToken ' + this.uuid;
-	
-	args += ' --userType Legacy';
-	args += ' --versionType "ICL 0.X"';*/
 	
 	if (this.height > 0) {
 		args += ' -height ' + this.height.toString();
