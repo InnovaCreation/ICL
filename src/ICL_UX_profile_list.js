@@ -14,12 +14,14 @@ function refresh_profile() {
 				}
 			}
 		});
+	fs = null;
 	var plist = document.getElementsByClassName('Profile');
 	for (p in plist) {
 		if (profiles_found.indexOf(plist[p].id) < 0) {
 			if (plist[p].remove) plist[p].remove();
 		}
 	}
+	profiles_found = null;
 }
 
 function load_profile(name) {

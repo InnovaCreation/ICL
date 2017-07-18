@@ -8,7 +8,7 @@ function LaunchArgument() {
 function LoadMinecraftArgsFromJSON(file) {
 	var launch_args = new LaunchArgument();
 
-	fs = require('fs');
+	var fs = require('fs');
 	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, "./gamedir/versions_descriptor/" + file + ".json")));
 
 	// Load inherit stuff
@@ -74,6 +74,8 @@ function LoadMinecraftArgsFromJSON(file) {
 	// Output args
 	launch_args.class_path = lib_args;
 	launch_args.minecraftArguments = json.minecraftArguments;
+
+	json = null;
 
 	return launch_args;
 }
