@@ -2,6 +2,7 @@ load_p.onclick = refresh_profile;
 
 function refresh_profile() {
 	var fs = require('fs');
+	var profiles_found = [];
 	fs.readdirSync($GameRoot).forEach(
 		function(f,index) {
 			if(!fs.statSync($path.join($GameRoot, f)).isDirectory()){
@@ -9,9 +10,16 @@ function refresh_profile() {
 				if (index > 0) {
 					var json_name = f.slice(0, index);
 					load_profile(json_name);
+					profiles_found = profiles_found.concat('profile_' + json_name);
 				}
 			}
-		})
+		});
+	var plist = document.getElementsByClassName('Profile');
+	for (p in plist) {
+		if (profiles_found.indexOf(plist[p].id) < 0) {
+			if (plist[p].remove) plist[p].remove();
+		}
+	}
 }
 
 function load_profile(name) {
@@ -24,6 +32,7 @@ function load_profile(name) {
 		cloned = model.cloneNode(true);
 	}
 
+	cloned.classList = ['Profile'];
 	cloned.id = 'profile_' + name;
 	cloned.children[0].children[0].textContent = name;
 	cloned.children[0].children[1].onclick = function() {edit(cloned);};
