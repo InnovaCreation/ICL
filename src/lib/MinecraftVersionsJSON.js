@@ -1,5 +1,24 @@
 function LoadMinecraftArgsFromJSON(file) {
-	var json = require(file);
+	fs = require('fs');
+	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, "./gamedir/versions_descriptor/" + file + ".json")));
+	
+	// Load inherit stuff
+	function inherit(to) {
+		if (to.inheritsFrom) {
+			var json_inherit = JSON.parse(fs.readFileSync($path.join($GameRoot, "./gamedir/versions_descriptor/" + to.inheritsFrom + ".json")));
+			json_inherit = inherit(json_inherit);
+			
+			for (i in to) {
+				if (json_inherit[i] instanceof Array)
+					json_inherit[i] = json_inherit[i].concat(to[i]);
+				else
+					json_inherit[i] = to[i];
+			}
+			return json_inherit;
+		}
+		return to;
+	}
+	json = inherit(json);
 				
 	// Automatically fill in java (though it could be javaw, or others)
 	document.getElementById('java_path').value = 'java';
@@ -23,14 +42,34 @@ function LoadMinecraftArgsFromJSON(file) {
 	});
 	// Add main jar to those libs
 	var versions_dir = $path.join($GameRoot, './gamedir/versions/');
-	var version_id = '1.11.2';
+	var version_id = json.jar ? json.jar : file;
 	lib_args += versions_dir + version_id + '.jar"'
 	// Output args
 	document.getElementById('class_path').value = lib_args;
+	document.getElementById('minecraft_arguments_model').value = json.minecraftArguments;
 }
-			
+
+function Artifact() {
+	this.path = '';
+}
+
 function JSONLibGetArtifact(lib) {
-	if (lib.downloads.classifiers)
+	if (!lib.downloads) {
+		var artifact = new Artifact();
+		var name_strings = lib.name.slice(0, lib.name.indexOf(':')).split('.');
+		//lib.name.split(/[.:]+/);
+		
+		var path_string = '';
+		for (i in name_strings) path_string = $path.join(path_string, name_strings[i] + '/');
+		
+		name_strings = lib.name.slice(lib.name.indexOf(':'), lib.name.length).split(':');
+		for (i in name_strings) path_string = $path.join(path_string, name_strings[i] + '/');
+		path_string = $path.join(path_string, name_strings[1] + '-' + name_strings[2] + '.jar');
+		
+		artifact.path = path_string;
+		
+		return artifact;
+	} else if (lib.downloads.classifiers)
 		return lib.downloads.classifiers[lib.natives[$OSType]];
 	else
 		return lib.downloads.artifact;
