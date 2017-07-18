@@ -27,130 +27,115 @@
 		</nav>
 
 		<div uk-grid>
+			<div class="uk-width-2-3@s">
+				<div>
+					<h2>Game Profile</h2>
 
-			<div class="uk-grid-divider" uk-grid>
-				<div class="uk-width-expand@s">
-					<div>
-						<h2>Game Profile</h2>
+					<div><a>Profile Name</a><input id="profile_name"></input></div>
+					<div><a>Path/to/java</a><input id="java_path"></input></div>
+					<div><a>Custom JVM args</a><input id="custom_jvm_args"></input></div>
+					<div><a>Minecraft Version String</a><input id="mc_version_string"></input></div>
+					<div><a>Custom Minecraft Args</a><input id="custom_minecraft_args"></input></div>
+					<!--<div><a>Minecraft Args Model</a><input id="minecraft_arguments_model"></input></div>-->
+					<div><a>Native Path</a><input id="native_path"></input></div>
+					<div><a>Asset Index</a><input id="asset_index"></input></div>
+					<div><a>Window Height</a><input id="height"></input></div>
+					<div><a>Window Width</a><input id="width"></input></div>
 
-						<div><a>Profile Name</a><input id="profile_name"></input></div>
-						<div><a>Path/to/java</a><input id="java_path"></input></div>
-						<div><a>Custom JVM args</a><input id="custom_jvm_args"></input></div>
-						<div><a>Minecraft Version String</a><input id="mc_version_string"></input></div>
-						<div><a>Custom Minecraft Args</a><input id="custom_minecraft_args"></input></div>
-						<!--<div><a>Minecraft Args Model</a><input id="minecraft_arguments_model"></input></div>-->
-						<div><a>Native Path</a><input id="native_path"></input></div>
-						<div><a>Asset Index</a><input id="asset_index"></input></div>
-						<div><a>Window Height</a><input id="height"></input></div>
-						<div><a>Window Width</a><input id="width"></input></div>
+					<button id="apply_profle" class="uk-button uk-button-default">Apply Game Profile</button>
+					<button id="profile2args" class="uk-button uk-button-default">Generate Args</button>
+					<button id="p2json" class="uk-button uk-button-default">Store Profile</button>
+					<button id="json2p" class="uk-button uk-button-default">Load Profile</button>
 
-						<button id="apply_profle" class="uk-button uk-button-default">Apply Game Profile</button>
-						<button id="profile2args" class="uk-button uk-button-default">Generate Args</button>
-						<button id="p2json" class="uk-button uk-button-default">Store Profile</button>
-						<button id="json2p" class="uk-button uk-button-default">Load Profile</button>
+					<script>
+						var $p = new Profile();
 
-						<script>
-							var $p = new Profile();
+						function refresh_profile_blob() {
+							document.getElementById('profile_name').value = $p.profile_name;
+							document.getElementById('java_path').value = $p.java_path;
+							document.getElementById('custom_jvm_args').value = $p.custom_jvm_args;
+							document.getElementById('mc_version_string').value = $p.mc_version_string;
+							document.getElementById('custom_minecraft_args').value = $p.custom_minecraft_args;
+							document.getElementById('native_path').value = $p.native_path;
 
-							function refresh_profile_blob() {
-								document.getElementById('profile_name').value = $p.profile_name;
-								document.getElementById('java_path').value = $p.java_path;
-								document.getElementById('custom_jvm_args').value = $p.custom_jvm_args;
-								document.getElementById('mc_version_string').value = $p.mc_version_string;
-								document.getElementById('custom_minecraft_args').value = $p.custom_minecraft_args;
-								document.getElementById('native_path').value = $p.native_path;
+							document.getElementById('asset_index').value = $p.asset_index;
 
-								document.getElementById('asset_index').value = $p.asset_index;
+							document.getElementById('height').value = $p.height;
+							document.getElementById('width').value = $p.width;
 
-								document.getElementById('height').value = $p.height;
-								document.getElementById('width').value = $p.width;
+							document.getElementById('apply_profle').onclick = apply_profile_blob;
+						}
 
-								document.getElementById('apply_profle').onclick = apply_profile_blob;
-							}
+						refresh_profile_blob();
 
+						function apply_profile_blob() {
+							$p.profile_name = document.getElementById('profile_name').value;
+							$p.java_path = document.getElementById('java_path').value;
+							$p.custom_jvm_args = document.getElementById('custom_jvm_args').value;
+							$p.mc_version_string = document.getElementById('mc_version_string').value;
+							$p.custom_minecraft_args = document.getElementById('custom_minecraft_args').value;
+							$p.native_path = document.getElementById('native_path').value;
+
+							$p.asset_index = document.getElementById('asset_index').value;
+
+							$p.height = document.getElementById('height').value;
+							$p.width = document.getElementById('width').value;
+						}
+
+						document.getElementById('profile2args').onclick = function() {
+							var mc_arg_model = LoadMinecraftArgsFromJSON($p.mc_version_string);
+
+							document.getElementById('java_path').value = $p.java_path;
+							document.getElementById('jvm_args').value = $p.GenerateJVMArgs($gp);
+
+							document.getElementById('minecraftArguments').value = $p.GenerateMinecraftArguments($gp, mc_arg_model);
+						};
+
+						document.getElementById('p2json').onclick = function() {
+							$p.StoreJSON();
+						};
+
+						document.getElementById('json2p').onclick = function() {
+							$p.LoadFromJSON(document.getElementById('profile_name').value);
 							refresh_profile_blob();
-
-							function apply_profile_blob() {
-								$p.profile_name = document.getElementById('profile_name').value;
-								$p.java_path = document.getElementById('java_path').value;
-								$p.custom_jvm_args = document.getElementById('custom_jvm_args').value;
-								$p.mc_version_string = document.getElementById('mc_version_string').value;
-								$p.custom_minecraft_args = document.getElementById('custom_minecraft_args').value;
-								$p.native_path = document.getElementById('native_path').value;
-
-								$p.asset_index = document.getElementById('asset_index').value;
-
-								$p.height = document.getElementById('height').value;
-								$p.width = document.getElementById('width').value;
-							}
-
-							document.getElementById('profile2args').onclick = function() {
-								var mc_arg_model = LoadMinecraftArgsFromJSON($p.mc_version_string);
-
-								document.getElementById('java_path').value = $p.java_path;
-								document.getElementById('jvm_args').value = $p.GenerateJVMArgs($gp);
-
-								document.getElementById('minecraftArguments').value = $p.GenerateMinecraftArguments($gp, mc_arg_model);
-							};
-
-							document.getElementById('p2json').onclick = function() {
-								$p.StoreJSON();
-							};
-
-							document.getElementById('json2p').onclick = function() {
-								$p.LoadFromJSON(document.getElementById('profile_name').value);
-								refresh_profile_blob();
-							};
-						</script>
-					</div>
-
-					<div>
-						<h2>Directly control all the launch arguments</h2>
-						<div><a>JVM args</a><input id="jvm_args"></input></div>
-						<div><a>Class Path</a><input id="class_path"></input></div>
-						<div><a>Main Class</a><input id="mainClass"></input></div>
-						<div><a>Minecraft Arguments</a><input id="minecraftArguments"></input></div>
-
-						<button id="launch_button" class="uk-button uk-button-default">Launch!</button>
-
-						<div>
-							<pre class="uk-resize">
-								<code id="game_output">
-									Game Output
-								</code>
-							</pre>
-						</div>
-
-						<script>
-							document.getElementById('launch_button').onclick =
-							function(){ LaunchGame(AssemblyLaunchCMD(
-								document.getElementById('java_path').value,
-								document.getElementById('jvm_args').value,
-								document.getElementById('class_path').value,
-								document.getElementById('mainClass').value,
-								document.getElementById('minecraftArguments').value
-								)); };
-						</script>
-					</div>
-<!--
-					<div>
-						<h2>Load arguments from Minecraft's json</h2>
-						<div><a>path/to/json</a><input id="json_file_path"></input></div>
-						<button id="launch_button" onclick="LoadMinecraftArgsFromJSON(document.getElementById('json_file_path').value)" class="uk-button uk-button-default">Load</button>
-					</div>-->
+						};
+					</script>
 				</div>
 
-				<div class="uk-width-1-4@s">
-					<div>
+				<div>
+					<h2>Directly control launch arguments</h2>
+					<div><a>JVM args</a><input id="jvm_args"></input></div>
+					<div><a>Class Path</a><input id="class_path"></input></div>
+					<div><a>Main Class</a><input id="mainClass"></input></div>
+					<div><a>Minecraft Arguments</a><input id="minecraftArguments"></input></div>
+
+					<button id="launch_button" class="uk-button uk-button-default">Launch!</button>
+
+					<script>
+						document.getElementById('launch_button').onclick =
+						function(){ LaunchGame(AssemblyLaunchCMD(
+							document.getElementById('java_path').value,
+							document.getElementById('jvm_args').value,
+							document.getElementById('class_path').value,
+							document.getElementById('mainClass').value,
+							document.getElementById('minecraftArguments').value
+							)); };
+					</script>
+				</div>
+			</div>
+
+			<div class="uk-width-3-3@s">
+				<div>
+					<div class="uk-card uk-card-default uk-card-body">
 
 						<h2>Global Profile</h2>
 						<div><a>Player ID</a><input id="player_id"></input></div>
 						<div><a>Max Memory</a><input id="maxMemory" type="number"></input></div>
 						<div><a>Min Memory</a><input id="minMemory" type="number"></input></div>
 
-						<button id="apply_gp" class="uk-button uk-button-default">Apply Global Profile</button>
-						<button id="store_gp" class="uk-button uk-button-default">Save Global Profile</button>
-						<button id="load_gp" class="uk-button uk-button-default">Load Global Profile</button>
+						<button id="apply_gp" class="uk-button uk-button-default">Apply</button>
+						<button id="store_gp" class="uk-button uk-button-default">Save</button>
+						<button id="load_gp" class="uk-button uk-button-default">Load</button>
 
 						<script>
 							var $gp = new GlobalProfile();
@@ -177,7 +162,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 
 	</body>
