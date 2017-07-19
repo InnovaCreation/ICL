@@ -38,6 +38,12 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 	// Fill the lib jars
 	var lib_dir = $path.join($ICL_data.GameRoot, './gamedir/libs/');
 	var lib_args = '-cp "';
+
+	// Prepare download queue
+	var DM = require('./lib/DownloadManager.js');
+	var downloads;
+	if (extract_flag) downloads = new DM.DownloadQueue();
+
 	json.libraries.forEach(function(lib) {
 		console.log("Get Library " + lib.name);
 
@@ -67,54 +73,76 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 			var artifact = JSONLibGetArtifact(lib);
 
 			console.log("Path:" + artifact.path);
-			lib_args += lib_dir + artifact.path + ":"
+			lib_args += $path.join(lib_dir, artifact.path) + ":";
 
-			// Decompress natives
-			if (lib.extract && extract_flag) {
-				console.log("Extracting " + lib.name);
+			// Examine library's presence & download
+			if (extract_flag) {
+				var lib_physical = $path.join(lib_dir, artifact.path);
 
-				var unzip = require('unzip');
-				var path = $path.join($ICL_data.GameRoot, './gamedir/versions/' + file + '-natives/');
-				var temp_path = $path.join(path, lib.name);
+				if (!fs.existsSync(lib_physical)) {
+					downloads.add_task(artifact.url, lib_physical).on('finished', decompress);
+				} else if (fs.statSync(lib_physical).size != artifact.size) {
+					console.log('Actual size ' + fs.statSync(lib_physical).size + ' artifact expected ' + artifact.size);
+					console.log('Size mismatch, redownload..');
+					fs.unlinkSync(lib_physical);
+					downloads.add_task(artifact.url, lib_physical).on('finished', decompress);
+				} else
+					decompress();
+			}
 
-				var stream = fs.createReadStream($path.join(lib_dir, artifact.path)).pipe(
-					unzip.Extract(
-						{ path: temp_path }
-					)
-				).on('close', function() {
-					// Excluded files
-					if (lib.extract.exclude) {
-						// rm -rf
-						function deleteRecursive(path) {
-							if(fs.existsSync(path)) {
-								if(fs.statSync(path).isDirectory()) {
-									var files = fs.readdirSync(path);
-									files.forEach( function(file,index){
-										deleteRecursive($path.join(path, file));
-									});
-									fs.rmdirSync(path);
-								} else {
-									fs.unlinkSync(path);
+			function decompress() {
+				// Decompress natives
+				if (lib.extract) {
+					console.log("Extracting " + lib.name + " from " + artifact.path);
+
+					var unzip = require('unzip');
+					var path = $path.join($ICL_data.GameRoot, './gamedir/versions/' + file + '-natives/');
+					var temp_path = $path.join(path, lib.name);
+
+					var stream = fs.createReadStream($path.join(lib_dir, artifact.path)).pipe(
+						unzip.Extract(
+							{ path: temp_path }
+						)
+					).on('close', function() {
+						// Excluded files
+						if (lib.extract.exclude) {
+							// rm -rf
+							function deleteRecursive(path) {
+								if(fs.existsSync(path)) {
+									if(fs.statSync(path).isDirectory()) {
+										var files = fs.readdirSync(path);
+										files.forEach( function(file,index){
+											deleteRecursive($path.join(path, file));
+										});
+										fs.rmdirSync(path);
+									} else {
+										fs.unlinkSync(path);
+									}
 								}
-							}
-						};
-						// Perform actual remove
-						for (i in lib.extract.exclude) deleteRecursive($path.join(temp_path, lib.extract.exclude[i]));
-					}
+							};
+							// Perform actual remove
+							for (i in lib.extract.exclude) deleteRecursive($path.join(temp_path, lib.extract.exclude[i]));
 
-					// Move out temp dir
-					var mv = require('mv');
-					var files = fs.readdirSync(temp_path);
-					files.forEach( function(file,index){
-						mv(
-							$path.join(temp_path, file),
-							$path.join(path, file),
-							{mkdirp: true}, function(err) {
-								console.log("Error when moving natives");
+							// Move out temp dir
+							function moveSync(from, to) {
+								if (fs.statSync(from).isDirectory()) {
+									var files = fs.readdirSync(temp_path);
+									files.forEach( function(file,index) {
+										moveSync($path.join(from, file), $path.join(to, file))
+									});
+								}
+								fs.renameSync(from, to);
 							}
-						);
+							var files = fs.readdirSync(temp_path);
+							files.forEach( function(file,index){
+								moveSync($path.join(temp_path, file), $path.join(path, file));
+							});
+
+							// Clean temp dir
+							fs.rmdirSync(temp_path);
+						}
 					});
-				});
+				}
 			}
 		}
 	});
@@ -126,28 +154,21 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 	launch_args.class_path = lib_args;
 	launch_args.minecraftArguments = json.minecraftArguments;
 
-	// Download main jar
 	if (extract_flag) {
-		DownloadJAR(json);
+		// Download main jar
+		downloads.add_task(
+			json.downloads.client.url,
+			$path.join($ICL_data.GameRoot, './gamedir/versions/' + json.id + '.jar')
+		);
+
+		// End queue and wait for everything to be done.
+		// In this scenerio, a emitter should be returned.
+		return downloads.end_queue();
 	}
 
 	json = null;
 
 	return launch_args;
-}
-
-function DownloadJAR(json) {
-	if (!json.downloads) return;
-	if (!json.downloads.client) return;
-	var url = json.downloads.client.url;
-
-	var urllib = require('urllib-sync');
-	urllib.request(url, {
-		method: 'GET',
-		writeFile: $path.join($ICL_data.GameRoot, './gamedir/versions/' + json.id + '.jar')
-	});
-
-	var mv = require('mv');
 }
 
 function Artifact() {
@@ -156,8 +177,6 @@ function Artifact() {
 
 function JSONLibGetArtifact(lib) {
 	function getDirect(lib) {
-		//if (!lib.downloads) {
-			var artifact = new Artifact();
 			var name_strings = lib.name.slice(0, lib.name.indexOf(':')).split('.');
 			//lib.name.split(/[.:]+/);
 
@@ -167,19 +186,20 @@ function JSONLibGetArtifact(lib) {
 			name_strings = lib.name.slice(lib.name.indexOf(':'), lib.name.length).split(':');
 			for (i in name_strings) path_string = $path.join(path_string, name_strings[i] + '/');
 			path_string = $path.join(path_string, name_strings[1] + '-' + name_strings[2]);
-
-			artifact.path = path_string;
-
-			return artifact;
-		/*} else if (lib.downloads.artifact)
-		return lib.downloads.artifact;
-		else if (lib.downloads.classifiers)
-		return lib.downloads.classifiers[lib.natives[$OSType]];
-		else
-		return new Artifact();*/
+			return path_string;
 	}
 
-	var artifact = getDirect(lib);
+	var artifact;
+	if (!lib.downloads)
+		artifact = new Artifact();
+	else if (lib.downloads.classifiers && lib.natives && lib.downloads.classifiers[lib.natives[$OSType]])
+		artifact = lib.downloads.classifiers[lib.natives[$OSType]];
+	else if (lib.downloads.artifact)
+		artifact = lib.downloads.artifact;
+	else
+		artifact = new Artifact();
+
+	artifact.path = getDirect(lib);
 	if (lib.natives) {
 		artifact.path += '-' + lib.natives[$OSType];
 	}

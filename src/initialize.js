@@ -5,6 +5,7 @@ var $SrcRoot = nw.__dirname;
 
 $ICL_data = require($path.join($SrcRoot, './data/Data.json'));
 $ICL_data.GameRoot = $path.join($path.join(nw.__dirname, '../'), $ICL_data.GameRoot);
+$ICL_data.SrcRoot = $SrcRoot;
 
 var $OSType;
 switch ($os.platform()) {
