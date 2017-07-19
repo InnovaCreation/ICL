@@ -1,9 +1,10 @@
 {
 	"minecraft_version_index" : {
-		"minecraft_index_json_source": {
+		"source": {
 			"Mojang" : "https://launchermeta.mojang.com/mc/game/version_manifest.json"
 		},
 		"default" : "Mojang"
 	},
-	"ICL_version" : "0.0.1"
+	"ICL_version" : "0.0.1",
+	"GameRoot" : "./Game"
 }
