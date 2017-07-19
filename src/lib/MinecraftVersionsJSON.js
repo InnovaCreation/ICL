@@ -41,6 +41,7 @@ function LoadMinecraftArgsFromJSON(file) {
 	json.libraries.forEach(function(lib) {
 		console.log("Get Library " + lib.name);
 
+		// Load Rules
 		var allowed = false;
 		if (lib.rules) {
 			lib.rules.forEach(function(rule) {
@@ -60,11 +61,47 @@ function LoadMinecraftArgsFromJSON(file) {
 			});
 		} else allowed = true;
 
+		// Load allowed
 		if (allowed) {
+			// Add artifact
 			var artifact = JSONLibGetArtifact(lib);
 
 			console.log("Path:" + artifact.path);
 			lib_args += lib_dir + artifact.path + ":"
+
+			// Decompress natives
+			if (lib.extract) {
+				console.log("Extracting " + lib.name);
+
+				var unzip = require('unzip');
+				var path = $path.join($ICL_data.GameRoot, './gamedir/versions/' + file + '-natives/');
+				var temp_path = $path.join(path, './' + lib.name);
+				fs.createReadStream($path.join(lib_dir, artifact.path)).pipe(
+					unzip.Extract(
+						{ path: temp_path }
+					)
+				);
+
+				// Excluded files
+				if (lib.extract.exclude) {
+					// rm -rf
+					function deleteRecursive(path) {
+						if(fs.existsSync(path)) {
+							if(fs.statSync(path).isDirectory()) {
+								var files = fs.readdirSync(path);
+								files.forEach( function(file,index){
+									deleteRecursive($path.join(path, file));
+								});
+								fs.rmdirSync(path);
+							} else {
+								fs.unlinkSync(path);
+							}
+						}
+					};
+					// Perform actual remove
+					for (i in lib.extract.exclude) deleteRecursive($path.join(temp_path, lib.extract.exclude[i]));
+				}
+			}
 		}
 	});
 	// Add main jar to those libs
@@ -85,23 +122,35 @@ function Artifact() {
 }
 
 function JSONLibGetArtifact(lib) {
-	if (!lib.downloads) {
-		var artifact = new Artifact();
-		var name_strings = lib.name.slice(0, lib.name.indexOf(':')).split('.');
-		//lib.name.split(/[.:]+/);
+	function getDirect(lib) {
+		//if (!lib.downloads) {
+			var artifact = new Artifact();
+			var name_strings = lib.name.slice(0, lib.name.indexOf(':')).split('.');
+			//lib.name.split(/[.:]+/);
 
-		var path_string = '';
-		for (i in name_strings) path_string = $path.join(path_string, name_strings[i] + '/');
+			var path_string = '';
+			for (i in name_strings) path_string = $path.join(path_string, name_strings[i] + '/');
 
-		name_strings = lib.name.slice(lib.name.indexOf(':'), lib.name.length).split(':');
-		for (i in name_strings) path_string = $path.join(path_string, name_strings[i] + '/');
-		path_string = $path.join(path_string, name_strings[1] + '-' + name_strings[2] + '.jar');
+			name_strings = lib.name.slice(lib.name.indexOf(':'), lib.name.length).split(':');
+			for (i in name_strings) path_string = $path.join(path_string, name_strings[i] + '/');
+			path_string = $path.join(path_string, name_strings[1] + '-' + name_strings[2]);
 
-		artifact.path = path_string;
+			artifact.path = path_string;
 
-		return artifact;
-	} else if (lib.downloads.classifiers)
-		return lib.downloads.classifiers[lib.natives[$OSType]];
-	else
+			return artifact;
+		/*} else if (lib.downloads.artifact)
 		return lib.downloads.artifact;
+		else if (lib.downloads.classifiers)
+		return lib.downloads.classifiers[lib.natives[$OSType]];
+		else
+		return new Artifact();*/
+	}
+
+	var artifact = getDirect(lib);
+	if (lib.natives) {
+		artifact.path += '-' + lib.natives[$OSType];
+	}
+	artifact.path += '.jar';
+
+	return artifact;
 }
