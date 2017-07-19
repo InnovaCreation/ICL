@@ -1,5 +1,5 @@
 function edit(profile_window) {
-	var profile_name_element = profile_window.children[0].children[0];
+	var profile_name_element = profile_window.getElementsByClassName('ModelProfileName')[0];
 	$p.LoadFromJSON(profile_name_element.textContent);
 	refresh_profile_blob();
 
@@ -9,7 +9,7 @@ function edit(profile_window) {
 
 function launch(profile_window) {
 	var p = new Profile();
-	var profile_name_element = profile_window.children[0].children[0];
+	var profile_name_element = profile_window.getElementsByClassName('ModelProfileName')[0];
 	p.LoadFromJSON(profile_name_element.textContent);
 
 	var launch_args = LoadMinecraftArgsFromJSON(p.mc_version_string);
