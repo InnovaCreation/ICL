@@ -80,8 +80,9 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 				var lib_physical = $path.join(lib_dir, artifact.path);
 
 				if (!fs.existsSync(lib_physical)) {
+					console.log('Downloading ' + artifact.url);
 					downloads.add_task(artifact.url, lib_physical).on('finished', decompress);
-				} else if (fs.statSync(lib_physical).size != artifact.size) {
+				} else if (artifact.size > 0 && fs.statSync(lib_physical).size != artifact.size) {
 					console.log('Actual size ' + fs.statSync(lib_physical).size + ' artifact expected ' + artifact.size);
 					console.log('Size mismatch, redownload..');
 					fs.unlinkSync(lib_physical);
@@ -203,7 +204,29 @@ function JSONLibGetArtifact(lib) {
 	if (lib.natives) {
 		artifact.path += '-' + lib.natives[$OSType];
 	}
+	var path_omit_jar = artifact.path;
 	artifact.path += '.jar';
+
+	if (!lib.downloads) {
+		var name = lib.name;
+		if (name.includes("scala-swing") || name.includes("scala-xml") || name.includes("scala-parser-combinators")) {
+			artifact.url = "http://ftb.cursecdn.com/FTB2/maven/" + artifact.path;
+		} else if (name.includes("typesafe") || name.includes("scala")) {
+			artifact.url = "http://maven.aliyun.com/nexus/content/groups/public/" + artifact.path;
+		} else if (name.includes("net.minecraft") && !name.includes("forge")) {
+			artifact.url = "https://libraries.minecraft.net/" + artifact.path;
+		} else if (name.includes("lzma"))
+			artifact.url = "https://repo.spongepowered.org/maven/" + artifact.path;
+		else if (lib.url)
+			artifact.url = lib.url + artifact.path;
+		else
+			artifact.url = "http://maven.aliyun.com/nexus/content/groups/public/" + artifact.path;
+
+		if (name.includes("net.minecraftforge:forge"))
+			artifact.url = lib.url + path_omit_jar + '-universal.jar';
+
+		artifact.size = 0;
+	}
 
 	return artifact;
 }
