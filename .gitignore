@@ -4,9 +4,11 @@ Game/gamedir/libs/*
 Game/gamedir/natives/*
 Game/gamedir/assets/*
 Game/.java
-src/logs
 
 Game/.minecraft/*
 
 Game/*.profile.json
 Game/GlobalProfile.json
+
+src/logs
+src/node_modules
