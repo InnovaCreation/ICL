@@ -85,32 +85,20 @@ module.exports.prototype.download_by_id = function(game_root, id) {
 
 	for (i in this.version_list) if (this.version_list[i].id == id) {
 		var v = this.version_list[i];
-		var protocal = v.url.slice(0, v.url.indexOf(':'));
-		if (protocal == 'http' || protocal == 'https') {
-			var remote = '';
-			var file_name = v.id + ".json";
-			var that = this.that;
-			require(protocal).get(v.url, function(res) {
-				res.on('data', function(data) {
-					remote += data;
-				});
-				res.on('end', function(){
-					var fs = require('fs');
-					fs.writeFileSync(
-						require('path').join(game_root, "./gamedir/versions_descriptor/" + file_name),
-						remote
-					)
-					that.LoadMinecraftArgsFromJSON(v.id, true);
+		var that = this.that;
 
-					indicator.textContent = 'Download'
-					indicator.disabled = false;
-				});
-			}).on('error', function(err) {
-				console.log('Error when reading remote version list: ' + err.toString());
+		var DM = require('./DownloadManager.js');
+		var json_task = new DM.DownloadTask(
+			v.url,
+			require('path').join(game_root, "./gamedir/versions_descriptor/" + v.id + ".json"));
+		json_task.start().on('finished', function() {
+			that.LoadMinecraftArgsFromJSON(v.id, true).on('finished', function(q) {
+				indicator.textContent = 'Download'
+				indicator.disabled = false;
 			});
+		});
 
-			return true;
-		} else return false;
+		return true;
 	}
 	return false;
 }
