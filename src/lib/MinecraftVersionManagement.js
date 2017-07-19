@@ -32,7 +32,10 @@ module.exports = function(icl_data, UI_window) {
 module.exports.prototype.refresh_list = function(url) {
 	if (this.is_refreshing) return false;
 
+	var indicator = this.UI_window.getElementsByClassName('refresh_version_list')[0];
 	this.is_refreshing = true;
+	indicator.textContent = 'Refreshing...';
+	indicator.disabled = true;
 
 	var protocal = url.slice(0, url.indexOf(':'));
 	if (protocal == 'http' || protocal == 'https') {
@@ -54,6 +57,9 @@ module.exports.prototype.refresh_list = function(url) {
 					t.is_refreshing = false;
 
 					t.UI_refresh_list();
+
+					indicator.textContent = 'Refreshing List';
+					indicator.disabled = false;
 				}
 			});
 		}).on('error', function(err) {
@@ -124,9 +130,7 @@ module.exports.prototype.load_version = function(original, ui_grid, version, gam
 
 module.exports.prototype.UI_refresh_list = function() {
 	var ui_grid = this.UI_window.getElementsByClassName('MCVersion_UI_Grid')[0];
-
-	var existed = ui_grid.getElementsByClassName('MCVersion');
-	for (var i = 0; i < existed.length; i++) existed[i].remove();
+	ui_grid.innerHTML = '';
 
 	var proto = (this.UI_window.getElementsByClassName('MCVersion_Proto')[0]).cloneNode(true);
 	for (i in this.version_list) this.load_version(proto, ui_grid, this.version_list[i], this.ICL_data.GameRoot);
