@@ -1,8 +1,11 @@
 // Initialize
 const $path = require('path');
 const $os = require('os');
-var $GameRoot = $path.join($path.join(nw.__dirname, '../'), './Game');
 var $SrcRoot = nw.__dirname;
+
+$ICL_data = require($path.join($SrcRoot, './data/Data.json'));
+$ICL_data.GameRoot = $path.join($path.join(nw.__dirname, '../'), $ICL_data.GameRoot);
+
 var $OSType;
 switch ($os.platform()) {
 	case 'linux' :
@@ -14,8 +17,6 @@ switch ($os.platform()) {
 	case 'win32' :
 		$OSType = 'windows';
 }
-
-$ICL_data = require($path.join($SrcRoot, './data/Data.json'))
 
 // Load other JS
 //var $MCJSON = require($path.join($SrcRoot, './lib/MinecraftVersionsJSON.js'));

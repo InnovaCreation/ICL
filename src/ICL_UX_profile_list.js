@@ -3,9 +3,9 @@ load_p.onclick = refresh_profile;
 function refresh_profile() {
 	var fs = require('fs');
 	var profiles_found = [];
-	fs.readdirSync($GameRoot).forEach(
+	fs.readdirSync($ICL_data.GameRoot).forEach(
 		function(f,index) {
-			if(!fs.statSync($path.join($GameRoot, f)).isDirectory()){
+			if(!fs.statSync($path.join($ICL_data.GameRoot, f)).isDirectory()){
 				var index = f.indexOf('.profile.json');
 				if (index > 0) {
 					var json_name = f.slice(0, index);
@@ -36,9 +36,9 @@ function load_profile(name) {
 
 	cloned.classList = ['Profile'];
 	cloned.id = 'profile_' + name;
-	cloned.children[0].children[0].textContent = name;
-	cloned.children[0].children[1].onclick = function() {edit(cloned);};
-	cloned.children[0].children[2].onclick = function() {launch(cloned);};
+	cloned.getElementsByClassName('ModelProfileName')[0].textContent = name;
+	cloned.getElementsByClassName('ModelProfileEdit')[0].onclick = function() {edit(cloned);};
+	cloned.getElementsByClassName('ModelProfileLaunch')[0].onclick = function() {launch(cloned);};
 
 	document.getElementById('profiles_window_grid').appendChild(cloned);
 
