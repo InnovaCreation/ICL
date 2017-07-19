@@ -15,7 +15,7 @@ switch ($os.platform()) {
 		$OSType = 'windows';
 }
 
-$ICL_Version = '0.0.1'
+$ICL_data = require($path.join($SrcRoot, './data/Data.json'))
 
 // Load other JS
 //var $MCJSON = require($path.join($SrcRoot, './lib/MinecraftVersionsJSON.js'));
