@@ -94,8 +94,33 @@
 
 		<div id="version_manager_window">
 			<h1>Version Manager</h1>
+			<button id="refresh_version_list" class="uk-button uk-button-default">Refresh List</button>
+
+			<!-- Model profile -->
+			<div class="MCVersion_Proto" hidden='true'>
+				<div class="uk-card uk-card-default uk-card-body">
+					<h2 class="MCVersionName">Version Name</h2>
+					<sm class="MCVersionType">Version Type</sm><br>
+					<sm class="MCVersionTime">Version Type</sm>
+
+					<button class="MCVersionDownload uk-button uk-button-default">Download</button>
+				</div>
+			</div>
+			<!-- End model profile -->
+			<script>
+				var $VersionManager = new
+					(require($path.join($SrcRoot, './lib/MinecraftVersionManagement.js')))
+					($ICL_data, document.getElementById('version_manager_window'));
+
+				document.getElementById('refresh_version_list').onclick = function() {
+					$VersionManager.refresh_list($ICL_data.minecraft_version_index.source[$ICL_data.minecraft_version_index.default]);
+				}
+			</script>
 
 			<div>
+				<div class="MCVersion_UI_Grid uk-child-width-1-3" uk-grid>
+
+				</div>
 			</div>
 		</div>
 

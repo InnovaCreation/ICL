@@ -9,12 +9,12 @@ function LoadMinecraftArgsFromJSON(file) {
 	var launch_args = new LaunchArgument();
 
 	var fs = require('fs');
-	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, "./gamedir/versions_descriptor/" + file + ".json")));
+	var json = JSON.parse(fs.readFileSync($path.join($ICL_data.GameRoot, "./gamedir/versions_descriptor/" + file + ".json")));
 
 	// Load inherit stuff
 	function inherit(to) {
 		if (to.inheritsFrom) {
-			var json_inherit = JSON.parse(fs.readFileSync($path.join($GameRoot, "./gamedir/versions_descriptor/" + to.inheritsFrom + ".json")));
+			var json_inherit = JSON.parse(fs.readFileSync($path.join($ICL_data.GameRoot, "./gamedir/versions_descriptor/" + to.inheritsFrom + ".json")));
 			json_inherit = inherit(json_inherit);
 
 			for (i in to) {
@@ -36,7 +36,7 @@ function LoadMinecraftArgsFromJSON(file) {
 	launch_args.asset_index = json.assetIndex.id;
 
 	// Fill the lib jars
-	var lib_dir = $path.join($GameRoot, './gamedir/libs/');
+	var lib_dir = $path.join($ICL_data.GameRoot, './gamedir/libs/');
 	var lib_args = '-cp "';
 	json.libraries.forEach(function(lib) {
 		console.log("Get Library " + lib.name);
@@ -68,7 +68,7 @@ function LoadMinecraftArgsFromJSON(file) {
 		}
 	});
 	// Add main jar to those libs
-	var versions_dir = $path.join($GameRoot, './gamedir/versions/');
+	var versions_dir = $path.join($ICL_data.GameRoot, './gamedir/versions/');
 	var version_id = json.jar ? json.jar : file;
 	lib_args += versions_dir + version_id + '.jar"'
 	// Output args

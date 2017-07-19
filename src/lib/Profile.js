@@ -22,14 +22,14 @@ Profile.prototype.GenerateJVMArgs = function(gp) {
 	args += ' -Xmx' + gp.maxMemory.toString() + 'm';
 
 	// Librarys (natives)
-	var natives_dir = $path.join($GameRoot, './gamedir/versions/' + this.mc_version_string + '-natives');
+	var natives_dir = $path.join($ICL_data.GameRoot, './gamedir/versions/' + this.mc_version_string + '-natives');
 	args += ' "-Djava.library.path=' + natives_dir + '"';
 
 	// FML defaults
 	args += ' -Dfml.ignoreInvalidMinecraftCertificates=true -Dfml.ignorePatchDiscrepancies=true';
 
 	// JAVA User Home
-	args += ' "-Duser.home=' + $GameRoot + '"';
+	args += ' "-Duser.home=' + $ICL_data.GameRoot + '"';
 
 	// Custom flags
 	args += this.custom_jvm_args;
@@ -47,8 +47,8 @@ function uuidv4() {
 Profile.prototype.GenerateMinecraftArguments = function(gp, launch_args) {
 	var auth_player_name = gp.player_id;
 	var version_name = '"ICL 0.X"';
-	var game_directory = '"' + $path.join($GameRoot, './.minecraft') + '"';
-	var assets_root = '"' + $path.join($GameRoot, './gamedir/assets') + '"';
+	var game_directory = '"' + $path.join($ICL_data.GameRoot, './.minecraft') + '"';
+	var assets_root = '"' + $path.join($ICL_data.GameRoot, './gamedir/assets') + '"';
 	var assets_index_name = launch_args.asset_index;
 	var auth_uuid = gp.uuid;
 	var auth_access_token = gp.uuid;
@@ -82,14 +82,14 @@ Profile.prototype.StoreJSON = function() {
 
 	var fs = require('fs');
 	fs.writeFile(
-		$path.join($GameRoot, this.profile_name + ".profile.json"),
+		$path.join($ICL_data.GameRoot, this.profile_name + ".profile.json"),
 		string
 	);
 }
 
 Profile.prototype.LoadFromJSON = function(profile_name) {
 	fs = require('fs');
-	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, profile_name + ".profile.json")));
+	var json = JSON.parse(fs.readFileSync($path.join($ICL_data.GameRoot, profile_name + ".profile.json")));
 
 	for (var i in json) this[i] = json[i];
 }
@@ -114,14 +114,14 @@ GlobalProfile.prototype.StoreJSON = function() {
 
 	var fs = require('fs');
 	fs.writeFile(
-		$path.join($GameRoot, "GlobalProfile.json"),
+		$path.join($ICL_data.GameRoot, "GlobalProfile.json"),
 		string
 	);
 }
 
 GlobalProfile.prototype.LoadFromJSON = function() {
 	fs = require('fs');
-	var json = JSON.parse(fs.readFileSync($path.join($GameRoot, "GlobalProfile.json")));
+	var json = JSON.parse(fs.readFileSync($path.join($ICL_data.GameRoot, "GlobalProfile.json")));
 
 	for (var i in json) this[i] = json[i];
 }

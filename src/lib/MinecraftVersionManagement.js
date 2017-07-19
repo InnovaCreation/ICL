@@ -20,10 +20,13 @@ function MCVersion(json) {
 	for (i in json) this[i] = json[i];
 }
 
-module.exports = function(icl_data) {
+module.exports = function(icl_data, UI_window) {
 	this.version_list = [];
 
 	this.is_refreshing = false;
+
+	this.UI_window = UI_window;
+	this.ICL_data = icl_data;
 }
 
 module.exports.prototype.refresh_list = function(url) {
@@ -36,12 +39,22 @@ module.exports.prototype.refresh_list = function(url) {
 		var remote = '';
 		var t = this;
 		require(protocal).get(url, function(res) {
+			var response_timer = setTimeout(function() {
+				res.destroy();
+				console.log('Response Timeout.');
+				t.is_refreshing = false;
+			}, 2000);
+
 			res.on('data', function(data) {
 				remote += data;
 			});
 			res.on('end', function(){
-				t.version_list = JSON.parse(remote).versions;
-				t.is_refreshing = false;
+				if (t.is_refreshing) {
+					t.version_list = JSON.parse(remote).versions;
+					t.is_refreshing = false;
+
+					t.UI_refresh_list();
+				}
 			});
 		}).on('error', function(err) {
 			console.log('Error when reading remote version list: ' + err.toString());
@@ -55,6 +68,13 @@ module.exports.prototype.refresh_list = function(url) {
 }
 
 module.exports.prototype.download_by_id = function(game_root, id) {
+	sys.debug("Downloading Minecraft version " + id);
+
+	var v = this.UI_window.getElementsByClassName('MCVersion_' + id)[0];
+	var indicator = v.getElementsByClassName('MCVersionDownload')[0];
+	indicator.textContent = 'Downloading...';
+	indicator.disabled = true;
+
 	for (i in this.version_list) if (this.version_list[i].id == id) {
 		var v = this.version_list[i];
 		var protocal = v.url.slice(0, v.url.indexOf(':'));
@@ -71,6 +91,9 @@ module.exports.prototype.download_by_id = function(game_root, id) {
 						require('path').join(game_root, "./gamedir/versions_descriptor/" + file_name),
 						remote
 					);
+
+					indicator.textContent = 'Download'
+					indicator.disabled = false;
 				});
 			}).on('error', function(err) {
 				console.log('Error when reading remote version list: ' + err.toString());
@@ -80,4 +103,31 @@ module.exports.prototype.download_by_id = function(game_root, id) {
 		} else return false;
 	}
 	return false;
+}
+
+module.exports.prototype.load_version = function(original, ui_grid, version, gameroot) {
+	var proto = original.cloneNode(true);
+
+	proto.classList = ['MCVersion MCVersion_' + version.id];
+	proto.getElementsByClassName('MCVersionName')[0].textContent = version.id;
+	proto.getElementsByClassName('MCVersionType')[0].textContent = version.type;
+	proto.getElementsByClassName('MCVersionTime')[0].textContent = version.releaseTime;
+	var t = this;
+	var id = version.id;
+	proto.getElementsByClassName('MCVersionDownload')[0].onclick = function() {
+		t.download_by_id(gameroot, id);
+	};
+	proto.hidden = false;
+
+	ui_grid.appendChild(proto);
+}
+
+module.exports.prototype.UI_refresh_list = function() {
+	var ui_grid = this.UI_window.getElementsByClassName('MCVersion_UI_Grid')[0];
+
+	var existed = ui_grid.getElementsByClassName('MCVersion');
+	for (var i = 0; i < existed.length; i++) existed[i].remove();
+
+	var proto = (this.UI_window.getElementsByClassName('MCVersion_Proto')[0]).cloneNode(true);
+	for (i in this.version_list) this.load_version(proto, ui_grid, this.version_list[i], this.ICL_data.GameRoot);
 }
