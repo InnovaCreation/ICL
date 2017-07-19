@@ -5,7 +5,7 @@ function LaunchArgument() {
 	this.minecraftArguments = '';
 }
 
-function LoadMinecraftArgsFromJSON(file) {
+function LoadMinecraftArgsFromJSON(file, extract_flag) {
 	var launch_args = new LaunchArgument();
 
 	var fs = require('fs');
@@ -70,37 +70,51 @@ function LoadMinecraftArgsFromJSON(file) {
 			lib_args += lib_dir + artifact.path + ":"
 
 			// Decompress natives
-			if (lib.extract) {
+			if (lib.extract && extract_flag) {
 				console.log("Extracting " + lib.name);
 
 				var unzip = require('unzip');
 				var path = $path.join($ICL_data.GameRoot, './gamedir/versions/' + file + '-natives/');
-				var temp_path = $path.join(path, './' + lib.name);
-				fs.createReadStream($path.join(lib_dir, artifact.path)).pipe(
+				var temp_path = $path.join(path, lib.name);
+
+				var stream = fs.createReadStream($path.join(lib_dir, artifact.path)).pipe(
 					unzip.Extract(
 						{ path: temp_path }
 					)
-				);
-
-				// Excluded files
-				if (lib.extract.exclude) {
-					// rm -rf
-					function deleteRecursive(path) {
-						if(fs.existsSync(path)) {
-							if(fs.statSync(path).isDirectory()) {
-								var files = fs.readdirSync(path);
-								files.forEach( function(file,index){
-									deleteRecursive($path.join(path, file));
-								});
-								fs.rmdirSync(path);
-							} else {
-								fs.unlinkSync(path);
+				).on('close', function() {
+					// Excluded files
+					if (lib.extract.exclude) {
+						// rm -rf
+						function deleteRecursive(path) {
+							if(fs.existsSync(path)) {
+								if(fs.statSync(path).isDirectory()) {
+									var files = fs.readdirSync(path);
+									files.forEach( function(file,index){
+										deleteRecursive($path.join(path, file));
+									});
+									fs.rmdirSync(path);
+								} else {
+									fs.unlinkSync(path);
+								}
 							}
-						}
-					};
-					// Perform actual remove
-					for (i in lib.extract.exclude) deleteRecursive($path.join(temp_path, lib.extract.exclude[i]));
-				}
+						};
+						// Perform actual remove
+						for (i in lib.extract.exclude) deleteRecursive($path.join(temp_path, lib.extract.exclude[i]));
+					}
+
+					// Move out temp dir
+					var mv = require('mv');
+					var files = fs.readdirSync(temp_path);
+					files.forEach( function(file,index){
+						mv(
+							$path.join(temp_path, file),
+							$path.join(path, file),
+							{mkdirp: true}, function(err) {
+								console.log("Error when moving natives");
+							}
+						);
+					});
+				});
 			}
 		}
 	});
@@ -112,9 +126,28 @@ function LoadMinecraftArgsFromJSON(file) {
 	launch_args.class_path = lib_args;
 	launch_args.minecraftArguments = json.minecraftArguments;
 
+	// Download main jar
+	if (extract_flag) {
+		DownloadJAR(json);
+	}
+
 	json = null;
 
 	return launch_args;
+}
+
+function DownloadJAR(json) {
+	if (!json.downloads) return;
+	if (!json.downloads.client) return;
+	var url = json.downloads.client.url;
+
+	var urllib = require('urllib-sync');
+	urllib.request(url, {
+		method: 'GET',
+		writeFile: $path.join($ICL_data.GameRoot, './gamedir/versions/' + json.id + '.jar')
+	});
+
+	var mv = require('mv');
 }
 
 function Artifact() {

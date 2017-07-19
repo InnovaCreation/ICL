@@ -20,13 +20,15 @@ function MCVersion(json) {
 	for (i in json) this[i] = json[i];
 }
 
-module.exports = function(icl_data, UI_window) {
+module.exports = function(icl_data, UI_window, that) {
 	this.version_list = [];
 
 	this.is_refreshing = false;
 
 	this.UI_window = UI_window;
 	this.ICL_data = icl_data;
+
+	this.that = that;
 }
 
 module.exports.prototype.refresh_list = function(url) {
@@ -87,16 +89,18 @@ module.exports.prototype.download_by_id = function(game_root, id) {
 		if (protocal == 'http' || protocal == 'https') {
 			var remote = '';
 			var file_name = v.id + ".json";
+			var that = this.that;
 			require(protocal).get(v.url, function(res) {
 				res.on('data', function(data) {
 					remote += data;
 				});
 				res.on('end', function(){
 					var fs = require('fs');
-					fs.writeFile(
+					fs.writeFileSync(
 						require('path').join(game_root, "./gamedir/versions_descriptor/" + file_name),
 						remote
-					);
+					)
+					that.LoadMinecraftArgsFromJSON(v.id, true);
 
 					indicator.textContent = 'Download'
 					indicator.disabled = false;

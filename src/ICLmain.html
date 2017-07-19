@@ -110,7 +110,7 @@
 			<script>
 				var $VersionManager = new
 					(require($path.join($SrcRoot, './lib/MinecraftVersionManagement.js')))
-					($ICL_data, document.getElementById('version_manager_window'));
+					($ICL_data, document.getElementById('version_manager_window'), this);
 
 				document.getElementById('refresh_version_list').onclick = function() {
 					$VersionManager.refresh_list($ICL_data.minecraft_version_index.source[$ICL_data.minecraft_version_index.default]);

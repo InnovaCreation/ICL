@@ -81,7 +81,7 @@ Profile.prototype.StoreJSON = function() {
 	var string = JSON.stringify(this);
 
 	var fs = require('fs');
-	fs.writeFile(
+	fs.writeFileSync(
 		$path.join($ICL_data.GameRoot, this.profile_name + ".profile.json"),
 		string
 	);
@@ -113,7 +113,7 @@ GlobalProfile.prototype.StoreJSON = function() {
 	var string = JSON.stringify(this);
 
 	var fs = require('fs');
-	fs.writeFile(
+	fs.writeFileSync(
 		$path.join($ICL_data.GameRoot, "GlobalProfile.json"),
 		string
 	);

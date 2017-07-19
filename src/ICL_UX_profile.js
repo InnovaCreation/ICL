@@ -12,7 +12,7 @@ function launch(profile_window) {
 	var profile_name_element = profile_window.getElementsByClassName('ModelProfileName')[0];
 	p.LoadFromJSON(profile_name_element.textContent);
 
-	var launch_args = LoadMinecraftArgsFromJSON(p.mc_version_string);
+	var launch_args = LoadMinecraftArgsFromJSON(p.mc_version_string, false);
 
 	var java_path = p.java_path;
 	var jvm_args = p.GenerateJVMArgs($gp);
