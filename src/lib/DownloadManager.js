@@ -1,11 +1,28 @@
 var events = require('events');
 
-function DownloadTask(url, to) {
-	this.finished = false;
+function DownloadTask(url, to, CDN) {
 	this.emmiter = new events.EventEmitter();
 
-	this.url = url;
-	this.to = to;
+	if (!url || !to) {
+		this.finished = true;
+	} else {
+		this.finished = false;
+
+		if (CDN) {
+			var url_cdn = url;
+
+			for (i in CDN.source[CDN.default]) {
+				var rule = CDN.source[CDN.default][i];
+				url_cdn = url_cdn.replace(rule.src, rule.cdn);
+			}
+
+			this.url = url_cdn;
+		} else {
+			this.url = url;
+		}
+
+		this.to = to;
+	}
 }
 
 var fs = require('fs');
@@ -19,6 +36,11 @@ function mkdirRecursiveSync(dirname) {
 }
 
 DownloadTask.prototype.start = function() {
+	if (this.finished) {
+		task.emmiter.emit('finished', task);
+		return this.emmiter();
+	}
+
 	var task = this;
 
 	var protocal = task.url.slice(0, task.url.indexOf(':'));
@@ -53,6 +75,9 @@ function DownloadQueue() {
 
 	this.count = 0;
 	this.finished_count = 0;
+	this.finished = false;
+
+	this.CDN = require('../data/Data.json').CDN;
 }
 
 module.exports.DownloadQueue = DownloadQueue;
@@ -61,31 +86,30 @@ DownloadQueue.prototype.add_task = function(url, to) {
 	var queue = this;
 	queue.count ++;
 
-	var task = new DownloadTask(url, to);
+	var task = new DownloadTask(url, to, this.CDN);
 	task.start().on('finished', function() {
-		if (queue.is_queue_ended) {
-			queue.finished_count++;
+		queue.finished_count++;
+		if (queue.is_queue_ended == true) {
 			queue.emmiter.emit('progress', queue.finished_count / queue.count);
 
-			var real_end = true;
-			for (i in queue.download_queue) {
-				if (!queue.download_queue[i].finished) {
-					real_end = false;
-					break;
-				}
-			}
-
-			if (real_end) {
-				console.log('Download queue ended');
-				queue.emmiter.emit('finished', queue);
-			}
+			queue.finish_queue();
 		}
 	});
 
 	return task.emmiter;
 }
 
+DownloadQueue.prototype.finish_queue = function() {
+	if (this.finished_count == this.count) {
+		console.log('Download queue ended');
+		require('sys').log('Download queue ended');
+		this.finished = true;
+		this.emmiter.emit('finished', this.queue);
+	}
+}
+
 DownloadQueue.prototype.end_queue = function() {
 	this.is_queue_ended = true;
+	this.finish_queue();
 	return this.emmiter;
 }

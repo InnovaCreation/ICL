@@ -87,10 +87,9 @@ module.exports.prototype.download_by_id = function(game_root, id) {
 	progress.hidden = false;
 	indicator.disabled = true;
 
-	var progress_percent = 0.0;
-	function change_progress(p) {
-		progress_percent += p;
-		progress.value = progress_percent * 100;
+	var progress_A = 0.0, progress_B = 0.0;
+	function change_progress() {
+		progress.value = (progress_A + progress_B) * 100;
 	}
 
 	for (i in this.version_list) if (this.version_list[i].id == id) {
@@ -100,9 +99,10 @@ module.exports.prototype.download_by_id = function(game_root, id) {
 		var DM = require('./DownloadManager.js');
 		var json_task = new DM.DownloadTask(
 			v.url,
-			require('path').join(game_root, "./gamedir/versions_descriptor/" + v.id + ".json"));
+			require('path').join(game_root, "./gamedir/versions_descriptor/" + v.id + ".json"), this.ICL_data.CDN);
 		json_task.start().on('finished', function() {
-			change_progress(0.1);
+			progress_A = 0.1;
+			change_progress();
 			var ev = that.LoadMinecraftArgsFromJSON(v.id, true).on('finished', function(q) {
 				indicator_spin.hidden = true;
 				indicator.textContent = 'Download'
@@ -111,7 +111,8 @@ module.exports.prototype.download_by_id = function(game_root, id) {
 				progress.value = 0;
 			});
 			ev.on('progress', (p) => {
-				change_progress(0.9 * p);
+				progress_B = 0.9 * p;
+				change_progress();
 			})
 		});
 
