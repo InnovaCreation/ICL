@@ -24,6 +24,21 @@ function mkdirRecursiveSync(dirname) {
 	}
 }
 
+function moveRecursiveSync(from, to) {
+	if(fs.existsSync(from)) {
+		if(fs.statSync(from).isDirectory()) {
+			var files = fs.readdirSync(from);
+			files.forEach( function(file,index){
+				moveRecursiveSync(path.join(from, file), path.join(to, file));
+			});
+			fs.rmdirSync(from);
+		} else {
+			if (!fs.existsSync(path.dirname(to))) mkdirRecursiveSync(path.dirname(to));
+			fs.renameSync(from, to);
+		}
+	}
+}
+
 function ExtractTask(from, to, exclude) {
 	this.emmiter = new events.EventEmitter();
 
@@ -39,6 +54,11 @@ function ExtractTask(from, to, exclude) {
 }
 
 ExtractTask.prototype.start = function() {
+	if (this.finished) {
+		task.emmiter.emit('finished', task);
+		return this.emmiter();
+	}
+
 	var task = this;
 	console.log("Extracting " + task.from);
 
@@ -50,7 +70,12 @@ ExtractTask.prototype.start = function() {
 	var stream = fs.createReadStream(task.from).pipe(
 		unzip.Extract(
 			{ path: temp_path }
-		)
+		).on('error', err => {
+			require('sys').error('Error when extracting ' + task.from + ' : ' + err);
+			deleteRecursiveSync(temp_path);
+			task.finished = true;
+			task.emmiter.emit('finished', task);
+		})
 	).on('close', function() {
 		// Excluded files
 		if (task.exclude) {
@@ -59,7 +84,7 @@ ExtractTask.prototype.start = function() {
 		// Move out temp dir
 		var files = fs.readdirSync(temp_path);
 		files.forEach( function(file,index){
-			fs.renameSync(path.join(temp_path, file), path.join(task.to, file));
+			moveRecursiveSync(path.join(temp_path, file), path.join(task.to, file));
 		});
 		// Clean temp dir
 		fs.rmdirSync(temp_path);
