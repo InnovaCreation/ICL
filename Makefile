@@ -7,6 +7,10 @@ TARGET = "./ICL.zip"
 
 .PHONY:clean
 
+prepare:
+	@echo Preparing Node NPM environment
+	cd ./src; npm install unzip
+
 pack: clean
 	@echo "Not really supported yet"
 

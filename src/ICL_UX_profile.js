@@ -24,7 +24,7 @@ function launch(profile_window) {
 
 	var minecraftArguments = p.GenerateMinecraftArguments($gp, launch_args);
 
-	var launch_cmd = AssemblyLaunchCMD(
+	var launch_cmd = AssembleLaunchCMD(
 		java_path,
 		jvm_args,
 		launch_args.class_path,

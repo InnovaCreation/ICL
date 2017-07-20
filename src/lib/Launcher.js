@@ -5,7 +5,7 @@ function LaunchGame(args) {
 	var game = require('child_process').exec(args, {
 		// detachment and ignored stdin are the key here:
 		detached: true,
-	   	stdio: [ 'ignore', 1, 2 ],
+		stdio: [ 'ignore', 1, 2 ],
 	});
 
 	var emmiter = new events.EventEmitter();
@@ -27,7 +27,7 @@ function LaunchGame(args) {
 	return emmiter;
 }
 
-function AssemblyLaunchCMD(
+function AssembleLaunchCMD(
 	java_path,
 	jvm_args,
 	class_path,
@@ -42,4 +42,4 @@ function AssemblyLaunchCMD(
 }
 
 //module.exports.LaunchGame = LaunchGame;
-//module.exports.AssemblyLaunchCMD = AssemblyLaunchCMD;
+//module.exports.AssembleLaunchCMD = AssembleLaunchCMD;
