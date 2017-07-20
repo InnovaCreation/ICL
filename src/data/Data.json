@@ -1,9 +1,25 @@
 {
 	"minecraft_version_index" : {
 		"source": {
-			"Mojang" : "https://launchermeta.mojang.com/mc/game/version_manifest.json"
+			"Mojang" : "https://launchermeta.mojang.com/mc/game/version_manifest.json",
+			"BMCLAPI" : "http://bmclapi2.bangbang93.com/mc/game/version_manifest.json"
 		},
 		"default" : "Mojang"
+	},
+	"CDN" : {
+		"source": {
+			"None" : [],
+			"Curse" : [
+				{"src" : "http://files.minecraftforge.net/maven", "cdn" :"http://ftb.cursecdn.com/FTB2/maven"}
+			],
+			"BMCLAPI" : [
+				{"src" : "https://launchermeta.mojang.com", "cdn" :"http://bmclapi2.bangbang93.com"},
+				{"src" : "https://launcher.mojang.com", "cdn" :"http://bmclapi2.bangbang93.com"},
+				{"src" : "https://libraries.minecraft.net", "cdn" :"http://bmclapi2.bangbang93.com/libraries"},
+				{"src" : "http://files.minecraftforge.net/maven", "cdn" :"http://bmclapi2.bangbang93.com/maven"}
+			]
+		},
+		"default" : "BMCLAPI"
 	},
 	"ICL_version" : "0.0.1",
 	"GameRoot" : "./Game"
