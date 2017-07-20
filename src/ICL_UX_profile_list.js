@@ -37,6 +37,7 @@ function load_profile(name) {
 	cloned.classList = ['Profile'];
 	cloned.id = 'profile_' + name;
 	cloned.getElementsByClassName('ModelProfileName')[0].textContent = name;
+	cloned.getElementsByClassName('ModelProfileEdit')[0].children[0].remove();
 	cloned.getElementsByClassName('ModelProfileEdit')[0].onclick = function() {edit(cloned);};
 	cloned.getElementsByClassName('ModelProfileLaunch')[0].onclick = function() {launch(cloned);};
 

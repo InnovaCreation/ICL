@@ -17,152 +17,163 @@
 
 	</head>
 	<body>
-		<nav class="uk-navbar-container uk-margin" uk-navbar>
-			<div class="uk-navbar-left">
+		<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+			<div class="uk-navbar-left uk-margin-remove-vertical">
 				<a class="uk-navbar-item uk-logo" href="#"><strong>ICL</strong> version <sm id="icl_ver"></sm></a>
 				<script>
 					document.getElementById("icl_ver").textContent = $ICL_data.version;
 				</script>
 			</div>
+			<ul class="uk-tab uk-margin-remove-vertical" uk-switcher="connect: #ui_panel; animation: uk-animation-fade; toggle: > :not(.uk-nav-header)">
+				<li class="uk-navbar-item"><a href="#">Profiles</a></li>
+				<li class="uk-navbar-item"><a href="#">Game Versions</a></li>
+			</ul>
 		</nav>
 
-		<!-- Model profile -->
-		<div class="Profile_Proto" id="model_profile" hidden='true'>
-			<div class="uk-card uk-card-default uk-card-body">
-				<h2 class="ModelProfileName">Profile Name</h2>
-				<button class="ModelProfileEdit uk-button uk-button-default">Edit</button>
-				<button class="ModelProfileLaunch uk-button uk-button-default">Launch</button>
+		<ul id="ui_panel" class="uk-switcher">
+			<!-- UI Panel - Profiles -->
+			<li id="ui_panel_profile">
+				<!-- UI - Game profile -->
+				<!-- Model profile -->
+				<div class="Profile_Proto" id="model_profile" hidden='true'>
+					<div class="uk-card uk-card-small uk-card-default uk-card-body uk-visible-toggle">
+						<div uk-grid>
+							<div class="uk-width-expand"><h3 class="ModelProfileName uk-card-title">Profile Name</h3></div>
+							<div class="uk-width-auto uk-invisible-hover">
+								<a class="ModelProfileEdit" uk-icon="icon: pencil"></a>
+							</div>
+						</div>
 
-				<script src="ICL_UX_profile.js"></script>
-			</div>
-		</div>
-		<!-- End model profile -->
+						<button class="ModelProfileLaunch uk-button uk-button-primary uk-width-1-1">Launch</button>
 
-		<div id="profiles_window">
-			<div id="profiles_window_grid" class="uk-child-width-1-3" uk-grid>
-
-			</div>
-		</div>
-
-		<input id="load_profile_name" value="Default"></input>
-		<button id='create_p' class="uk-button uk-button-default">Create Profile</button>
-		<button id='load_p' class="uk-button uk-button-default">Reload</button>
-		<script src="ICL_UX_profile_list.js"></script>
-
-		<div id="game_profile_settings_window" class="uk-modal-full" uk-modal>
-			<div class="uk-modal-dialog">
-				<h2>Edit Game Profile</h2>
-
-				<button id="apply_profle" class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-
-				<div><a>Profile Name</a><input id="profile_name"></input></div>
-				<div><a>Path/to/java</a><input id="java_path"></input></div>
-				<div><a>Custom JVM args</a><input id="custom_jvm_args"></input></div>
-				<div>
-					<a>Minecraft Version String</a>
-					<input id="mc_version_string"></input>
-					<!--<button id="load_json" class="uk-modal-close-full uk-close-large" type="button" uk-close></button>-->
+						<script src="ICL_UX_profile.js"></script>
+					</div>
 				</div>
-				<div><a>Custom Minecraft Args</a><input id="custom_minecraft_args"></input></div>
-				<div><a>Window Height</a><input id="height"></input></div>
-				<div><a>Window Width</a><input id="width"></input></div>
+				<!-- End model profile -->
 
-				<script src="ICL_UX_edit_profile.js"></script>
-			</div>
-		</div>
+				<div id="profiles_window uk-grid-divider" uk-grid>
+					<div class="uk-width-2-3@s">
+						<div class="uk-padding uk-padding-remove-vertical">
+							<h2>Game Profile</h2>
+							<div id="profiles_window_grid" class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-small" uk-grid>
 
-		<div id="direct_launch_argument_control" uk-modal>
-			<h2>Directly control launch arguments</h2>
-			<div><a>JVM args</a><input id="jvm_args"></input></div>
-			<div><a>Class Path</a><input id="class_path"></input></div>
-			<div><a>Main Class</a><input id="mainClass"></input></div>
-			<div><a>Minecraft Arguments</a><input id="minecraftArguments"></input></div>
+							</div>
+							<input id="load_profile_name" value="Default"></input>
+							<button id='create_p' class="uk-button uk-button-default">Create Profile</button>
+							<button id='load_p' class="uk-button uk-button-default">Reload</button>
+							<script src="ICL_UX_profile_list.js"></script>
+						</div>
+					</div>
 
-			<button id="launch_button" class="uk-button uk-button-default">Launch!</button>
+					<!-- UI - Global profile -->
+					<div class="uk-width-1-3@s">
 
-			<script>
-				document.getElementById('launch_button').onclick =
-				function(){ LaunchGame(AssembleLaunchCMD(
-					document.getElementById('java_path').value,
-					document.getElementById('jvm_args').value,
-					document.getElementById('class_path').value,
-					document.getElementById('mainClass').value,
-					document.getElementById('minecraftArguments').value
-					)); };
-			</script>
-		</div>
+						<div class="uk-padding-right">
+							<h2>Global Profile</h2>
+							<div><a>Player ID</a><input id="player_id"></input></div>
+							<div><a>Max Memory</a><input id="maxMemory" type="number"></input></div>
+							<div><a>Min Memory</a><input id="minMemory" type="number"></input></div>
 
-		<div id="version_manager_window">
-			<h1>Version Manager</h1>
-			<button id="refresh_version_list" class="refresh_version_list uk-button uk-button-default">Refresh List</button>
+							<div class="uk-button-group uk-width-1-1">
+								<button id="apply_gp" class="uk-button uk-button-default uk-button-small">Apply</button>
+								<button id="store_gp" class="uk-button uk-button-default uk-button-small">Save</button>
+								<button id="load_gp" class="uk-button uk-button-default uk-button-small">Load</button>
+							</div>
+						</div>
 
-			<!-- Model profile -->
-			<div class="MCVersion_Proto" hidden='true'>
-				<div class="uk-card uk-card-default uk-card-body">
-					<h2 class="MCVersionName">Version Name</h2>
-					<sm class="MCVersionType">Version Type</sm><br>
-					<sm class="MCVersionTime">Version Type</sm>
+						<script>
+							var $gp = new GlobalProfile();
+							document.getElementById('maxMemory').value = $gp.maxMemory;
+							document.getElementById('minMemory').value = $gp.minMemory;
 
-					<button class="MCVersionDownload uk-button uk-button-default">Download</button>
+							document.getElementById('apply_gp').onclick = function(){
+								$gp.player_id = document.getElementById('player_id').value;
+								$gp.maxMemory = Math.floor(document.getElementById('maxMemory').value);
+								$gp.minMemory = Math.floor(document.getElementById('minMemory').value);
+							};
+
+							document.getElementById('store_gp').onclick = function() {
+								$gp.StoreJSON();
+							};
+
+							document.getElementById('load_gp').onclick = load_gp;
+							function load_gp() {
+								$gp.LoadFromJSON();
+								document.getElementById('player_id').value = $gp.player_id;
+								document.getElementById('maxMemory').value = $gp.maxMemory;
+								document.getElementById('minMemory').value = $gp.minMemory;
+							};
+
+							load_gp();
+						</script>
+					</div>
 				</div>
-			</div>
-			<!-- End model profile -->
-			<script>
-				var $VersionManager = new
-					(require($path.join($SrcRoot, './lib/MinecraftVersionManagement.js')))
-					($ICL_data, document.getElementById('version_manager_window'), this);
 
-				document.getElementById('refresh_version_list').onclick = function() {
-					$VersionManager.refresh_list($ICL_data.minecraft_version_index.source[$ICL_data.minecraft_version_index.default]);
-				}
-			</script>
+				<!-- Profile edit -->
+				<div id="game_profile_settings_window" class="uk-modal-full" uk-modal>
+					<div class="uk-modal-dialog">
+						<h2>Edit Game Profile</h2>
 
-			<div>
-				<div class="MCVersion_UI_Grid uk-child-width-1-3" uk-grid>
+						<button id="apply_profle" class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
 
+						<div><a>Profile Name</a><input id="profile_name"></input></div>
+						<div><a>Path/to/java</a><input id="java_path"></input></div>
+						<div><a>Custom JVM args</a><input id="custom_jvm_args"></input></div>
+						<div>
+							<a>Minecraft Version String</a>
+							<input id="mc_version_string"></input>
+							<!--<button id="load_json" class="uk-modal-close-full uk-close-large" type="button" uk-close></button>-->
+						</div>
+						<div><a>Custom Minecraft Args</a><input id="custom_minecraft_args"></input></div>
+						<div><a>Window Height</a><input id="height"></input></div>
+						<div><a>Window Width</a><input id="width"></input></div>
+
+						<script src="ICL_UX_edit_profile.js"></script>
+					</div>
 				</div>
-			</div>
-		</div>
 
-		<div>
-			<div class="uk-card uk-card-default uk-card-body">
+			</li>
+			<!-- End UI Panel - Profiles -->
 
-				<h2>Global Profile</h2>
-				<div><a>Player ID</a><input id="player_id"></input></div>
-				<div><a>Max Memory</a><input id="maxMemory" type="number"></input></div>
-				<div><a>Min Memory</a><input id="minMemory" type="number"></input></div>
+			<!-- UI Panel - Version Management -->
+			<li id="ui_panel_versions">
+				<div id="version_manager_window" class="uk-padding">
+					<div uk-grid>
+						<h2 class="uk-width-expand@s">Core Version Manager</h2>
+						<button id="refresh_version_list" class="refresh_version_list uk-button uk-button-default uk-width-auto@s">Refresh List</button>
+					</a>
 
-				<button id="apply_gp" class="uk-button uk-button-default">Apply</button>
-				<button id="store_gp" class="uk-button uk-button-default">Save</button>
-				<button id="load_gp" class="uk-button uk-button-default">Load</button>
+					<!-- Model profile -->
+					<div class="MCVersion_Proto" hidden='true'>
+						<div class="uk-card uk-card-default uk-card-body">
+							<div uk-grid>
+								<h2 class="MCVersionName uk-width-expand">Version Name</h2>
+								<div class="uk-spinner"></div>
+							</div>
+							<sm class="MCVersionType">Version Type</sm><br>
+							<sm class="MCVersionTime">Version Type</sm>
 
-				<script>
-					var $gp = new GlobalProfile();
-					document.getElementById('maxMemory').value = $gp.maxMemory;
-					document.getElementById('minMemory').value = $gp.minMemory;
+							<button class="MCVersionDownload uk-button uk-button-default">Download</button>
+							<progress class="download_progressbar uk-progress" value="0" max="100" hidden=true></progress>
+						</div>
+					</div>
+					<!-- End model profile -->
+					<div>
+						<div class="MCVersion_UI_Grid uk-child-width-1-3" uk-grid></div>
+					</div>
 
-					document.getElementById('apply_gp').onclick = function(){
-						$gp.player_id = document.getElementById('player_id').value;
-						$gp.maxMemory = Math.floor(document.getElementById('maxMemory').value);
-						$gp.minMemory = Math.floor(document.getElementById('minMemory').value);
-					};
+					<script>
+						var $VersionManager = new
+							(require($path.join($SrcRoot, './lib/MinecraftVersionManagement.js')))
+							($ICL_data, document.getElementById('version_manager_window'), this);
 
-					document.getElementById('store_gp').onclick = function() {
-						$gp.StoreJSON();
-					};
-
-					document.getElementById('load_gp').onclick = load_gp;
-					function load_gp() {
-						$gp.LoadFromJSON();
-						document.getElementById('player_id').value = $gp.player_id;
-						document.getElementById('maxMemory').value = $gp.maxMemory;
-						document.getElementById('minMemory').value = $gp.minMemory;
-					};
-
-					load_gp();
-				</script>
-			</div>
-		</div>
+						document.getElementById('refresh_version_list').onclick = function() {
+							$VersionManager.refresh_list($ICL_data.minecraft_version_index.source[$ICL_data.minecraft_version_index.default]);
+						}
+					</script>
+				</div>
+			</li>
+		</ul>
 
 	</body>
 </html>

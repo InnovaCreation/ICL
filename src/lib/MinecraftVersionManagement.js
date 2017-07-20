@@ -80,8 +80,18 @@ module.exports.prototype.download_by_id = function(game_root, id) {
 
 	var v = this.UI_window.getElementsByClassName('MCVersion_' + id)[0];
 	var indicator = v.getElementsByClassName('MCVersionDownload')[0];
+	var progress = v.getElementsByClassName('download_progressbar')[0];
+	var indicator_spin = v.getElementsByClassName('uk-spinner')[0];
 	indicator.textContent = 'Downloading...';
+	indicator_spin.hidden = false;
+	progress.hidden = false;
 	indicator.disabled = true;
+
+	var progress_percent = 0.0;
+	function change_progress(p) {
+		progress_percent += p;
+		progress.value = progress_percent * 100;
+	}
 
 	for (i in this.version_list) if (this.version_list[i].id == id) {
 		var v = this.version_list[i];
@@ -92,10 +102,17 @@ module.exports.prototype.download_by_id = function(game_root, id) {
 			v.url,
 			require('path').join(game_root, "./gamedir/versions_descriptor/" + v.id + ".json"));
 		json_task.start().on('finished', function() {
-			that.LoadMinecraftArgsFromJSON(v.id, true).on('finished', function(q) {
+			change_progress(0.1);
+			var ev = that.LoadMinecraftArgsFromJSON(v.id, true).on('finished', function(q) {
+				indicator_spin.hidden = true;
 				indicator.textContent = 'Download'
 				indicator.disabled = false;
+				progress.hidden = true;
+				progress.value = 0;
 			});
+			ev.on('progress', (p) => {
+				change_progress(0.9 * p);
+			})
 		});
 
 		return true;

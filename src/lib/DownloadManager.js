@@ -50,16 +50,23 @@ function DownloadQueue() {
 	this.is_queue_ended = false;
 
 	this.emmiter = new events.EventEmitter();
+
+	this.count = 0;
+	this.finished_count = 0;
 }
 
 module.exports.DownloadQueue = DownloadQueue;
 
 DownloadQueue.prototype.add_task = function(url, to) {
 	var queue = this;
+	queue.count ++;
 
 	var task = new DownloadTask(url, to);
 	task.start().on('finished', function() {
 		if (queue.is_queue_ended) {
+			queue.finished_count++;
+			queue.emmiter.emit('progress', queue.finished_count / queue.count);
+
 			var real_end = true;
 			for (i in queue.download_queue) {
 				if (!queue.download_queue[i].finished) {
