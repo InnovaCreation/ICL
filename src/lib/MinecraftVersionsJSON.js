@@ -1,3 +1,5 @@
+var event = require('events');
+
 function LaunchArgument() {
 	this.mainClass = '';
 	this.asset_index = '';
@@ -41,8 +43,15 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 
 	// Prepare download queue
 	var DM = require('./lib/DownloadManager.js');
-	var downloads;
-	if (extract_flag) downloads = new DM.DownloadQueue();
+	var EM = require('./lib/ExtractManager.js');
+	var downloads, extracts;
+	if (extract_flag) {
+		downloads = new DM.DownloadQueue();
+		extracts = new EM.ExtractQueue();
+	}
+
+	var emmiter;
+	if (extract_flag) emmiter = new event.EventEmitter();
 
 	json.libraries.forEach(function(lib) {
 		console.log("Get Library " + lib.name);
@@ -81,72 +90,29 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 
 				if (!fs.existsSync(lib_physical)) {
 					console.log('Downloading ' + artifact.url);
+					download_end = false;
 					downloads.add_task(artifact.url, lib_physical).on('finished', decompress);
 				} else if (artifact.size > 0 && fs.statSync(lib_physical).size != artifact.size) {
 					console.log('Actual size ' + fs.statSync(lib_physical).size + ' artifact expected ' + artifact.size);
 					console.log('Size mismatch, redownload..');
+					download_end = false;
 					fs.unlinkSync(lib_physical);
 					downloads.add_task(artifact.url, lib_physical).on('finished', decompress);
 				} else
 					decompress();
-			}
 
-			function decompress() {
-				// Decompress natives
-				if (lib.extract) {
-					console.log("Extracting " + lib.name + " from " + artifact.path);
-
-					var unzip = require('unzip');
-					var path = $path.join($ICL_data.GameRoot, './gamedir/versions/' + file + '-natives/');
-					var temp_path = $path.join(path, lib.name);
-
-					var stream = fs.createReadStream($path.join(lib_dir, artifact.path)).pipe(
-						unzip.Extract(
-							{ path: temp_path }
-						)
-					).on('close', function() {
-						// Excluded files
-						if (lib.extract.exclude) {
-							// rm -rf
-							function deleteRecursive(path) {
-								if(fs.existsSync(path)) {
-									if(fs.statSync(path).isDirectory()) {
-										var files = fs.readdirSync(path);
-										files.forEach( function(file,index){
-											deleteRecursive($path.join(path, file));
-										});
-										fs.rmdirSync(path);
-									} else {
-										fs.unlinkSync(path);
-									}
-								}
-							};
-							// Perform actual remove
-							for (i in lib.extract.exclude) deleteRecursive($path.join(temp_path, lib.extract.exclude[i]));
-
-							// Move out temp dir
-							function moveSync(from, to) {
-								if (fs.statSync(from).isDirectory()) {
-									var files = fs.readdirSync(temp_path);
-									files.forEach( function(file,index) {
-										moveSync($path.join(from, file), $path.join(to, file))
-									});
-								}
-								fs.renameSync(from, to);
-							}
-							var files = fs.readdirSync(temp_path);
-							files.forEach( function(file,index){
-								moveSync($path.join(temp_path, file), $path.join(path, file));
-							});
-
-							// Clean temp dir
-							fs.rmdirSync(temp_path);
-						}
-					});
+				function decompress() {
+					if (lib.extract) {
+						var from = $path.join(lib_dir, artifact.path);
+						var to = $path.join($ICL_data.GameRoot, './gamedir/versions/' + file + '-natives/')
+						extracts.add_task(from, to);
+					}
 				}
 			}
+
 		}
 	});
+
 	// Add main jar to those libs
 	var versions_dir = $path.join($ICL_data.GameRoot, './gamedir/versions/');
 	var version_id = json.jar ? json.jar : file;
@@ -162,9 +128,20 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 			$path.join($ICL_data.GameRoot, './gamedir/versions/' + json.id + '.jar')
 		);
 
+		var progressD = 0.0, progressE = 0.0;
+		var evd = downloads.end_queue().on('finished', function() {
+			if (downloads.finished && extracts.finished) emmiter.emit('finished');
+		});
+		evd.on('progress', (p) => { progressD = p * 0.8; emmiter.emit('progress', progressD + progressE) });
+
+		var eve = extracts.end_queue().on('finished', function() {
+			if (downloads.finished && extracts.finished) emmiter.emit('finished');
+		});
+		eve.on('progress', (p) => { progressE = p * 0.2; emmiter.emit('progress', progressD + progressE) });
+
 		// End queue and wait for everything to be done.
 		// In this scenerio, a emitter should be returned.
-		return downloads.end_queue();
+		return emmiter;
 	}
 
 	json = null;
