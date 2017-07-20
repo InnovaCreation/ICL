@@ -1,23 +1,30 @@
+var events = require('events');
+
 function LaunchGame(args) {
 	var sys = require('sys');
-	var game = require('child_process').exec(args, { 
-		// detachment and ignored stdin are the key here: 
+	var game = require('child_process').exec(args, {
+		// detachment and ignored stdin are the key here:
 		detached: true,
-	   	stdio: [ 'ignore', 1, 2 ], 
+	   	stdio: [ 'ignore', 1, 2 ],
 	});
-	
-	game.unref(); 
+
+	var emmiter = new events.EventEmitter();
+
+	game.unref();
 	game.stdout.on('data', function(data) {
-		console.log("[Game Output]" + data.toString()); 
+		console.log("[Game Output]" + data.toString());
 	});
-	
+
 	game.stderr.on('data', function(data) {
-		console.log("[Game Error]" + data.toString()); 
+		console.log("[Game Error]" + data.toString());
 	});
-	
+
 	game.on('exit', function(code) {
 		console.log("Game exited with code " + code.toString());
+		emmiter.emit('game_exit', args);
 	});
+
+	return emmiter;
 }
 
 function AssemblyLaunchCMD(

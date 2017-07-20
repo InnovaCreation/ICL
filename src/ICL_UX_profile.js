@@ -10,7 +10,12 @@ function edit(profile_window) {
 function launch(profile_window) {
 	var p = new Profile();
 	var profile_name_element = profile_window.getElementsByClassName('ModelProfileName')[0];
-	p.LoadFromJSON(profile_name_element.textContent);
+
+	var indicator = profile_window.getElementsByClassName('ModelProfileLaunch')[0];
+	indicator.disabled = true;
+	indicator.textContent = 'Launching...';
+
+	p.LoadFromJSON(profile_name_element.textContent, false);
 
 	var launch_args = LoadMinecraftArgsFromJSON(p.mc_version_string, false);
 
@@ -29,5 +34,11 @@ function launch(profile_window) {
 
 	console.log(launch_cmd);
 
-	LaunchGame(launch_cmd);
+	var ev = LaunchGame(launch_cmd)
+	indicator.textContent = 'Running';
+
+	ev.on('game_exit', function(args) {
+		indicator.textContent = 'Launch';
+		indicator.disabled = false;
+	});
 }
