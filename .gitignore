@@ -12,3 +12,4 @@ Game/GlobalProfile.json
 
 src/logs
 src/node_modules
+src/package-lock.json
