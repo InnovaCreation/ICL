@@ -60,7 +60,7 @@ module.exports.prototype.refresh_list = function(url) {
 
 					t.UI_refresh_list();
 
-					indicator.textContent = 'Refreshing List';
+					indicator.textContent = 'Refresh List';
 					indicator.disabled = false;
 				}
 			});

@@ -137,11 +137,11 @@
 
 			<!-- UI Panel - Version Management -->
 			<li id="ui_panel_versions">
-				<div id="version_manager_window" class="uk-padding">
-					<div uk-grid>
+				<div id="version_manager_window">
+					<div class="uk-width-1-1 uk-padding" uk-grid>
 						<h2 class="uk-width-expand@s">Core Version Manager</h2>
 						<button id="refresh_version_list" class="refresh_version_list uk-button uk-button-default uk-width-auto@s">Refresh List</button>
-					</a>
+					</div>
 
 					<!-- Model profile -->
 					<div class="MCVersion_Proto" hidden='true'>
@@ -150,15 +150,15 @@
 								<h2 class="MCVersionName uk-width-expand">Version Name</h2>
 								<div class="uk-spinner"></div>
 							</div>
-							<sm class="MCVersionType">Version Type</sm><br>
-							<sm class="MCVersionTime">Version Type</sm>
+							<sm class="MCVersionType uk-text-bold">Version Type</sm><br>
+							<sm class="MCVersionTime uk-text-meta">Version Time</sm>
 
 							<button class="MCVersionDownload uk-button uk-button-default">Download</button>
 							<progress class="download_progressbar uk-progress" value="0" max="100" hidden=true></progress>
 						</div>
 					</div>
 					<!-- End model profile -->
-					<div>
+					<div class="uk-panel uk-panel-scrollable" uk-height-viewport="expand: true">
 						<div class="MCVersion_UI_Grid uk-child-width-1-3" uk-grid></div>
 					</div>
 
