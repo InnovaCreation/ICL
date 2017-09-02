@@ -11,7 +11,9 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 	var launch_args = new LaunchArgument();
 
 	var fs = require('fs');
-	var json = JSON.parse(fs.readFileSync($path.join($ICL_data.GameRoot, "./gamedir/versions_descriptor/" + file + ".json")));
+	var json_file = $path.join($ICL_data.GameRoot, "./gamedir/versions_descriptor/" + file + ".json");
+	if (!fs.existsSync()) return 200;
+	var json = JSON.parse(fs.readFileSync(json_file));
 
 	// Load inherit stuff
 	function inherit(to) {

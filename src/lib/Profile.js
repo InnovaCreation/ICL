@@ -121,6 +121,10 @@ GlobalProfile.prototype.StoreJSON = function() {
 
 GlobalProfile.prototype.LoadFromJSON = function() {
 	fs = require('fs');
+
+	var json_file = $path.join($ICL_data.GameRoot, "GlobalProfile.json");
+	if (!fs.existsSync(json_file)) return 200;
+
 	var json = JSON.parse(fs.readFileSync($path.join($ICL_data.GameRoot, "GlobalProfile.json")));
 
 	for (var i in json) this[i] = json[i];

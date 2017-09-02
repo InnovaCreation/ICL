@@ -11,13 +11,20 @@ function launch(profile_window) {
 	var p = new Profile();
 	var profile_name_element = profile_window.getElementsByClassName('ModelProfileName')[0];
 
+	if (p.LoadFromJSON(profile_name_element.textContent, false) == 200) {
+		alert("Profile (JSON) file not found");
+		return false;
+	}
+
+	var launch_args = LoadMinecraftArgsFromJSON(p.mc_version_string, false);
+	if (launch_args == 200) {
+		alert("Version descriptor (JSON) file not found");
+		return false;
+	}
+
 	var indicator = profile_window.getElementsByClassName('ModelProfileLaunch')[0];
 	indicator.disabled = true;
 	indicator.textContent = 'Launching...';
-
-	p.LoadFromJSON(profile_name_element.textContent, false);
-
-	var launch_args = LoadMinecraftArgsFromJSON(p.mc_version_string, false);
 
 	var java_path = p.java_path;
 	var jvm_args = p.GenerateJVMArgs($gp);
