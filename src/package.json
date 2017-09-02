@@ -13,7 +13,7 @@
 		"min_height": 320,
 		"max_width": 1280,
 		"max_height": 720
-	}
+	},
 	"dependencies": {
                 "unzip": "0.1.11"
         }
