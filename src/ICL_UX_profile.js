@@ -39,8 +39,6 @@ function launch(profile_window) {
 		minecraftArguments
 	);
 
-	console.log(launch_cmd);
-
 	var ev = LaunchGame(launch_cmd)
 	indicator.textContent = 'Running';
 

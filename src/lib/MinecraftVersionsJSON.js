@@ -60,12 +60,12 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 
 		// Load Rules
 		var allowed = false;
+		function validateOS(classifier) {
+			if ($OSType == classifier) return true;
+			return false;
+		}
 		if (lib.rules) {
 			lib.rules.forEach(function(rule) {
-				function validateOS(classifier) {
-					if ($OSType == classifier) return true;
-					return false;
-				}
 				if (rule.action == 'allow') {
 					if (rule.os) {
 						if (validateOS(rule.os.name)) allowed = true;
@@ -84,7 +84,7 @@ function LoadMinecraftArgsFromJSON(file, extract_flag) {
 			var artifact = JSONLibGetArtifact(lib);
 
 			console.log("Path:" + artifact.path);
-			lib_args += $path.join(lib_dir, artifact.path) + ":";
+			lib_args += $path.join(lib_dir, artifact.path) + (validateOS("windows") ? ";" : ":");
 
 			// Examine library's presence & download
 			if (extract_flag) {
