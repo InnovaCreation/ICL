@@ -1,4 +1,4 @@
-var sys = require('sys');
+var util = require('util');
 
 function MCVersion() {
 	this.id = '';
@@ -76,7 +76,7 @@ module.exports.prototype.refresh_list = function(url) {
 }
 
 module.exports.prototype.download_by_id = function(game_root, id) {
-	sys.debug("Downloading Minecraft version " + id);
+	util.debug("Downloading Minecraft version " + id);
 
 	var v = this.UI_window.getElementsByClassName('MCVersion_' + id)[0];
 	var indicator = v.getElementsByClassName('MCVersionDownload')[0];

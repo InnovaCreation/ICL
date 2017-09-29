@@ -1,7 +1,7 @@
 var events = require('events');
 
 function LaunchGame(args) {
-	var sys = require('sys');
+	var util = require('util');
 	var game = require('child_process').exec(args, {
 		// detachment and ignored stdin are the key here:
 		detached: true,

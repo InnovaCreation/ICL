@@ -102,7 +102,7 @@ DownloadQueue.prototype.add_task = function(url, to) {
 DownloadQueue.prototype.finish_queue = function() {
 	if (this.finished_count == this.count) {
 		console.log('Download queue ended');
-		require('sys').log('Download queue ended');
+		require('util').log('Download queue ended');
 		this.finished = true;
 		this.emmiter.emit('finished', this.queue);
 	}

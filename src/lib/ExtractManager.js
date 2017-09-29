@@ -71,7 +71,7 @@ ExtractTask.prototype.start = function() {
 		unzip.Extract(
 			{ path: temp_path }
 		).on('error', err => {
-			require('sys').error('Error when extracting ' + task.from + ' : ' + err);
+			require('util').error('Error when extracting ' + task.from + ' : ' + err);
 			deleteRecursiveSync(temp_path);
 			task.finished = true;
 			task.emmiter.emit('finished', task);
@@ -131,7 +131,7 @@ ExtractQueue.prototype.add_task = function(from, to, exclude) {
 ExtractQueue.prototype.finish_queue = function() {
 	if (this.finished_count == this.count) {
 		console.log('Extract queue ended');
-		require('sys').log('Extract queue ended');
+		require('util').log('Extract queue ended');
 		this.finished = true;
 		this.emmiter.emit('finished', this.queue);
 	}
